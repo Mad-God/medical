@@ -1,0 +1,353 @@
+{% extends "base.html" %} {% block body %} {% load static %}
+<!-- Home Banner -->
+<!-- Breadcrumb -->
+
+<style>
+
+	.slider {
+		-webkit-appearance: none;
+		width: 100%;
+		height: 25px;
+		background: #ddd;
+		outline: none;
+		opacity: 0.7;
+		-webkit-transition: .2s;
+		transition: opacity .2s;
+	  }
+	  
+	  .slider::-webkit-slider-thumb {
+		-webkit-appearance: none;
+		appearance: none;
+		width: 25px;
+		height: 25px;
+		background: #4caf50;
+		cursor: pointer;
+	  }
+	  
+	  .slider::-moz-range-thumb {
+		width: 25px;
+		height: 25px;
+		background: #4caf50;
+		cursor: pointer;
+	  }
+	  
+</style>
+
+
+
+{% for message in messages %}
+<div class="alert alert-{{ message.tags }} background-{{ message.tags }}">
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <i class="icofont icofont-close-line-circled text-white"></i>
+    </button>
+    <strong>{{message}}</strong>
+</div>
+{% endfor %}	
+<!-- Breadcrumb -->
+<div class="breadcrumb-bar">
+	<div class="container-fluid">
+		<div class="row align-items-center">
+			<div class="col-md-12 col-12">
+				<nav aria-label="breadcrumb" class="page-breadcrumb">
+					<ol class="breadcrumb">
+						<li class="breadcrumb-item"><a href="index-2.html">Home</a></li>
+						<li class="breadcrumb-item active" aria-current="page">Booking</li>
+					</ol>
+				</nav>
+				<h2 class="breadcrumb-title">Booking</h2>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- /Breadcrumb -->
+
+<!-- Page Content -->
+<div class="content">
+	<div class="container">
+	
+		<div class="row">
+			<div class="col-12">
+			
+				<div class="card">
+					<div class="card-body">
+						<div class="booking-doc-info">
+							<a href="doctor-profile.html" class="booking-doc-img">
+								<img src="{{doctor.picture.url}}" alt="User Image">
+							</a>
+							<div class="booking-info">
+								<h4><a href="doctor-profile.html">Dr. {{doctor.name}}</a></h4>
+								<div class="rating">
+									<span class="d-inline-block average-rating badge">Reviews: {{doctor.review.all|length}}</span>
+								</div>
+								<p class="text-muted mb-0"><i class="fas fa-map-marker-alt"></i> {{doctor.city}}, {{doctor.state}}, {{doctor.country}}</p>
+							</div>
+						</div>
+					</div>
+					<!-- Business Hours Content -->
+						<div class="col-md-6 offset-md-3">
+							<!-- Business Hours Widget -->
+							<div class="widget business-widget">
+							<div class="widget-content">
+								<div class="listing-hours">
+								
+								<div class="listing-day">
+									<div class="day">Monday</div>
+									<div class="time-items">
+									<span class="{% if doctor.monday and doctor.monday != "closed" %} time {% else %}badge bg-danger-light{% endif %}">{{doctor.monday}}</span>
+									</div>
+								</div>
+								<div class="listing-day">
+									<div class="day">Tuesday</div>
+									<div class="time-items">
+									<span class="{% if doctor.tuesday and doctor.tuesday != "closed" %} time {% else %}badge bg-danger-light{% endif %}">{{doctor.tuesday}}</span>
+									</div>
+								</div>
+								<div class="listing-day">
+									<div class="day">Wednesday</div>
+									<div class="time-items">
+									<span class="{% if doctor.wednesday and doctor.wednesday != "closed" %} time {% else %}badge bg-danger-light{% endif %}">{{doctor.wednesday}}</span>
+									</div>
+								</div>
+								<div class="listing-day">
+									<div class="day">Thursday</div>
+									<div class="time-items">
+									<span class="{% if doctor.thursday and doctor.thursday != "closed" %} time {% else %}badge bg-danger-light{% endif %}">{{doctor.thursday}}</span>
+									</div>
+								</div>
+								<div class="listing-day">
+									<div class="day">Friday</div>
+									<div class="time-items">
+									<span class="{% if doctor.friday and doctor.friday != "closed" %} time {% else %}badge bg-danger-light{% endif %}">{{doctor.friday}}</span>
+									</div>
+								</div>
+								<div class="listing-day">
+									<div class="day">Saturday</div>
+									<div class="time-items">
+									<span class="{% if doctor.saturday and doctor.saturday != "closed" %} time {% else %}badge bg-danger-light{% endif %}">{{doctor.saturday}}</span>
+									</div>
+								</div>
+								<div class="listing-day closed">
+									<div class="day">Sunday</div>
+									<div class="time-items">
+									<span class="time"
+										><span class="{% if doctor.saturday and doctor.saturday != "closed" %} time {% else %}badge bg-danger-light{% endif %}">{{doctor.sunday}}</span>
+										</span
+									>
+									</div>
+								</div>
+								</div>
+							</div>
+							</div>
+							<!-- /Business Hours Widget -->
+						</div>
+						
+					<!-- /Business Hours Content -->
+				
+				
+				
+				
+					<div class="formbold-main-wrapper">
+						<!-- Author: FormBold Team -->
+						<!-- Learn More: https://formbold.com -->
+						<div class="formbold-form-wrapper">
+						  <form action="{% url 'home:doctor-booking' pk=doctor.id %}" method="POST">
+							<div class="formbold-mb-5">
+								{% csrf_token %}
+							  <label for="name" class="formbold-form-label"> Full Name </label>
+							  <input
+								type="text"
+								name="name"
+								id="name"
+								placeholder="Full Name"
+								class="formbold-form-input"
+							  />
+							</div>
+							<div class="formbold-mb-5">
+							  <label for="phone" class="formbold-form-label"> Phone Number </label>
+							  <input
+								type="text"
+								name="phone"
+								id="phone"
+								placeholder="Enter your phone number"
+								class="formbold-form-input"
+							  />
+							</div>
+							<div class="formbold-mb-5">
+							  <label for="email" class="formbold-form-label"> Email Address </label>
+							  <input
+								type="email"
+								name="email"
+								id="email"
+								placeholder="Enter your email"
+								class="formbold-form-input"
+							  />
+							</div>
+							<div class="flex flex-wrap formbold--mx-3">
+							  <div class="w-full sm:w-half formbold-px-3">
+								<div class="formbold-mb-5 w-full">
+								  <label for="date" class="formbold-form-label"> Date </label>
+								  <input
+									type="date"
+									name="date"
+									id="date"
+									class="formbold-form-input"
+								  />
+								</div>
+							  </div>
+							  <div class="w-full sm:w-half formbold-px-3">
+								<div class="formbold-mb-5">
+								  <label for="time" class="formbold-form-label"> Time </label>
+								  <input
+									type="time"
+									name="time"
+									id="time"
+									class="formbold-form-input"
+								  />
+								</div>
+							  </div>
+							</div>
+					  
+							
+							<div>
+							  <button type = 'submit' class="formbold-btn">Book Appointment</button>
+							</div>
+						  </form>
+						</div>
+					  </div>
+					  <style>
+						* {
+						  margin: 0;
+						  padding: 0;
+						  box-sizing: border-box;
+						}
+						body {
+						  font-family: "Inter", Arial, Helvetica, sans-serif;
+						}
+						.formbold-mb-5 {
+						  margin-bottom: 20px;
+						}
+						.formbold-pt-3 {
+						  padding-top: 12px;
+						}
+						.formbold-main-wrapper {
+						  display: flex;
+						  align-items: center;
+						  justify-content: center;
+						  padding: 48px;
+						}
+					  
+						.formbold-form-wrapper {
+						  margin: 0 auto;
+						  max-width: 550px;
+						  width: 100%;
+						  background: white;
+						}
+						.formbold-form-label {
+						  display: block;
+						  font-weight: 500;
+						  font-size: 16px;
+						  color: #07074d;
+						  margin-bottom: 12px;
+						}
+						.formbold-form-label-2 {
+						  font-weight: 600;
+						  font-size: 20px;
+						  margin-bottom: 20px;
+						}
+					  
+						.formbold-form-input {
+						  width: 100%;
+						  padding: 12px 24px;
+						  border-radius: 6px;
+						  border: 1px solid #e0e0e0;
+						  background: white;
+						  font-weight: 500;
+						  font-size: 16px;
+						  color: #6b7280;
+						  outline: none;
+						  resize: none;
+						}
+						.formbold-form-input:focus {
+						  border-color: #6a64f1;
+						  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
+						}
+					  
+						.formbold-btn {
+						  text-align: center;
+						  font-size: 16px;
+						  border-radius: 6px;
+						  padding: 14px 32px;
+						  border: none;
+						  font-weight: 600;
+						  background-color: #6a64f1;
+						  color: white;
+						  width: 100%;
+						  cursor: pointer;
+						}
+						.formbold-btn:hover {
+						  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
+						}
+					  
+						.formbold--mx-3 {
+						  margin-left: -12px;
+						  margin-right: -12px;
+						}
+						.formbold-px-3 {
+						  padding-left: 12px;
+						  padding-right: 12px;
+						}
+						.flex {
+						  display: flex;
+						}
+						.flex-wrap {
+						  flex-wrap: wrap;
+						}
+						.w-full {
+						  width: 100%;
+						}
+						@media (min-width: 540px) {
+						  .sm\:w-half {
+							width: 50%;
+						  }
+						}
+					  </style>
+				
+				
+				
+				</div>
+			</div>
+		</div>
+	</div>
+
+</div>			
+
+
+<script>
+	const date_picker = document.getElementById("date")
+
+	var today = new Date();
+	var year = today.getFullYear();
+	var month = today.getMonth() + 1;
+	var day = today.getDate();
+	
+	if (month < 10) {
+	  month = "0" + month;
+	}
+	
+	if (day < 10) {
+	  day = "0" + day;
+	}
+	
+	var todayString = year + "-" + month + "-" + day;
+	date_picker.setAttribute("min", todayString);
+	date_picker.setAttribute("value", todayString);
+
+
+
+
+
+
+</script>
+
+<!-- /Page Content -->
+{% endblock body%}
