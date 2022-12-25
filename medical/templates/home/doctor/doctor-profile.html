@@ -143,29 +143,18 @@
               </ul>
             </div>
             <div class="doctor-action">
-              <a
-                href="javascript:void(0)"
-                class="btn btn-white call-btn"
-                data-toggle="modal"
-                data-target="#video_call"
-              ><i class="far fa-comment-alt">  {{doctor.message_link}}</i></a><br/>
-			  <a
-                href="javascript:void(0)"
-                class="btn btn-white call-btn"
-                data-toggle="modal"
-                data-target="#video_call"
-
-              ><i class="fas fa-phone" style="border-width:15px;">  {{doctor.phone}}</i></a><br/>
-			  <a
-                href="javascript:void(0)"
-                class="btn btn-white call-btn"
-                data-toggle="modal"
-                data-target="#video_call"
-              ><i class="fas fa-video">  {{doctor.video_link}}</i></a><br/>
-              
+				<a href="chat.html" class="btn btn-white msg-btn">
+					<i class="far fa-comment-alt"></i>
+				</a>
+				<a href="javascript:void(0)" class="btn btn-white call-btn" data-toggle="modal" data-target="#voice_call">
+					<i class="fas fa-phone"></i>
+				</a>
+				<a href="javascript:void(0)" class="btn btn-white call-btn" data-toggle="modal" data-target="#video_call">
+					<i class="fas fa-video"></i>
+				</a>
             </div>
             <div class="clinic-booking">
-              <a class="apt-btn" href="{% url 'home:doctor-booking' pk=doctor.id %}">Book Appointment</a>
+              <a class="apt-btn" href="{% url 'home:doctor-booking' slug=doctor.slug %}">Book Appointment</a>
             </div>
           </div>
         </div>
@@ -416,7 +405,7 @@
 
               <!-- Write Review Form -->
               <form
-                action="{% url 'home:doctor-profile' pk=doctor.pk %}"
+                action="{% url 'home:doctor-profile' slug=doctor.slug %}"
                 method="post"
               >
 			  {% csrf_token %}

@@ -1,0 +1,77 @@
+{% extends "base.html" %} {% block body %}
+{% load static %}
+
+
+<section class="section section-doctor">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="">
+				<div class="section-header ">
+					<h2>Matching Doctors</h2>
+				</div>
+			</div>
+			<div class="col-lg-8 row" >
+				<div class="flex" style="display:flex">
+					{% for doctor in doctors %}
+					<!-- Doctor Widget -->
+					<div class="profile-widget" style="margin:20px; width:300px">
+						<div class="doc-img">
+							<a href="{% url 'home:doctor-profile' pk=doctor.id %}">
+								<img style="height:150px" class="img-fluid" alt="User Image" src="{{doctor.picture.url}}">
+							</a>
+							<a href="{% url 'home:doctor-profile' pk=doctor.id %}" class="fav-btn">
+								<i class="far fa-bookmark"></i>
+							</a>
+						</div>
+						<div class="pro-content">
+							<h3 class="title">
+								<a href="{% url 'home:doctor-profile' pk=doctor.id %}">{{doctor.name}}</a> 
+								<i class="fas fa-check-circle verified"></i>
+							</h3>
+							<p class="speciality">{{doctor.speciality}}</p>
+							<div class="rating">
+								<span class="d-inline-block average-rating">Reviews: {{doctor.review.all|length}}</span>
+							</div>
+							<ul class="available-info">
+								<li>
+									<i class="fas fa-map-marker-alt"></i> {{doctor.state}}, {{doctor.country}}
+								</li>
+								<li>
+									<i class="far fa-clock"></i><span class="p-2 badge">
+										Available: {% if doctor.monday != "closed" %}Monday |{% endif %}
+										{% if doctor.tuesday != "closed" %}Tuesday |{% endif %}
+										{% if doctor.wednesday != "closed" %}Wednesday |{% endif %}
+										{% if doctor.thursday != "closed" %}Thursday |{% endif %}
+										{% if doctor.friday != "closed" %}Friday |{% endif %}
+										{% if doctor.saturday != "closed" %}Saturday |{% endif %}
+										{% if doctor.sunday != "closed" %}Sunday |{% endif %}
+									</span>
+								</li>
+								<li>
+									<i class="far fa-money-bill-alt"></i> ${{doctor.price_low}} - ${{doctor.price_high}} 
+									<i class="fas fa-info-circle" data-toggle="tooltip" title="Lorem Ipsum"></i>
+								</li>
+							</ul>
+							<div class="row row-sm">
+								<div class="col-6">
+									<a href="{% url 'home:doctor-profile' pk=doctor.id %}" class="btn view-btn">View Profile</a>
+								</div>
+								<div class="col-6">
+									<a href="" class="btn book-btn">Book Now</a> <!-- href should be proper-->
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- /Doctor Widget -->
+					
+					
+					{% endfor %}
+			
+            </div>
+        </div>
+    </div>
+</section>
+<!-- /Popular Section -->
+
+
+{% endblock body %}

@@ -46,7 +46,7 @@
 							</span>
 						</a>
 						<a href="/" class="navbar-brand logo">
-							<img src="{{detail.logo.url}}" height="`140" width="52" class="img-fluid" alt="Logo">
+							<img src="{{detail.logo.url}}" class="img-fluid" alt="Logo">
 						</a>
 					</div>
 					<div class="main-menu-wrapper">
@@ -153,7 +153,7 @@
 								<!-- Footer Widget -->
 								<div class="footer-widget footer-about">
 									<div class="footer-logo">
-										<img src="{{detail.logo.url}}" height = "150px" alt="logo">
+                    <img src="{% if detail.footer_logo %}{{detail.footer_logo.url}}{% else %}{{detail.logo.url}} {% endif %} " class="img-fluid" alt="Logo">
 									</div>
 									<div class="footer-about-content">
 										<p>{{detail.footer_description}} </p>

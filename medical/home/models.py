@@ -1,20 +1,10 @@
 from django.db import models
 from django.contrib.auth.models import User
 from ckeditor.fields import RichTextField
+from autoslug import AutoSlugField
+
 
 # Create your models here.
-
-
-class Enquire(models.Model):
-    name = models.CharField(max_length=255, null=True, blank=True)
-    email = models.EmailField(max_length=255, null=True, blank=True)
-    number = models.CharField(max_length=255, null=True, blank=True)
-    city = models.CharField(max_length=255, null=True, blank=True)
-    program = models.CharField(max_length=255, null=True, blank=True)
-    date = models.DateTimeField(auto_now_add=True, null=True, blank=True)
-
-    def __str__(self) -> str:
-        return self.name
 
 
 class Doctor(models.Model):
@@ -25,7 +15,7 @@ class Doctor(models.Model):
     price_low = models.IntegerField()
     price_high = models.IntegerField()
     picture = models.ImageField(upload_to="doctor/profile/")
-    type = models.CharField(max_length=40, null=True, blank=True)
+    qualification = models.CharField(max_length=40, null=True, blank=True)
     overview = models.CharField(max_length=700, blank=True, null=True)
     hospital = models.ForeignKey(
         "Hospital", on_delete=models.SET_NULL, null=True, blank=True
@@ -37,7 +27,7 @@ class Doctor(models.Model):
         null=True,
         blank=True,
     )
-    opening_timing = models.CharField(max_length=50, null=True, blank=True)
+    slug = AutoSlugField(populate_from='name', unique = True, null =True, default=None)
     message_link = models.CharField(max_length=30)
     phone = models.CharField(max_length=13)
     video_link = models.CharField(max_length=30)
@@ -52,10 +42,9 @@ class Doctor(models.Model):
         return self.name
 
 
-
-
 class SiteDetail(models.Model):
     logo = models.ImageField(upload_to="site/")
+    footer_logo = models.ImageField(upload_to="site/", blank=True, null=True)
     phone = models.CharField(max_length=13)
     description = models.CharField(max_length=700)
     email = models.EmailField()
@@ -73,7 +62,7 @@ class Speciality(models.Model):
         upload_to="branch/", default="speciality/specialities-01.png"
     )
     name = models.CharField(max_length=30)
-
+    slug = AutoSlugField(populate_from='name', unique = True, null =True, default=None)
     def __str__(self):
         return self.name
 
@@ -110,6 +99,9 @@ class Hospital(models.Model):
         null=True,
         blank=True,
     )
+    picture = models.ImageField(upload_to='hospital', null=True, blank=True)
+    slug = AutoSlugField(populate_from='name', unique = True, null =True, default=None)
+
 
 class Booking(models.Model):
     name=models.CharField(max_length=40)
@@ -118,3 +110,12 @@ class Booking(models.Model):
     doctor = models.ForeignKey("Doctor", on_delete=models.CASCADE, related_name="booking")
     phone = models.CharField(max_length=13)
     email = models.CharField(max_length=30)
+
+
+class DoctorImage(models.Model):
+    image = models.ImageField(upload_to = 'doctor/images')
+    doctor = models.ForeignKey("Doctor", on_delete=models.CASCADE, related_name="image")
+
+class DoctorServices(models.Model):
+    name = models.CharField(max_length=20)
+    doctor = models.ForeignKey("Doctor", on_delete=models.CASCADE, related_name="service")

@@ -150,7 +150,7 @@
 						<!-- Author: FormBold Team -->
 						<!-- Learn More: https://formbold.com -->
 						<div class="formbold-form-wrapper">
-						  <form action="{% url 'home:doctor-booking' pk=doctor.id %}" method="POST">
+						  <form action="{% url 'home:doctor-booking' slug=doctor.slug %}" method="POST">
 							<div class="formbold-mb-5">
 								{% csrf_token %}
 							  <label for="name" class="formbold-form-label"> Full Name </label>

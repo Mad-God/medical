@@ -15,26 +15,26 @@ def home(request):
         {
             "detail": SiteDetail.objects.last(),
             "specialities": Speciality.objects.all(),
-            # "doctors": Doctor.objects.all().order_by("-id").annotate(available=True),
-            "doctors": Doctor.objects.raw(f"SELECT *, {day}!='closed' AS available FROM home_doctor")
+            "hospitals":Hospital.objects.all().order_by("-id"),
+            "doctors": Doctor.objects.raw(f"SELECT *, {day}!='closed' AS available FROM home_doctor ORDER BY id DESC")
         },
     )
 
 
-def doctor_detail(request, pk):
+def doctor_detail(request, slug):
     if request.method == "POST":
         data = dict(request.POST)
         data.pop("csrfmiddlewaretoken", None)
         data = {k: v[0] for k, v in data.items()}
-        Review.objects.create(doctor=Doctor.objects.get(id=pk), **data)
+        Review.objects.create(doctor=Doctor.objects.get(slug=slug), **data)
         messages.success(request, "Review Added successfully !")
     return render(
         request,
         "home/doctor/doctor-profile.html",
         {
-            "doctor": Doctor.objects.get(pk=pk),
+            "doctor": Doctor.objects.get(slug=slug),
             "detail": SiteDetail.objects.last(),
-            "reviews": Review.objects.filter(doctor__id=pk).order_by("-id"),
+            "reviews": Review.objects.filter(doctor__slug=slug).order_by("-id"),
         },
     )
 
@@ -65,18 +65,18 @@ Doctor.objects.raw(f
 AND (city LIKE '%{keyword}%' OR state LIKE '%{keyword}%' OR country LIKE '%{keyword%}')
 '''
 
-def doctor_booking(request, pk):
+def doctor_booking(request, slug):
     if request.method == "POST":
         # breakpoint()
         data = request.POST
         data._mutable = True
         data.pop("csrfmiddlewaretoken")
         data = {k:v for k,v in data.items()}
-        data["doctor"] = Doctor.objects.get(id=pk)
+        data["doctor"] = Doctor.objects.get(slug=slug)
         Booking.objects.create(**data)
         messages.success(request, "Appointment Booked successfully")
         return redirect("home:home")
-    return render(request, "home/doctor/booking.html", {"doctor":Doctor.objects.get(id=pk), "detail":SiteDetail.objects.last()})
+    return render(request, "home/doctor/booking.html", {"doctor":Doctor.objects.get(slug=slug), "detail":SiteDetail.objects.last()})
 
 
 

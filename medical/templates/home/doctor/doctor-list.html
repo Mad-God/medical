@@ -1,77 +1,241 @@
 {% extends "base.html" %} {% block body %}
 {% load static %}
 
+{% for message in messages %}
+<div class="alert alert-{{ message.tags }} background-{{ message.tags }}">
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <i class="icofont icofont-close-line-circled text-white"></i>
+    </button>
+    <strong>{{message}}</strong>
+</div>
+{% endfor %}	
 
-<section class="section section-doctor">
+
+<!-- Page Content -->
+<div class="content">
 	<div class="container-fluid">
+
 		<div class="row">
-			<div class="">
-				<div class="section-header ">
-					<h2>Matching Doctors</h2>
-				</div>
-			</div>
-			<div class="col-lg-8 row" >
-				<div class="flex" style="display:flex">
-					{% for doctor in doctors %}
-					<!-- Doctor Widget -->
-					<div class="profile-widget" style="margin:20px; width:300px">
-						<div class="doc-img">
-							<a href="{% url 'home:doctor-profile' pk=doctor.id %}">
-								<img style="height:150px" class="img-fluid" alt="User Image" src="{{doctor.picture.url}}">
-							</a>
-							<a href="{% url 'home:doctor-profile' pk=doctor.id %}" class="fav-btn">
-								<i class="far fa-bookmark"></i>
-							</a>
+			<div class="col-md-12 col-lg-4 col-xl-3 theiaStickySidebar">
+			
+				<!-- Search Filter -->
+				<div class="card search-filter">
+					<div class="card-header">
+						<h4 class="card-title mb-0">Search Filter</h4>
+					</div>
+					<div class="card-body">
+					<div class="filter-widget">
+						<div class="cal-icon">
+							<input type="text" class="form-control datetimepicker" placeholder="Select Date">
+						</div>			
+					</div>
+					<div class="filter-widget">
+						<h4>Gender</h4>
+						<div>
+							<label class="custom_check">
+								<input type="checkbox" name="gender_type" checked>
+								<span class="checkmark"></span> Male Doctor
+							</label>
 						</div>
-						<div class="pro-content">
-							<h3 class="title">
-								<a href="{% url 'home:doctor-profile' pk=doctor.id %}">{{doctor.name}}</a> 
-								<i class="fas fa-check-circle verified"></i>
-							</h3>
-							<p class="speciality">{{doctor.speciality}}</p>
-							<div class="rating">
-								<span class="d-inline-block average-rating">Reviews: {{doctor.review.all|length}}</span>
-							</div>
-							<ul class="available-info">
-								<li>
-									<i class="fas fa-map-marker-alt"></i> {{doctor.state}}, {{doctor.country}}
-								</li>
-								<li>
-									<i class="far fa-clock"></i><span class="p-2 badge">
-										Available: {% if doctor.monday != "closed" %}Monday |{% endif %}
-										{% if doctor.tuesday != "closed" %}Tuesday |{% endif %}
-										{% if doctor.wednesday != "closed" %}Wednesday |{% endif %}
-										{% if doctor.thursday != "closed" %}Thursday |{% endif %}
-										{% if doctor.friday != "closed" %}Friday |{% endif %}
-										{% if doctor.saturday != "closed" %}Saturday |{% endif %}
-										{% if doctor.sunday != "closed" %}Sunday |{% endif %}
-									</span>
-								</li>
-								<li>
-									<i class="far fa-money-bill-alt"></i> ${{doctor.price_low}} - ${{doctor.price_high}} 
-									<i class="fas fa-info-circle" data-toggle="tooltip" title="Lorem Ipsum"></i>
-								</li>
-							</ul>
-							<div class="row row-sm">
-								<div class="col-6">
-									<a href="{% url 'home:doctor-profile' pk=doctor.id %}" class="btn view-btn">View Profile</a>
+						<div>
+							<label class="custom_check">
+								<input type="checkbox" name="gender_type">
+								<span class="checkmark"></span> Female Doctor
+							</label>
+						</div>
+					</div>
+					<div class="filter-widget">
+						<h4>Select Specialist</h4>
+						<div>
+							<label class="custom_check">
+								<input type="checkbox" name="select_specialist" checked>
+								<span class="checkmark"></span> Urology
+							</label>
+						</div>
+						<div>
+							<label class="custom_check">
+								<input type="checkbox" name="select_specialist" checked>
+								<span class="checkmark"></span> Neurology
+							</label>
+						</div>
+						<div>
+							<label class="custom_check">
+								<input type="checkbox" name="select_specialist">
+								<span class="checkmark"></span> Dentist
+							</label>
+						</div>
+						<div>
+							<label class="custom_check">
+								<input type="checkbox" name="select_specialist">
+								<span class="checkmark"></span> Orthopedic
+							</label>
+						</div>
+						<div>
+							<label class="custom_check">
+								<input type="checkbox" name="select_specialist">
+								<span class="checkmark"></span> Cardiologist
+							</label>
+						</div>
+						<div>
+							<label class="custom_check">
+								<input type="checkbox" name="select_specialist">
+								<span class="checkmark"></span> Cardiologist
+							</label>
+						</div>
+					</div>
+						<div class="btn-search">
+							<button type="button" class="btn btn-block">Search</button>
+						</div>	
+					</div>
+				</div>
+				<!-- /Search Filter -->
+				
+			</div>
+			
+			<div class="col-md-12 col-lg-8 col-xl-9">
+				
+				
+							<!-- Doctor Widget -->
+							<div class="card">
+								<div class="card-body">
+									<div class="doctor-widget">
+										<div class="doc-info-left">
+											<div class="doctor-img">
+												<a href="doctor-profile.html">
+													<img src="static/assets/img/doctors/doctor-thumb-06.jpg" class="img-fluid" alt="User Image">
+												</a>
+											</div>
+											<div class="doc-info-cont">
+												<h4 class="doc-name"><a href="doctor-profile.html">Dr. Katharine Berthold</a></h4>
+												<p class="doc-speciality">MS - Orthopaedics, MBBS, M.Ch - Orthopaedics</p>
+												<p class="doc-department"><img src="static/assets/img/specialities/specialities-03.png" class="img-fluid" alt="Speciality">Orthopaedics</p>
+												<div class="rating">
+													<i class="fas fa-star filled"></i>
+													<i class="fas fa-star filled"></i>
+													<i class="fas fa-star filled"></i>
+													<i class="fas fa-star filled"></i>
+													<i class="fas fa-star"></i>
+													<span class="d-inline-block average-rating">(52)</span>
+												</div>
+												<div class="clinic-details">
+													<p class="doc-location"><i class="fas fa-map-marker-alt"></i> Texas, USA</p>
+													<ul class="clinic-gallery">
+														<li>
+															<a href="static/assets/img/features/feature-01.jpg" data-fancybox="gallery">
+																<img src="static/assets/img/features/feature-01.jpg" alt="Feature">
+															</a>
+														</li>
+														<li>
+															<a href="static/assets/img/features/feature-02.jpg" data-fancybox="gallery">
+																<img  src="static/assets/img/features/feature-02.jpg" alt="Feature">
+															</a>
+														</li>
+														<li>
+															<a href="static/assets/img/features/feature-03.jpg" data-fancybox="gallery">
+																<img src="static/assets/img/features/feature-03.jpg" alt="Feature">
+															</a>
+														</li>
+														<li>
+															<a href="static/assets/img/features/feature-04.jpg" data-fancybox="gallery">
+																<img src="static/assets/img/features/feature-04.jpg" alt="Feature">
+															</a>
+														</li>
+													</ul>
+												</div>
+												<div class="clinic-services">
+													<span>Dental Fillings</span>
+													<span> Whitneing</span>
+												</div>
+											</div>
+										</div>
+										<div class="doc-info-right">
+											<div class="clini-infos">
+												<ul>
+													<li><i class="far fa-thumbs-up"></i> 100%</li>
+													<li><i class="far fa-comment"></i> 52 Feedback</li>
+													<li><i class="fas fa-map-marker-alt"></i> Texas, USA</li>
+													<li><i class="far fa-money-bill-alt"></i> $100 - $500 <i class="fas fa-info-circle" data-toggle="tooltip" title="Lorem Ipsum"></i></li>
+												</ul>
+											</div>
+											<div class="clinic-booking">
+												<a class="view-pro-btn" href="doctor-profile.html">View Profile</a>
+												<a class="apt-btn" href="booking.html">Book Appointment</a>
+											</div>
+										</div>
+									</div>
 								</div>
-								<div class="col-6">
-									<a href="" class="btn book-btn">Book Now</a> <!-- href should be proper-->
+							</div>
+							<!-- /Doctor Widget -->
+
+
+
+				
+				
+				<!-- Doctor Widget -->
+				{% for doctor in doctors %}
+				<div class="card">
+					<div class="card-body">
+						<div class="doctor-widget">
+							<div class="doc-info-left">
+								<div class="doctor-img">
+									<a href="doctor-profile.html">
+										<img src="{{doctor.picture.url}}" class="img-fluid" alt="User Image">
+									</a>
+								</div>
+								<div class="doc-info-cont">
+									<h4 class="doc-name"><a href="doctor-profile.html">Dr. {{doctor.name}}</a></h4>
+									<p class="doc-speciality">{{doctor.qualification}} - {{doctor.speciality}}</p>
+									<p class="doc-department"><img src="{{doctor.speciality.image.url}}" class="img-fluid" alt="Speciality">{{doctor.speciality}}</p>
+									<div class="rating">
+										<span class="d-inline-block average-rating badge">Total Reviews: {{doctor.review.all|length}}</span>
+									</div>
+									<div class="clinic-details">
+										<p class="doc-location"><i class="fas fa-map-marker-alt"></i> {{doctor.city}}, {{doctor.state}}, {{doctor.country}}</p>
+										<ul class="clinic-gallery">
+											{% for image in doctor.image.all %}
+											<li>
+												<a href="{{image.image.url}}" data-fancybox="gallery">
+													<img src="{{image.image.url}}" alt="Feature">
+												</a>
+											</li>
+											{% endfor %}
+										</ul>
+									</div>
+									<div class="clinic-services">
+										{% for service in doctor.service.all %}
+										<span> {{service.name}}</span>
+										{% endfor %}
+									</div>
+								</div>
+							</div>
+							<div class="doc-info-right">
+								<div class="clini-infos">
+									<ul>
+										<li><i class="far fa-comment"></i> {{doctor.review.all|length}} Feedback</li>
+										<li><i class="fas fa-map-marker-alt"></i>{{doctor.state}}, {{doctor.country}}</li>
+										<li><i class="far fa-money-bill-alt"></i> ${{dcotr.price_low}} - ${{doctor.price_high}} <i class="fas fa-info-circle" data-toggle="tooltip" title="Lorem Ipsum"></i></li>
+									</ul>
+								</div>
+								<div class="clinic-booking">
+									<a class="view-pro-btn" href="{% url 'home:doctor-profile' slug=doctor.slug %}">View Profile</a>
+									<a class="apt-btn" href="{% url 'home:doctor-booking' slug=doctor.slug %}">Book Appointment</a>
 								</div>
 							</div>
 						</div>
 					</div>
-					<!-- /Doctor Widget -->
-					
-					
-					{% endfor %}
-			
-            </div>
-        </div>
-    </div>
-</section>
-<!-- /Popular Section -->
+				</div>
+				<!-- /Doctor Widget -->
+				{% endfor %}
 
+				
 
+				
+			</div>
+		</div>
+
+	</div>
+
+</div>		
+<!-- /Page Content -->
+   
 {% endblock body %}
