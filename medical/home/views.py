@@ -56,14 +56,10 @@ def doctor_list(request):
             ),
             
             "detail": SiteDetail.objects.last(),
+            'specialities':Speciality.objects.all()
         },
     )
-'''
-Doctor.objects.raw(f
-"SELECT *, {day}!='closed' AS available FROM home_doctor WHERE 
-(city LIKE '%{location}%' OR state LIKE '%{location}%' OR country LIKE '%{location%}') 
-AND (city LIKE '%{keyword}%' OR state LIKE '%{keyword}%' OR country LIKE '%{keyword%}')
-'''
+
 
 def doctor_booking(request, slug):
     if request.method == "POST":
@@ -76,24 +72,63 @@ def doctor_booking(request, slug):
         Booking.objects.create(**data)
         messages.success(request, "Appointment Booked successfully")
         return redirect("home:home")
-    return render(request, "home/doctor/booking.html", {"doctor":Doctor.objects.get(slug=slug), "detail":SiteDetail.objects.last()})
-
-
-
-
-def about(request):
-    return render(request, "home/about.html")
-
-
-def contact(request):
-    if request.method == "POST":
-        data = request.POST
-        enq = Enquire(
-            name=data["name"],
-            email=data["email"],
-            number=data["number"],
+    return render(request, "home/doctor/booking.html", {
+        "doctor":Doctor.objects.get(slug=slug), 
+        "detail":SiteDetail.objects.last()}
         )
-        messages.success(request, "Successfully Submit")
-        enq.save()
 
-    return render(request, "home/contact.html", {"doctor": Doctor.objects.first()})
+
+def all_doctors(request):
+    days = ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"]
+    day = days[datetime.now().weekday()]
+    return render(request, 'home/doctor/all-doctor-list.html', {
+        "detail": SiteDetail.objects.last(),
+        "specialities": Speciality.objects.all(),
+        "hospitals":Hospital.objects.all().order_by("-id"),
+        "doctors":Doctor.objects.raw(f"SELECT *, {day}!='closed' AS available FROM home_doctor ORDER BY id DESC")
+        })
+ 
+     
+def all_hospitals(request):
+    return render(request, "home/all-hospital-list.html", {
+        "hospitals":Hospital.objects.all(),
+        "detail": SiteDetail.objects.last(),
+        'specialities':Speciality.objects.all()
+    })
+
+
+def filter_doctor(request):
+    lst = [x for x in request.GET.keys()]
+    if not len(lst):
+        lst = [name["name"] for name in Speciality.objects.values("name")]
+    print(lst)
+    return render(
+        request,
+        "home/doctor/doctor-list.html",
+        {
+            "doctors": Doctor.objects.filter(speciality__name__in = lst),
+            "detail": SiteDetail.objects.last(),
+            'specialities':Speciality.objects.all(),
+            'searching_doctors':True,
+        },
+    )
+
+
+def filter_hospital(request):
+    lst = [x for x in request.GET.keys()]
+    if not len(lst):
+        lst = [name["name"] for name in Speciality.objects.values("name")]
+    print(lst, Hospital.objects.filter(speciality__name__in = lst),)
+    return render(
+        request,
+        "home/all-hospital-list.html",
+        {
+            "hospitals":Hospital.objects.filter(speciality__name__in = lst),
+            "detail": SiteDetail.objects.last(),
+            'specialities':Speciality.objects.all(),
+            'searching_hospitals':True,
+        },
+    )
+
+
+

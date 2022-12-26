@@ -18,7 +18,7 @@ class Doctor(models.Model):
     qualification = models.CharField(max_length=40, null=True, blank=True)
     overview = models.CharField(max_length=700, blank=True, null=True)
     hospital = models.ForeignKey(
-        "Hospital", on_delete=models.SET_NULL, null=True, blank=True
+        "Hospital", on_delete=models.SET_NULL, null=True, blank=True, related_name="doctor"
     )
     speciality = models.ForeignKey(
         "Speciality",

@@ -65,47 +65,13 @@
                 </p>
                 <!-- get the "get direction" link to work properly-->
                 <ul class="clinic-gallery">
-                  {% for img in doctor.doctorimage.all %}
+                  {% for img in doctor.image.all %}
                   <li>
                     <a href="{{img.image.url}}" data-fancybox="gallery">
                       <img src="{{img.image.url}}" alt="Feature" />
                     </a>
                   </li>
                   {% endfor %}
-
-                  <li>
-                    <a
-                      href="{% static '/assets/img/features/feature-01.jpg' %}"
-                      data-fancybox="gallery"
-                    >
-                      <img
-                        src="{% static '/assets/img/features/feature-01.jpg' %}"
-                        alt="Feature"
-                      />
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="{% static '/assets/img/features/feature-02.jpg' %}"
-                      data-fancybox="gallery"
-                    >
-                      <img
-                        src="{% static '/assets/img/features/feature-02.jpg' %}"
-                        alt="Feature Image"
-                      />
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="{% static '/assets/img/features/feature-03.jpg' %}"
-                      data-fancybox="gallery"
-                    >
-                      <img
-                        src="{% static '/assets/img/features/feature-03.jpg' %}"
-                        alt="Feature"
-                      />
-                    </a>
-                  </li>
                   <li>
                     <a
                       href="{% static '/assets/img/features/feature-04.jpg' %}"
@@ -120,7 +86,7 @@
                 </ul>
               </div>
               <div class="clinic-services">
-                {% for spc in doctor.specialization.all %}
+                {% for spc in doctor.service.all %}
 				<span>{{spc.name}}</span>
 				{% endfor %}
                 <span>Dental Fillings</span>

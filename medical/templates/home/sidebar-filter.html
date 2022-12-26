@@ -1,0 +1,36 @@
+<div class="col-md-12 col-lg-4 col-xl-3 theiaStickySidebar">
+						
+    <!-- Search Filter -->
+    {% if doctors or "doctor" in request.path %}
+    <form method="GET" action="{% url 'home:filter-doctor' %}">
+    {% elif hospitals or "hospital" in request.path %}
+    <form method="GET" action="{% url 'home:filter-hospital' %}">
+    {% else %}
+    <form method="GET" action="{% url 'home:filter-doctor' %}">
+    {% endif %}
+    <div class="card search-filter">
+        <div class="card-header">
+            <h4 class="card-title mb-0">Search Filter</h4>
+        </div>
+        <div class="card-body">
+        
+        <div class="filter-widget">
+            <h4>Select Specialist</h4>
+            {% for spc in specialities %}
+            <div>
+                <label class="custom_check">
+                    <input type="checkbox" class="speciality-checkbox-input" name="{{spc}}">
+                    <span class="checkmark"></span> {{spc.name}}
+                </label>
+            </div>
+            {% endfor %}
+        </div>
+            <div class="btn-search">
+                <button type="submit" class="btn btn-block">Search</button>
+            </div>	
+        </div>
+    </form>
+    </div>
+    <!-- /Search Filter -->
+    
+</div>

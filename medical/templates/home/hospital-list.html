@@ -23,27 +23,27 @@
 				
 							
 				<!-- Doctor Widget -->
-				{% for doctor in doctors %}
+				{% for hosp in hospitals %}
 				<div class="card">
 					<div class="card-body">
 						<div class="doctor-widget">
 							<div class="doc-info-left">
 								<div class="doctor-img">
 									<a href="doctor-profile.html">
-										<img src="{{doctor.picture.url}}" class="img-fluid" alt="User Image">
+										<img src="{{hosp.picture.url}}" class="img-fluid" alt="Hospital Image">
 									</a>
 								</div>
 								<div class="doc-info-cont">
-									<h4 class="doc-name"><a href="">Dr. {{doctor.name}}</a></h4>
-									<p class="doc-speciality">{{doctor.qualification}} - {{doctor.speciality}}</p>
-									<p class="doc-department"><img src="{{doctor.speciality.image.url}}" class="img-fluid" alt="Speciality">{{doctor.speciality}}</p>
+									<h4 class="doc-name"><a href="">{{hosp.name}}</a></h4>
+									<p class="doc-speciality">{{hosp.location}}</p>
+									<p class="doc-department"><img src="{{hosp.speciality.image.url}}" class="img-fluid" alt="Speciality">{{hosp.speciality}}</p>
 									<div class="rating">
-										<span class="d-inline-block average-rating badge">Total Reviews: {{doctor.review.all|length}}</span>
+										<span class="d-inline-block average-rating badge">Total Reviews: {{hosp.doctor.all.0.review.all|length}}</span>
 									</div>
 									<div class="clinic-details">
-										<p class="doc-location"><i class="fas fa-map-marker-alt"></i> {{doctor.city}}, {{doctor.state}}, {{doctor.country}}</p>
+										<p class="doc-location"><i class="fas fa-map-marker-alt"></i> {{hosp.address}}</p>
 										<ul class="clinic-gallery">
-											{% for image in doctor.image.all %}
+											{% for image in hosp.doctor.all.0.image.all %}
 											<li>
 												<a href="{{image.image.url}}" data-fancybox="gallery">
 													<img src="{{image.image.url}}" alt="Feature">
@@ -53,7 +53,7 @@
 										</ul>
 									</div>
 									<div class="clinic-services">
-										{% for service in doctor.service.all %}
+										{% for service in hosp.doctor.all.0.service.all %}
 										<span> {{service.name}}</span>
 										{% endfor %}
 									</div>
@@ -61,15 +61,10 @@
 							</div>
 							<div class="doc-info-right">
 								<div class="clini-infos">
-									<ul>
-										<li><i class="far fa-comment"></i> {{doctor.review.all|length}} Feedback</li>
-										<li><i class="fas fa-map-marker-alt"></i>{{doctor.state}}, {{doctor.country}}</li>
-										<li><i class="far fa-money-bill-alt"></i> ${{doctor.price_low}} - ${{doctor.price_high}} <i class="fas fa-info-circle" data-toggle="tooltip" title="Lorem Ipsum"></i></li>
-									</ul>
+
 								</div>
 								<div class="clinic-booking">
-									<a class="view-pro-btn" href="{% url 'home:doctor-profile' slug=doctor.slug %}">View Profile</a>
-									<a class="apt-btn" href="{% url 'home:doctor-booking' slug=doctor.slug %}">Book Appointment</a>
+									<a class="view-pro-btn" href="{% url 'home:home' %}">View Hospital</a>
 								</div>
 							</div>
 						</div>
