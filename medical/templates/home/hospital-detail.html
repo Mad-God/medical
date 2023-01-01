@@ -1,5 +1,4 @@
-{% extends "base.html" %} {% block body %}
-{% load static %}
+{% extends "base.html" %} {% block body %} {% load static %}
 
 {% for message in messages %}
 <div class="alert alert-{{ message.tags }} background-{{ message.tags }}">
@@ -8,7 +7,344 @@
     </button>
     <strong>{{message}}</strong>
 </div>
-{% endfor %}	
+{% endfor %}
+<div class="breadcrumb-bar">
+  <div class="container-fluid">
+    <div class="row align-items-center">
+      <div class="col-md-12 col-12">
+        <nav aria-label="breadcrumb" class="page-breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="index-2.html">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">
+              Hosptal Detail
+            </li>
+          </ol>
+        </nav>
+        <h2 class="breadcrumb-title">Hosptal Details</h2>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- /Breadcrumb -->
 
-   
-{% endblock body %}
+<!-- Page Content -->
+<div class="content">
+  <div class="container">
+    <!-- Doctor Widget -->
+    <div class="card">
+      <div class="card-body">
+        <div class="doctor-widget">
+          <div class="doc-info-left">
+            <div class="doctor-img">
+              <img
+                src="{{hospital.picture.url}}"
+                class="img-fluid"
+                alt="User Image"
+              />
+            </div>
+            <div class="doc-info-cont">
+              <h4 class="doc-name">{{hospital.name}}</h4>
+              {% comment %} <p class="doc-speciality">
+                {% for edu in doctor.education.all %} {{edu.degree}}, {% endfor%} - {{doctor.type}}
+              </p> {% endcomment %}
+              <p class="doc-department">
+                <img
+                  style="width: 30px; height: 30px"
+                  src="{{hospital.speciality.image.url}}"
+                  class="img-fluid"
+                  alt="Speciality"
+                />{{hospital.speciality}}
+              </p>
+              <div class="clinic-details">
+                <p class="doc-location">
+                  <i class="fas fa-map-marker-alt"></i> {{hospital.address}}
+                </p>
+                <!-- get the "get direction" link to work properly-->
+                <ul class="clinic-gallery">
+                    {% for doctor in hospital.doctor.all %}
+                        {% for img in doctor.image.all %}
+                        <li>
+                            <a href="{{img.image.url}}" data-fancybox="gallery">
+                            <img src="{{img.image.url}}" alt="Feature" />
+                            </a>
+                        </li>
+                        {% endfor %}
+                    {% endfor %}
+                  
+                </ul>
+              </div>
+              <div class="clinic-services">
+                {% for doctor in hospital.doctor.all %}
+                    {% for spc in doctor.service.all %}
+                    <span>{{spc.name}}</span>
+                    {% endfor %}
+                {% endfor %}
+                <span>Dental Fillings</span>
+                <span>Teeth Whitneing</span>
+              </div>
+            </div>
+          </div>
+          <div class="doc-info-right">
+            <div class="doctor-action">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /Doctor Widget -->
+
+    <!-- Doctor Details Tab -->
+    <div class="card">
+      <div class="card-body pt-0">
+        <!-- Tab Menu -->
+        <nav class="user-tabs mb-4">
+          <ul class="nav nav-tabs nav-tabs-bottom nav-justified">
+            <li class="nav-item">
+              <a class="nav-link active" href="#doc_overview" data-toggle="tab"
+                >Overview</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#doc_locations" data-toggle="tab"
+                >Doctors Available</a
+              >
+            </li>
+            {% comment %} 
+            <li class="nav-item">
+              <a class="nav-link" href="#doc_reviews" data-toggle="tab"
+                >Reviews</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#doc_business_hours" data-toggle="tab"
+                >Business Hours</a
+              >
+            </li> {% endcomment %}
+          </ul>
+        </nav>
+        <!-- /Tab Menu -->
+
+        <!-- Tab Content -->
+        <div class="tab-content pt-0">
+          <!-- Overview Content -->
+          <div
+            role="tabpanel"
+            id="doc_overview"
+            class="tab-pane fade show active"
+          >
+            <div class="row">
+              <div class="col-md-12 col-lg-9">
+                <!-- About Details -->
+                <div class="widget about-widget">
+                  <h4 class="widget-title">About this Hopsital</h4>
+                  <p>{{hospital.description|safe}}</p>
+                </div>
+                <!-- /About Details -->
+                <p>{{hospital.address|safe}}</p>
+              </div>
+            </div>
+          </div>
+          <!-- /Overview Content -->
+
+          <!-- Locations Content -->
+          <div role="tabpanel" id="doc_locations" class="tab-pane fade">
+            <!-- Location List -->
+          
+            <div class="row row-grid">
+				{% for doctor in hospital.doctor.all %}
+					<div class="col-md-6 col-lg-4 col-xl-3">
+						<div class="card widget-profile pat-widget-profile">
+							<div class="card-body">
+								<div class="pro-widget-content">
+									<div class="profile-info-widget">
+										<a href="{% url 'home:doctor-profile' slug=doctor.slug %}" class="booking-doc-img">
+											<img src="{{doctor.picture.url}}" alt="User Image">
+										</a>
+										<div class="profile-det-info">
+											<h3><a href="{% url 'home:doctor-profile' slug=doctor.slug %}	">Dr. {{doctor.name}}</a></h3>
+											
+											<div class="patient-details">
+												<h5><b>{{doctor.speciality}}</b></h5>
+												<h5 class="mb-0"><i class="fas fa-map-marker-alt"></i> {{doctor.city}}, {{doctor.state}}</h5>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="patient-info">
+									<ul>
+										<li>{{doctor.qualification|truncatechars:35}}</li>
+										<li>Hospital: <span>{{doctor.hospital.name}}</span></li>
+										<li><i class="far fa-clock"></i>{% if doctor.available %}<span class="badge badge-success">Available {% else %}<span class="badge badge-warning"> Not Available Today{% endif %}</span></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					{% endfor %}
+				</div>
+            
+          </div>
+          <!-- /Locations Content -->
+
+          <!-- Reviews Content -->
+          <div role="tabpanel" id="doc_reviews" class="tab-pane fade">
+            <!-- Review Listing -->
+            <div class="widget review-listing">
+              <ul class="comments-list">
+				{% for review in reviews %}
+				
+				<li>
+					<div class="comment">
+					  <img
+						class="avatar avatar-sm rounded-circle"
+						alt="User Image"
+						src="{% static '/assets/img/patients/patient-logo.png' %}"
+					  />
+					  <div class="comment-body">
+						<div class="meta-data">
+						  <span class="comment-author">{{review.name}}</span>
+						  <span class="comment-date">Reviewed on: {{review.date}}</span>
+						</div>
+						<p class="recommended">
+						  {{review.title}}
+						</p>
+						<p class="comment-content">
+						  {{review.review}}
+						</p>
+					  </div>
+					</div>
+  				  </li>
+
+				{% endfor %}
+
+
+
+
+
+                
+            </div>
+            <!-- /Review Listing -->
+
+            <!-- Write Review -->
+            <div class="write-review">
+              <h4>Write a review for <strong>Dr. {{doctor.name}}</strong></h4>
+
+              <!-- Write Review Form -->
+              <form
+                action="{% url 'home:doctor-profile' slug=hospital.slug %}"
+                method="post"
+              >
+			  {% csrf_token %}
+
+                <div class="form-group">
+                  <label>Enter your name: </label>
+                  <input
+                    class="form-control"
+                    type="text"
+					maxlength="30"
+                    placeholder="Your name here"
+					name="name"
+                  />
+                </div>
+                <div class="form-group">
+                  <label>Title of your review</label>
+                  <input
+                    class="form-control"
+                    type="text"
+					maxlength="100"
+                    placeholder="If you could say it in one sentence, what would you say?"
+					name="title"
+                  />
+                </div>
+                <div class="form-group">
+                  <label>Your review</label>
+                  <textarea
+                    id="review_desc"
+                    maxlength="100"
+                    class="form-control"
+					name="review"
+                  ></textarea>
+
+                </div>
+                <div class="submit-section">
+                  <button type="submit" class="btn btn-primary submit-btn">
+                    Add Review
+                  </button>
+                </div>
+              </form>
+              <!-- /Write Review Form -->
+            </div>
+            <!-- /Write Review -->
+          </div>
+          <!-- /Reviews Content -->
+
+          <!-- Business Hours Content -->
+          <div role="tabpanel" id="doc_business_hours" class="tab-pane fade">
+            <div class="row">
+              <div class="col-md-6 offset-md-3">
+                <!-- Business Hours Widget -->
+                <div class="widget business-widget">
+                  <div class="widget-content">
+                    <div class="listing-hours">
+                      <div class="listing-day">
+                        <div class="day">Monday</div>
+                        <div class="time-items">
+                          <span class="{% if doctor.monday and doctor.monday != "closed" %} time {% else %}badge bg-danger-light{% endif %}">{{doctor.monday}}</span>
+                        </div>
+                      </div>
+                      <div class="listing-day">
+                        <div class="day">Tuesday</div>
+                        <div class="time-items">
+                          <span class="{% if doctor.tuesday and doctor.tuesday != "closed" %} time {% else %}badge bg-danger-light{% endif %}">{{doctor.tuesday}}</span>
+                        </div>
+                      </div>
+                      <div class="listing-day">
+                        <div class="day">Wednesday</div>
+                        <div class="time-items">
+                          <span class="{% if doctor.wednesday and doctor.wednesday != "closed" %} time {% else %}badge bg-danger-light{% endif %}">{{doctor.wednesday}}</span>
+                        </div>
+                      </div>
+                      <div class="listing-day">
+                        <div class="day">Thursday</div>
+                        <div class="time-items">
+                          <span class="{% if doctor.thursday and doctor.thursday != "closed" %} time {% else %}badge bg-danger-light{% endif %}">{{doctor.thursday}}</span>
+                        </div>
+                      </div>
+                      <div class="listing-day">
+                        <div class="day">Friday</div>
+                        <div class="time-items">
+                          <span class="{% if doctor.friday and doctor.friday != "closed" %} time {% else %}badge bg-danger-light{% endif %}">{{doctor.friday}}</span>
+                        </div>
+                      </div>
+                      <div class="listing-day">
+                        <div class="day">Saturday</div>
+                        <div class="time-items">
+                          <span class="{% if doctor.saturday and doctor.saturday != "closed" %} time {% else %}badge bg-danger-light{% endif %}">{{doctor.saturday}}</span>
+                        </div>
+                      </div>
+                      <div class="listing-day closed">
+                        <div class="day">Sunday</div>
+                        <div class="time-items">
+                          <span class="time"
+                            ><span class="{% if doctor.saturday and doctor.saturday != "closed" %} time {% else %}badge bg-danger-light{% endif %}">{{doctor.sunday}}</span>
+                            </span
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- /Business Hours Widget -->
+              </div>
+            </div>
+          </div>
+          <!-- /Business Hours Content -->
+        </div>
+      </div>
+    </div>
+    <!-- /Doctor Details Tab -->
+  </div>
+</div>
+<!-- /Page Content -->
+{% endblock body%}

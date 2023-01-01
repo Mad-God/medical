@@ -1,5 +1,14 @@
 from django.contrib import admin
-from home.models import Speciality, SiteDetail, Doctor, Review, Hospital, Booking, DoctorImage, DoctorServices
+from home.models import (
+    Speciality,
+    SiteDetail,
+    Doctor,
+    Review,
+    Hospital,
+    Booking,
+    DoctorImage,
+    DoctorServices,
+)
 
 # Register your models here.
 

@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "autoslug",
     "home",
-    'ckeditor',
+    "ckeditor",
 ]
 
 MIDDLEWARE = [

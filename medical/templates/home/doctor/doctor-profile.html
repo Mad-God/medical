@@ -294,16 +294,16 @@
                 <div class="col-md-6">
                   <div class="clinic-content">
                     <h4 class="clinic-name">
-                      <a href="#">{{doctor.hospital.name}}</a>
+                      <a href="{% url 'home:hospital' slug=doctor.hospital.slug %}">{{doctor.hospital.name}}</a>
                     </h4>
                     <p class="doc-speciality">
                       {{doctor.hospital.speciality}}
                     </p>
                     <div class="clinic-details mb-0">
                       <p class="clinic-direction">
-                        <i class="fas fa-map-marker-alt"></i> {{doctor.hospital.address}}
+                        <i class="fas fa-map-marker-alt"></i> {{doctor.hospital.address|safe}}
                       </p>
-                      {{doctor.hospital.description}}
+                      {{doctor.hospital.description|safe}}
                     </div>
                   </div>
                 </div>

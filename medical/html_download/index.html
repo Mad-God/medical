@@ -1,870 +1,149 @@
-<!DOCTYPE html> 
-<html lang="en">
-	
-<!-- doccure/  30 Nov 2019 04:11:34 GMT -->
-<head>
-
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
-		<title>Doccure</title>
-		
-		<!-- Favicons -->
-		<link type="image/x-icon" href="assets/img/favicon.png" rel="icon">
-		
-		<!-- Bootstrap CSS -->
-		<link rel="stylesheet" href="assets/css/bootstrap.min.css">
-		
-		<!-- Fontawesome CSS -->
-		<link rel="stylesheet" href="assets/plugins/fontawesome/css/fontawesome.min.css">
-		<link rel="stylesheet" href="assets/plugins/fontawesome/css/all.min.css">
-		
-		<!-- Main CSS -->
-		<link rel="stylesheet" href="assets/css/style.css">
-		
-		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-		<!--[if lt IE 9]>
-			<script src="assets/js/html5shiv.min.js"></script>
-			<script src="assets/js/respond.min.js"></script>
-		<![endif]-->
-	
-	</head>
-	<body>
-
-		<!-- Main Wrapper -->
-		<div class="main-wrapper">
-		
-			<!-- Header -->
-			<header class="header">
-				<nav class="navbar navbar-expand-lg header-nav">
-					<div class="navbar-header">
-						<a id="mobile_btn" href="javascript:void(0);">
-							<span class="bar-icon">
-								<span></span>
-								<span></span>
-								<span></span>
-							</span>
-						</a>
-						<a href="index-2.html" class="navbar-brand logo">
-							<img src="assets/img/logo.png" class="img-fluid" alt="Logo">
-						</a>
-					</div>
-					<div class="main-menu-wrapper">
-						<div class="menu-header">
-							<a href="index-2.html" class="menu-logo">
-								<img src="assets/img/logo.png" class="img-fluid" alt="Logo">
-							</a>
-							<a id="menu_close" class="menu-close" href="javascript:void(0);">
-								<i class="fas fa-times"></i>
-							</a>
-						</div>
-						<ul class="main-nav">
-							<li class="active">
-								<a href="index-2.html">Home</a>
-							</li>
-							<li class="has-submenu">
-								<a href="#">Doctors <i class="fas fa-chevron-down"></i></a>
-								<ul class="submenu">
-									<li><a href="doctor-dashboard.html">Doctor Dashboard</a></li>
-									<li><a href="appointments.html">Appointments</a></li>
-									<li><a href="schedule-timings.html">Schedule Timing</a></li>
-									<li><a href="my-patients.html">Patients List</a></li>
-									<li><a href="patient-profile.html">Patients Profile</a></li>
-									<li><a href="chat-doctor.html">Chat</a></li>
-									<li><a href="invoices.html">Invoices</a></li>
-									<li><a href="doctor-profile-settings.html">Profile Settings</a></li>
-									<li><a href="reviews.html">Reviews</a></li>
-									<li><a href="doctor-register.html">Doctor Register</a></li>
-								</ul>
-							</li>	
-							<li class="has-submenu">
-								<a href="#">Patients <i class="fas fa-chevron-down"></i></a>
-								<ul class="submenu">
-									<li><a href="search.html">Search Doctor</a></li>
-									<li><a href="doctor-profile.html">Doctor Profile</a></li>
-									<li><a href="booking.html">Booking</a></li>
-									<li><a href="checkout.html">Checkout</a></li>
-									<li><a href="booking-success.html">Booking Success</a></li>
-									<li><a href="patient-dashboard.html">Patient Dashboard</a></li>
-									<li><a href="favourites.html">Favourites</a></li>
-									<li><a href="chat.html">Chat</a></li>
-									<li><a href="profile-settings.html">Profile Settings</a></li>
-									<li><a href="change-password.html">Change Password</a></li>
-								</ul>
-							</li>	
-							<li class="has-submenu">
-								<a href="#">Pages <i class="fas fa-chevron-down"></i></a>
-								<ul class="submenu">
-									<li><a href="voice-call.html">Voice Call</a></li>
-									<li><a href="video-call.html">Video Call</a></li>
-									<li><a href="search.html">Search Doctors</a></li>
-									<li><a href="calendar.html">Calendar</a></li>
-									<li><a href="components.html">Components</a></li>
-									<li class="has-submenu">
-										<a href="invoices.html">Invoices</a>
-										<ul class="submenu">
-											<li><a href="invoices.html">Invoices</a></li>
-											<li><a href="invoice-view.html">Invoice View</a></li>
-										</ul>
-									</li>
-									<li><a href="blank-page.html">Starter Page</a></li>
-									<li><a href="login.html">Login</a></li>
-									<li><a href="register.html">Register</a></li>
-									<li><a href="forgot-password.html">Forgot Password</a></li>
-								</ul>
-							</li>
-							<li>
-								<a href="admin/index.html" target="_blank">Admin</a>
-							</li>
-							<li class="login-link">
-								<a href="login.html">Login / Signup</a>
-							</li>
-						</ul>		 
-					</div>		 
-					<ul class="nav header-navbar-rht">
-						<li class="nav-item contact-item">
-							<div class="header-contact-img">
-								<i class="far fa-hospital"></i>							
-							</div>
-							<div class="header-contact-detail">
-								<p class="contact-header">Contact</p>
-								<p class="contact-info-header"> +1 315 369 5943</p>
-							</div>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link header-login" href="login.html">login / Signup </a>
-						</li>
-					</ul>
-				</nav>
-			</header>
-			<!-- /Header -->
-			
-			<!-- Home Banner -->
-			<section class="section section-search">
-				<div class="container-fluid">
-					<div class="banner-wrapper">
-						<div class="banner-header text-center">
-							<h1>Search Doctor, Make an Appointment</h1>
-							<p>Discover the best doctors, clinic & hospital the city nearest to you.</p>
-						</div>
-                         
-						<!-- Search -->
-						<div class="search-box">
-							<form action="templateshub.net">
-								<div class="form-group search-location">
-									<input type="text" class="form-control" placeholder="Search Location">
-									<span class="form-text">Based on your Location</span>
-								</div>
-								<div class="form-group search-info">
-									<input type="text" class="form-control" placeholder="Search Doctors, Clinics, Hospitals, Diseases Etc">
-									<span class="form-text">Ex : Dental or Sugar Check up etc</span>
-								</div>
-								<button type="submit" class="btn btn-primary search-btn"><i class="fas fa-search"></i> <span>Search</span></button>
-							</form>
-						</div>
-						<!-- /Search -->
-						
-					</div>
-				</div>
-			</section>
-			<!-- /Home Banner -->
-			  
-			<!-- Clinic and Specialities -->
-			<section class="section section-specialities">
-				<div class="container-fluid">
-					<div class="section-header text-center">
-						<h2>Clinic and Specialities</h2>
-						<p class="sub-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-					</div>
-					<div class="row justify-content-center">
-						<div class="col-md-9">
-							<!-- Slider -->
-							<div class="specialities-slider slider">
-							
-								<!-- Slider Item -->
-								<div class="speicality-item text-center">
-									<div class="speicality-img">
-										<img src="assets/img/specialities/specialities-01.png" class="img-fluid" alt="Speciality">
-										<span><i class="fa fa-circle" aria-hidden="true"></i></span>
-									</div>
-									<p>Urology</p>
-								</div>	
-								<!-- /Slider Item -->
-								
-								<!-- Slider Item -->
-								<div class="speicality-item text-center">
-									<div class="speicality-img">
-										<img src="assets/img/specialities/specialities-02.png" class="img-fluid" alt="Speciality">
-										<span><i class="fa fa-circle" aria-hidden="true"></i></span>
-									</div>
-									<p>Neurology</p>	
-								</div>							
-								<!-- /Slider Item -->
-								
-								<!-- Slider Item -->
-								<div class="speicality-item text-center">
-									<div class="speicality-img">
-										<img src="assets/img/specialities/specialities-03.png" class="img-fluid" alt="Speciality">
-										<span><i class="fa fa-circle" aria-hidden="true"></i></span>
-									</div>	
-									<p>Orthopedic</p>	
-								</div>							
-								<!-- /Slider Item -->
-								
-								<!-- Slider Item -->
-								<div class="speicality-item text-center">
-									<div class="speicality-img">
-										<img src="assets/img/specialities/specialities-04.png" class="img-fluid" alt="Speciality">
-										<span><i class="fa fa-circle" aria-hidden="true"></i></span>
-									</div>	
-									<p>Cardiologist</p>	
-								</div>							
-								<!-- /Slider Item -->
-								
-								<!-- Slider Item -->
-								<div class="speicality-item text-center">
-									<div class="speicality-img">
-										<img src="assets/img/specialities/specialities-05.png" class="img-fluid" alt="Speciality">
-										<span><i class="fa fa-circle" aria-hidden="true"></i></span>
-									</div>	
-									<p>Dentist</p>
-								</div>							
-								<!-- /Slider Item -->
-								
-							</div>
-							<!-- /Slider -->
-							
-						</div>
-					</div>
-				</div>   
-			</section>	 
-			<!-- Clinic and Specialities -->
-		  
-			<!-- Popular Section -->
-			<section class="section section-doctor">
-				<div class="container-fluid">
-				   <div class="row">
-						<div class="col-lg-4">
-							<div class="section-header ">
-								<h2>Book Our Doctor</h2>
-								<p>Lorem Ipsum is simply dummy text </p>
-							</div>
-							<div class="about-content">
-								<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum.</p>
-								<p>web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes</p>					
-								<a href="javascript:;">Read More..</a>
-							</div>
-						</div>
-						<div class="col-lg-8">
-							<div class="doctor-slider slider">
-							
-								<!-- Doctor Widget -->
-								<div class="profile-widget">
-									<div class="doc-img">
-										<a href="doctor-profile.html">
-											<img class="img-fluid" alt="User Image" src="assets/img/doctors/doctor-01.jpg">
-										</a>
-										<a href="javascript:void(0)" class="fav-btn">
-											<i class="far fa-bookmark"></i>
-										</a>
-									</div>
-									<div class="pro-content">
-										<h3 class="title">
-											<a href="doctor-profile.html">Ruby Perrin</a> 
-											<i class="fas fa-check-circle verified"></i>
-										</h3>
-										<p class="speciality">MDS - Periodontology and Oral Implantology, BDS</p>
-										<div class="rating">
-											<i class="fas fa-star filled"></i>
-											<i class="fas fa-star filled"></i>
-											<i class="fas fa-star filled"></i>
-											<i class="fas fa-star filled"></i>
-											<i class="fas fa-star filled"></i>
-											<span class="d-inline-block average-rating">(17)</span>
-										</div>
-										<ul class="available-info">
-											<li>
-												<i class="fas fa-map-marker-alt"></i> Florida, USA
-											</li>
-											<li>
-												<i class="far fa-clock"></i> Available on Fri, 22 Mar
-											</li>
-											<li>
-												<i class="far fa-money-bill-alt"></i> $300 - $1000 
-												<i class="fas fa-info-circle" data-toggle="tooltip" title="Lorem Ipsum"></i>
-											</li>
-										</ul>
-										<div class="row row-sm">
-											<div class="col-6">
-												<a href="doctor-profile.html" class="btn view-btn">View Profile</a>
-											</div>
-											<div class="col-6">
-												<a href="booking.html" class="btn book-btn">Book Now</a>
-											</div>
-										</div>
-									</div>
-								</div>
-								<!-- /Doctor Widget -->
-						
-								<!-- Doctor Widget -->
-								<div class="profile-widget">
-									<div class="doc-img">
-										<a href="doctor-profile.html">
-											<img class="img-fluid" alt="User Image" src="assets/img/doctors/doctor-02.jpg">
-										</a>
-										<a href="javascript:void(0)" class="fav-btn">
-											<i class="far fa-bookmark"></i>
-										</a>
-									</div>
-									<div class="pro-content">
-										<h3 class="title">
-											<a href="doctor-profile.html">Darren Elder</a> 
-											<i class="fas fa-check-circle verified"></i>
-										</h3>
-										<p class="speciality">BDS, MDS - Oral & Maxillofacial Surgery</p>
-										<div class="rating">
-											<i class="fas fa-star filled"></i>
-											<i class="fas fa-star filled"></i>
-											<i class="fas fa-star filled"></i>
-											<i class="fas fa-star filled"></i>
-											<i class="fas fa-star"></i>
-											<span class="d-inline-block average-rating">(35)</span>
-										</div>
-										<ul class="available-info">
-											<li>
-												<i class="fas fa-map-marker-alt"></i> Newyork, USA
-											</li>
-											<li>
-												<i class="far fa-clock"></i> Available on Fri, 22 Mar
-											</li>
-											<li>
-												<i class="far fa-money-bill-alt"></i> $50 - $300 
-												<i class="fas fa-info-circle" data-toggle="tooltip" title="Lorem Ipsum"></i>
-											</li>
-										</ul>
-										<div class="row row-sm">
-											<div class="col-6">
-												<a href="doctor-profile.html" class="btn view-btn">View Profile</a>
-											</div>
-											<div class="col-6">
-												<a href="booking.html" class="btn book-btn">Book Now</a>
-											</div>
-										</div>
-									</div>
-								</div>
-								<!-- /Doctor Widget -->
-						
-								<!-- Doctor Widget -->
-								<div class="profile-widget">
-									<div class="doc-img">
-										<a href="doctor-profile.html">
-											<img class="img-fluid" alt="User Image" src="assets/img/doctors/doctor-03.jpg">
-										</a>
-										<a href="javascript:void(0)" class="fav-btn">
-											<i class="far fa-bookmark"></i>
-										</a>
-									</div>
-									<div class="pro-content">
-										<h3 class="title">
-											<a href="doctor-profile.html">Deborah Angel</a> 
-											<i class="fas fa-check-circle verified"></i>
-										</h3>
-										<p class="speciality">MBBS, MD - General Medicine, DNB - Cardiology</p>
-										<div class="rating">
-											<i class="fas fa-star filled"></i>
-											<i class="fas fa-star filled"></i>
-											<i class="fas fa-star filled"></i>
-											<i class="fas fa-star filled"></i>
-											<i class="fas fa-star"></i>
-											<span class="d-inline-block average-rating">(27)</span>
-										</div>
-										<ul class="available-info">
-											<li>
-												<i class="fas fa-map-marker-alt"></i> Georgia, USA
-											</li>
-											<li>
-												<i class="far fa-clock"></i> Available on Fri, 22 Mar
-											</li>
-											<li>
-												<i class="far fa-money-bill-alt"></i> $100 - $400 
-												<i class="fas fa-info-circle" data-toggle="tooltip" title="Lorem Ipsum"></i>
-											</li>
-										</ul>
-										<div class="row row-sm">
-											<div class="col-6">
-												<a href="doctor-profile.html" class="btn view-btn">View Profile</a>
-											</div>
-											<div class="col-6">
-												<a href="booking.html" class="btn book-btn">Book Now</a>
-											</div>
-										</div>
-									</div>
-								</div>
-								<!-- /Doctor Widget -->
-						
-								<!-- Doctor Widget -->
-								<div class="profile-widget">
-									<div class="doc-img">
-										<a href="doctor-profile.html">
-											<img class="img-fluid" alt="User Image" src="assets/img/doctors/doctor-04.jpg">
-										</a>
-										<a href="javascript:void(0)" class="fav-btn">
-											<i class="far fa-bookmark"></i>
-										</a>
-									</div>
-									<div class="pro-content">
-										<h3 class="title">
-											<a href="doctor-profile.html">Sofia Brient</a> 
-											<i class="fas fa-check-circle verified"></i>
-										</h3>
-										<p class="speciality">MBBS, MS - General Surgery, MCh - Urology</p>
-										<div class="rating">
-											<i class="fas fa-star filled"></i>
-											<i class="fas fa-star filled"></i>
-											<i class="fas fa-star filled"></i>
-											<i class="fas fa-star filled"></i>
-											<i class="fas fa-star"></i>
-											<span class="d-inline-block average-rating">(4)</span>
-										</div>
-										<ul class="available-info">
-											<li>
-												<i class="fas fa-map-marker-alt"></i> Louisiana, USA
-											</li>
-											<li>
-												<i class="far fa-clock"></i> Available on Fri, 22 Mar
-											</li>
-											<li>
-												<i class="far fa-money-bill-alt"></i> $150 - $250 
-												<i class="fas fa-info-circle" data-toggle="tooltip" title="Lorem Ipsum"></i>
-											</li>
-										</ul>
-										<div class="row row-sm">
-											<div class="col-6">
-												<a href="doctor-profile.html" class="btn view-btn">View Profile</a>
-											</div>
-											<div class="col-6">
-												<a href="booking.html" class="btn book-btn">Book Now</a>
-											</div>
-										</div>
-									</div>
-								</div>
-								<!-- /Doctor Widget -->
-								
-								<!-- Doctor Widget -->
-								<div class="profile-widget">
-									<div class="doc-img">
-										<a href="doctor-profile.html">
-											<img class="img-fluid" alt="User Image" src="assets/img/doctors/doctor-05.jpg">
-										</a>
-										<a href="javascript:void(0)" class="fav-btn">
-											<i class="far fa-bookmark"></i>
-										</a>
-									</div>
-									<div class="pro-content">
-										<h3 class="title">
-											<a href="doctor-profile.html">Marvin Campbell</a> 
-											<i class="fas fa-check-circle verified"></i>
-										</h3>
-										<p class="speciality">MBBS, MD - Ophthalmology, DNB - Ophthalmology</p>
-										<div class="rating">
-											<i class="fas fa-star filled"></i>
-											<i class="fas fa-star filled"></i>
-											<i class="fas fa-star filled"></i>
-											<i class="fas fa-star filled"></i>
-											<i class="fas fa-star"></i>
-											<span class="d-inline-block average-rating">(66)</span>
-										</div>
-										<ul class="available-info">
-											<li>
-												<i class="fas fa-map-marker-alt"></i> Michigan, USA
-											</li>
-											<li>
-												<i class="far fa-clock"></i> Available on Fri, 22 Mar
-											</li>
-											<li>
-												<i class="far fa-money-bill-alt"></i> $50 - $700 
-												<i class="fas fa-info-circle" data-toggle="tooltip" title="Lorem Ipsum"></i>
-											</li>
-										</ul>
-										<div class="row row-sm">
-											<div class="col-6">
-												<a href="doctor-profile.html" class="btn view-btn">View Profile</a>
-											</div>
-											<div class="col-6">
-												<a href="booking.html" class="btn book-btn">Book Now</a>
-											</div>
-										</div>
-									</div>
-								</div>
-								<!-- /Doctor Widget -->
-								
-								<!-- Doctor Widget -->
-								<div class="profile-widget">
-									<div class="doc-img">
-										<a href="doctor-profile.html">
-											<img class="img-fluid" alt="User Image" src="assets/img/doctors/doctor-06.jpg">
-										</a>
-										<a href="javascript:void(0)" class="fav-btn">
-											<i class="far fa-bookmark"></i>
-										</a>
-									</div>
-									<div class="pro-content">
-										<h3 class="title">
-											<a href="doctor-profile.html">Katharine Berthold</a> 
-											<i class="fas fa-check-circle verified"></i>
-										</h3>
-										<p class="speciality">MS - Orthopaedics, MBBS, M.Ch - Orthopaedics</p>
-										<div class="rating">
-											<i class="fas fa-star filled"></i>
-											<i class="fas fa-star filled"></i>
-											<i class="fas fa-star filled"></i>
-											<i class="fas fa-star filled"></i>
-											<i class="fas fa-star"></i>
-											<span class="d-inline-block average-rating">(52)</span>
-										</div>
-										<ul class="available-info">
-											<li>
-												<i class="fas fa-map-marker-alt"></i> Texas, USA
-											</li>
-											<li>
-												<i class="far fa-clock"></i> Available on Fri, 22 Mar
-											</li>
-											<li>
-												<i class="far fa-money-bill-alt"></i> $100 - $500 
-												<i class="fas fa-info-circle" data-toggle="tooltip" title="Lorem Ipsum"></i>
-											</li>
-										</ul>
-										<div class="row row-sm">
-											<div class="col-6">
-												<a href="doctor-profile.html" class="btn view-btn">View Profile</a>
-											</div>
-											<div class="col-6">
-												<a href="booking.html" class="btn book-btn">Book Now</a>
-											</div>
-										</div>
-									</div>
-								</div>
-								<!-- /Doctor Widget -->
-								
-								<!-- Doctor Widget -->
-								<div class="profile-widget">
-									<div class="doc-img">
-										<a href="doctor-profile.html">
-											<img class="img-fluid" alt="User Image" src="assets/img/doctors/doctor-07.jpg">
-										</a>
-										<a href="javascript:void(0)" class="fav-btn">
-											<i class="far fa-bookmark"></i>
-										</a>
-									</div>
-									<div class="pro-content">
-										<h3 class="title">
-											<a href="doctor-profile.html">Linda Tobin</a> 
-											<i class="fas fa-check-circle verified"></i>
-										</h3>
-										<p class="speciality">MBBS, MD - General Medicine, DM - Neurology</p>
-										<div class="rating">
-											<i class="fas fa-star filled"></i>
-											<i class="fas fa-star filled"></i>
-											<i class="fas fa-star filled"></i>
-											<i class="fas fa-star filled"></i>
-											<i class="fas fa-star"></i>
-											<span class="d-inline-block average-rating">(43)</span>
-										</div>
-										<ul class="available-info">
-											<li>
-												<i class="fas fa-map-marker-alt"></i> Kansas, USA
-											</li>
-											<li>
-												<i class="far fa-clock"></i> Available on Fri, 22 Mar
-											</li>
-											<li>
-												<i class="far fa-money-bill-alt"></i> $100 - $1000 
-												<i class="fas fa-info-circle" data-toggle="tooltip" title="Lorem Ipsum"></i>
-											</li>
-										</ul>
-										<div class="row row-sm">
-											<div class="col-6">
-												<a href="doctor-profile.html" class="btn view-btn">View Profile</a>
-											</div>
-											<div class="col-6">
-												<a href="booking.html" class="btn book-btn">Book Now</a>
-											</div>
-										</div>
-									</div>
-								</div>
-								<!-- /Doctor Widget -->
-								
-								<!-- Doctor Widget -->
-								<div class="profile-widget">
-									<div class="doc-img">
-										<a href="doctor-profile.html">
-											<img class="img-fluid" alt="User Image" src="assets/img/doctors/doctor-08.jpg">
-										</a>
-										<a href="javascript:void(0)" class="fav-btn">
-											<i class="far fa-bookmark"></i>
-										</a>
-									</div>
-									<div class="pro-content">
-										<h3 class="title">
-											<a href="doctor-profile.html">Paul Richard</a> 
-											<i class="fas fa-check-circle verified"></i>
-										</h3>
-										<p class="speciality">MBBS, MD - Dermatology , Venereology & Lepros</p>
-										<div class="rating">
-											<i class="fas fa-star filled"></i>
-											<i class="fas fa-star filled"></i>
-											<i class="fas fa-star filled"></i>
-											<i class="fas fa-star filled"></i>
-											<i class="fas fa-star"></i>
-											<span class="d-inline-block average-rating">(49)</span>
-										</div>
-										<ul class="available-info">
-											<li>
-												<i class="fas fa-map-marker-alt"></i> California, USA
-											</li>
-											<li>
-												<i class="far fa-clock"></i> Available on Fri, 22 Mar
-											</li>
-											<li>
-												<i class="far fa-money-bill-alt"></i> $100 - $400 
-												<i class="fas fa-info-circle" data-toggle="tooltip" title="Lorem Ipsum"></i>
-											</li>
-										</ul>
-										<div class="row row-sm">
-											<div class="col-6">
-												<a href="doctor-profile.html" class="btn view-btn">View Profile</a>
-											</div>
-											<div class="col-6">
-												<a href="booking.html" class="btn book-btn">Book Now</a>
-											</div>
-										</div>
-									</div>
-								</div>
-								<!-- Doctor Widget -->
-								
-							</div>
-						</div>
-				   </div>
-				</div>
-			</section>
-			<!-- /Popular Section -->
-		   
-		   <!-- Availabe Features -->
-		   <section class="section section-features">
-				<div class="container-fluid">
-				   <div class="row">
-						<div class="col-md-5 features-img">
-							<img src="assets/img/features/feature.png" class="img-fluid" alt="Feature">
-						</div>
-						<div class="col-md-7">
-							<div class="section-header">	
-								<h2 class="mt-2">Availabe Features in Our Clinic</h2>
-								<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. </p>
-							</div>	
-							<div class="features-slider slider">
-								<!-- Slider Item -->
-								<div class="feature-item text-center">
-									<img src="assets/img/features/feature-01.jpg" class="img-fluid" alt="Feature">
-									<p>Patient Ward</p>
-								</div>
-								<!-- /Slider Item -->
-								
-								<!-- Slider Item -->
-								<div class="feature-item text-center">
-									<img src="assets/img/features/feature-02.jpg" class="img-fluid" alt="Feature">
-									<p>Test Room</p>
-								</div>
-								<!-- /Slider Item -->
-								
-								<!-- Slider Item -->
-								<div class="feature-item text-center">
-									<img src="assets/img/features/feature-03.jpg" class="img-fluid" alt="Feature">
-									<p>ICU</p>
-								</div>
-								<!-- /Slider Item -->
-								
-								<!-- Slider Item -->
-								<div class="feature-item text-center">
-									<img src="assets/img/features/feature-04.jpg" class="img-fluid" alt="Feature">
-									<p>Laboratory</p>
-								</div>
-								<!-- /Slider Item -->
-								
-								<!-- Slider Item -->
-								<div class="feature-item text-center">
-									<img src="assets/img/features/feature-05.jpg" class="img-fluid" alt="Feature">
-									<p>Operation</p>
-								</div>
-								<!-- /Slider Item -->
-								
-								<!-- Slider Item -->
-								<div class="feature-item text-center">
-									<img src="assets/img/features/feature-06.jpg" class="img-fluid" alt="Feature">
-									<p>Medical</p>
-								</div>
-								<!-- /Slider Item -->
-							</div>
-						</div>
-				   </div>
-				</div>
-			</section>		
-			<!-- Availabe Features -->
-			
-			<!-- Footer -->
-			<footer class="footer">
-				
-				<!-- Footer Top -->
-				<div class="footer-top">
-					<div class="container-fluid">
-						<div class="row">
-							<div class="col-lg-3 col-md-6">
-							
-								<!-- Footer Widget -->
-								<div class="footer-widget footer-about">
-									<div class="footer-logo">
-										<img src="assets/img/footer-logo.png" alt="logo">
-									</div>
-									<div class="footer-about-content">
-										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-										<div class="social-icon">
-											<ul>
-												<li>
-													<a href="#" target="_blank"><i class="fab fa-facebook-f"></i> </a>
-												</li>
-												<li>
-													<a href="#" target="_blank"><i class="fab fa-twitter"></i> </a>
-												</li>
-												<li>
-													<a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-												</li>
-												<li>
-													<a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
-												</li>
-												<li>
-													<a href="#" target="_blank"><i class="fab fa-dribbble"></i> </a>
-												</li>
-											</ul>
-										</div>
-									</div>
-								</div>
-								<!-- /Footer Widget -->
-								
-							</div>
-							
-							<div class="col-lg-3 col-md-6">
-							
-								<!-- Footer Widget -->
-								<div class="footer-widget footer-menu">
-									<h2 class="footer-title">For Patients</h2>
-									<ul>
-										<li><a href="search.html"><i class="fas fa-angle-double-right"></i> Search for Doctors</a></li>
-										<li><a href="login.html"><i class="fas fa-angle-double-right"></i> Login</a></li>
-										<li><a href="register.html"><i class="fas fa-angle-double-right"></i> Register</a></li>
-										<li><a href="booking.html"><i class="fas fa-angle-double-right"></i> Booking</a></li>
-										<li><a href="patient-dashboard.html"><i class="fas fa-angle-double-right"></i> Patient Dashboard</a></li>
-									</ul>
-								</div>
-								<!-- /Footer Widget -->
-								
-							</div>
-							
-							<div class="col-lg-3 col-md-6">
-							
-								<!-- Footer Widget -->
-								<div class="footer-widget footer-menu">
-									<h2 class="footer-title">For Doctors</h2>
-									<ul>
-										<li><a href="appointments.html"><i class="fas fa-angle-double-right"></i> Appointments</a></li>
-										<li><a href="chat.html"><i class="fas fa-angle-double-right"></i> Chat</a></li>
-										<li><a href="login.html"><i class="fas fa-angle-double-right"></i> Login</a></li>
-										<li><a href="doctor-register.html"><i class="fas fa-angle-double-right"></i> Register</a></li>
-										<li><a href="doctor-dashboard.html"><i class="fas fa-angle-double-right"></i> Doctor Dashboard</a></li>
-									</ul>
-								</div>
-								<!-- /Footer Widget -->
-								
-							</div>
-							
-							<div class="col-lg-3 col-md-6">
-							
-								<!-- Footer Widget -->
-								<div class="footer-widget footer-contact">
-									<h2 class="footer-title">Contact Us</h2>
-									<div class="footer-contact-info">
-										<div class="footer-address">
-											<span><i class="fas fa-map-marker-alt"></i></span>
-											<p> 3556  Beech Street, San Francisco,<br> California, CA 94108 </p>
-										</div>
-										<p>
-											<i class="fas fa-phone-alt"></i>
-											+1 315 369 5943
-										</p>
-										<p class="mb-0">
-											<i class="fas fa-envelope"></i>
-											doccure@example.com
-										</p>
-									</div>
-								</div>
-								<!-- /Footer Widget -->
-								
-							</div>
-							
-						</div>
-					</div>
-				</div>
-				<!-- /Footer Top -->
-				
-				<!-- Footer Bottom -->
-                <div class="footer-bottom">
-					<div class="container-fluid">
-					
-						<!-- Copyright -->
-						<div class="copyright">
-							<div class="row">
-								<div class="col-md-6 col-lg-6">
-									<div class="copyright-text">
-										<p class="mb-0"><a href="templateshub.net">Templates Hub</a></p>
-									</div>
-								</div>
-								<div class="col-md-6 col-lg-6">
-								
-									<!-- Copyright Menu -->
-									<div class="copyright-menu">
-										<ul class="policy-menu">
-											<li><a href="term-condition.html">Terms and Conditions</a></li>
-											<li><a href="privacy-policy.html">Policy</a></li>
-										</ul>
-									</div>
-									<!-- /Copyright Menu -->
-									
-								</div>
-							</div>
-						</div>
-						<!-- /Copyright -->
-						
-					</div>
-				</div>
-				<!-- /Footer Bottom -->
-				
-			</footer>
-			<!-- /Footer -->
-		   
-	   </div>
-	   <!-- /Main Wrapper -->
-	  
-		<!-- jQuery -->
-		<script src="assets/js/jquery.min.js"></script>
-		
-		<!-- Bootstrap Core JS -->
-		<script src="assets/js/popper.min.js"></script>
-		<script src="assets/js/bootstrap.min.js"></script>
-		
-		<!-- Slick JS -->
-		<script src="assets/js/slick.js"></script>
-		
-		<!-- Custom JS -->
-		<script src="assets/js/script.js"></script>
-		
-	</body>
-
-<!-- doccure/  30 Nov 2019 04:11:53 GMT -->
-</html>
+<!DOCTYPE html><html lang="en"><head><link href="https://marketing-assets.hubstaff.com/" rel="preconnect" /><link as="font" crossorigin="" href="https://marketing-assets.hubstaff.com/assets/ProximaNova-Bold-12dde6d12360922534b3c0381d9b16b39bc187a95e727808c4a5f38389e2dbec.woff2" rel="preload" type="font/woff2" /><link as="font" crossorigin="" href="https://marketing-assets.hubstaff.com/assets/Lato-036d841b132c14046e26d8f2da1bc634c6ad34885ed1295660694a91c98933a6.woff2" rel="preload" type="font/woff2" /><link as="font" crossorigin="" href="https://marketing-assets.hubstaff.com/assets/Lato-Bold-9baad10e85c5be8d5697086479983b6b477197103bf8f0f11817b1bdfb9a7451.woff2" rel="preload" type="font/woff2" /><link as="image" href="https://marketing-assets.hubstaff.com/assets/refresh/heros/homepage-hero-keyframe-desktop-compressed@2x-2b02f809ffa5efbbc5e1c9651b4244e2b6af3d0b5f546710bd612290a11b2b71.webp" media="(min-width: 992px)" rel="preload" /><script async="" src="//www.googleoptimize.com/optimize.js?id=OPT-KWQHRNV"></script><style type="text/css">@font-face {
+	font-family: 'ProximaNova-Bold';
+	src: url("https://marketing-assets.hubstaff.com/assets/ProximaNova-Bold-12dde6d12360922534b3c0381d9b16b39bc187a95e727808c4a5f38389e2dbec.woff2") format("woff2");
+	font-display: swap;
+	font-style: normal
+  }
+  
+  @font-face {
+   font-family: 'Lato';
+   font-style: normal;
+   font-weight: 400;
+   font-display: swap;
+   src: local("Lato Regular"), local("Lato-Regular"), url("https://marketing-assets.hubstaff.com/assets/Lato-036d841b132c14046e26d8f2da1bc634c6ad34885ed1295660694a91c98933a6.woff2") format("woff2");
+   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD
+  }
+  
+  @font-face {
+   font-family: 'Lato';
+   font-style: normal;
+   font-weight: 700;
+   font-display: swap;
+   src: local("Lato Bold"), local("Lato-Bold"), url("https://marketing-assets.hubstaff.com/assets/Lato-Bold-9baad10e85c5be8d5697086479983b6b477197103bf8f0f11817b1bdfb9a7451.woff2") format("woff2");
+   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD
+  }</style><link href="https://hubstaff.com/" rel="canonical" /><title>Hubstaff | Time Tracking and Productivity Monitoring Tool</title><meta content="Simple yet powerful employee work tracker with screenshots, timesheets, billing, in-depth reports, and more. Understand productivity issues and act on them." name="description" /><meta content="Hubstaff | Time Tracking and Productivity Monitoring Tool" property="og:title" /><meta content="Simple yet powerful employee work tracker with screenshots, ti..." property="og:description" /><meta content="https://marketing-assets.hubstaff.com/assets/social/hubstaff-e42ad3e4f8e29cbab49ccc75389668db8b253997242c521ab620aa4a482b84e7.png" property="og:image" /><meta content="https://marketing-assets.hubstaff.com/assets/social/hubstaff-e42ad3e4f8e29cbab49ccc75389668db8b253997242c521ab620aa4a482b84e7.png" property="og:image:secure_url" /><meta content="https://hubstaff.com/" property="og:url" /><meta content="Hubstaff" property="og:site_name" /><meta content="website" property="og:type" /><meta content="en_US" property="og:locale" /><meta content="summary_large_image" name="twitter:card" /><meta content="@Hubstaff" name="twitter:site" /><meta content="Hubstaff | Time Tracking and Productivity Monitoring..." name="twitter:title" /><meta content="Simple yet powerful employee work tracker with screenshots, timesheets, billing, in-depth reports, and more. Understand pr..." name="twitter:description" /><meta content="https://marketing-assets.hubstaff.com/assets/social/hubstaff-e42ad3e4f8e29cbab49ccc75389668db8b253997242c521ab620aa4a482b84e7.png" name="twitter:image" /><meta content="@Hubstaff" name="twitter:creator" /><meta charset="utf-8" />
+  <script>window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"74c96e2a6d","applicationID":"19018248","transactionName":"JQlXTBNbW15dFB4OWgsDFlEPUFJK","queueTime":2,"applicationTime":14,"agent":""}</script>
+  <script>(window.NREUM||(NREUM={})).init={ajax:{deny_list:["bam.nr-data.net"]}};(window.NREUM||(NREUM={})).loader_config={licenseKey:"74c96e2a6d",applicationID:"19018248"};/*! For license information please see nr-loader-rum-1220.min.js.LICENSE.txt */
+  !function(t,e){"object"==typeof exports&&"object"==typeof module?module.exports=e():"function"==typeof define&&define.amd?define([],e):"object"==typeof exports?exports.NRBA=e():t.NRBA=e()}(self,(function(){return function(){var t,e,n={9034:function(t,e,n){"use strict";var r=n(4168);e.Z=(0,r.ky)(16)},5973:function(t,e,n){"use strict";n.d(e,{I:function(){return r}});var r=0,o=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);o&&(r=+o[1])},4280:function(t,e,n){"use strict";n.d(e,{H:function(){return o}});var r=document.createElement("div");r.innerHTML="\x3c!--[if lte IE 6]><div></div><![endif]--\x3e\x3c!--[if lte IE 7]><div></div><![endif]--\x3e\x3c!--[if lte IE 8]><div></div><![endif]--\x3e\x3c!--[if lte IE 9]><div></div><![endif]--\x3e";var o,i=r.getElementsByTagName("div").length;o=4===i?6:3===i?7:2===i?8:1===i?9:0},5955:function(t,e,n){"use strict";n.d(e,{I:function(){return r}});var r=function(t,e){var n=this;return t&&"object"==typeof t?e&&"object"==typeof e?(Object.assign(this,e),void Object.entries(t).forEach((function(t){var e=t[0],r=t[1];n[e]=r}))):console.error("setting a Configurable requires a model to set its initial properties"):console.error("setting a Configurable requires an object as input")}},441:function(t,e,n){"use strict";n.d(e,{C:function(){return c},L:function(){return u}});var r=n(1424),o=n(5955),i={beacon:r.ce.beacon,errorBeacon:r.ce.errorBeacon,licenseKey:void 0,applicationID:void 0,sa:void 0,queueTime:void 0,applicationTime:void 0,ttGuid:void 0,user:void 0,account:void 0,product:void 0,extra:void 0,jsAttributes:{},userAttributes:void 0,atts:void 0,transactionName:void 0,tNamePlain:void 0},a={};function c(t){if(!t)throw new Error("All info objects require an agent identifier!");if(!a[t])throw new Error("Info for "+t+" was never set");return a[t]}function u(t,e){if(!t)throw new Error("All info objects require an agent identifier!");a[t]=new o.I(e,i),(0,r.Qy)(t,a[t],"info")}},1476:function(t,e,n){"use strict";n.d(e,{Dg:function(){return c},Mt:function(){return u}});var r=n(1424),o=n(5955),i={privacy:{cookies_enabled:!0},ajax:{deny_list:void 0,enabled:!0},distributed_tracing:{enabled:void 0,exclude_newrelic_header:void 0,cors_use_newrelic_header:void 0,cors_use_tracecontext_headers:void 0,allowed_origins:void 0},ssl:void 0,obfuscate:void 0,jserrors:{enabled:!0},metrics:{enabled:!0},page_action:{enabled:!0},page_view_event:{enabled:!0},page_view_timing:{enabled:!0},session_trace:{enabled:!0},spa:{enabled:!0}},a={};function c(t,e){if(!t)throw new Error("All configuration objects require an agent identifier!");a[t]=new o.I(e,i),(0,r.Qy)(t,a[t],"config")}function u(t,e){if(!t)throw new Error("All configuration objects require an agent identifier!");var n=function(t){if(!t)throw new Error("All configuration objects require an agent identifier!");if(!a[t])throw new Error("Configuration for "+t+" was never set");return a[t]}(t);if(n){for(var r=e.split("."),o=0;o<r.length-1;o++)if("object"!=typeof(n=n[r[o]]))return;n=n[r[r.length-1]]}return n}},2085:function(t,e,n){"use strict";n.d(e,{Y:function(){return r}});var r=(0,n(1424).mF)().o},1220:function(t,e,n){"use strict";n.d(e,{O:function(){return w},s:function(){return x}});var r={};n.r(r),n.d(r,{agent:function(){return a},match:function(){return f},version:function(){return c}});var o=n(4280),i=n(6959),a=null,c=null;if(navigator.userAgent){var u=navigator.userAgent,s=u.match(/Version\/(\S+)\s+Safari/);s&&-1===u.indexOf("Chrome")&&-1===u.indexOf("Chromium")&&(a="Safari",c=s[1])}function f(t,e){if(!a)return!1;if(t!==a)return!1;if(!e)return!0;if(!c)return!1;for(var n=c.split("."),r=e.split("."),o=0;o<r.length;o++)if(r[o]!==n[o])return!1;return!0}var d=n(5955),l=n(1424),v=n(4168),p=window.sessionStorage,h="NRBA_SESSION_ID";var g=n(1476),y=window.XMLHttpRequest,m=y&&y.prototype,b={};function w(t){if(!t)throw new Error("All runtime objects require an agent identifier!");if(!b[t])throw new Error("Runtime for "+t+" was never set");return b[t]}function x(t,e){if(!t)throw new Error("All runtime objects require an agent identifier!");var n,a;b[t]=new d.I(e,(n=t,{customTransaction:void 0,disabled:!1,features:{},maxBytes:6===o.H?2e3:3e4,offset:(0,i.yf)(),onerror:void 0,origin:""+window.location,ptid:void 0,releaseIds:{},sessionId:!0===(0,g.Mt)(n,"privacy.cookies_enabled")?(null===(a=p.getItem(h))&&(a=(0,v.ky)(16),p.setItem(h,a)),a):"0",xhrWrappable:y&&m&&m.addEventListener&&!/CriOS/.test(navigator.userAgent),userAgent:r})),(0,l.Qy)(t,b[t],"runtime")}},158:function(t,e,n){"use strict";n.d(e,{q:function(){return r}});var r=["1220","PROD"].filter((function(t){return t})).join(".")},3707:function(t,e,n){"use strict";n.d(e,{w:function(){return o}});var r={agentIdentifier:""},o=function(t){var e=this;if("object"!=typeof t)return console.error("shared context requires an object as input");this.sharedContext={},Object.assign(this.sharedContext,r),Object.entries(t).forEach((function(t){var n=t[0],o=t[1];Object.keys(r).includes(n)&&(e.sharedContext[n]=o)}))}},1776:function(t,e,n){"use strict";n.d(e,{ee:function(){return r}});var r,o=n(1424),i=n(4217),a=n(357),c="nr@context",u=(0,o.fP)();function s(){}function f(){return new s}function d(){(r.backlog.api||r.backlog.feature)&&(r.aborted=!0,r.backlog={})}u.ee?r=u.ee:(r=function t(e,n){var o={},u={},l={},v={on:g,addEventListener:g,removeEventListener:y,emit:h,get:b,listeners:m,context:p,buffer:w,abort:d,aborted:!1,isBuffering:x,debugId:n,backlog:e&&e.backlog?e.backlog:{}};return v;function p(t){return t&&t instanceof s?t:t?(0,i.X)(t,c,f):f()}function h(t,n,o,i,a){if(!1!==a&&(a=!0),!r.aborted||i){e&&a&&e.emit(t,n,o);for(var c=p(o),s=m(t),f=s.length,d=0;d<f;d++)s[d].apply(c,n);var l=O()[u[t]];return l&&l.push([v,t,n,c]),c}}function g(t,e){o[t]=m(t).concat(e)}function y(t,e){var n=o[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function m(t){return o[t]||[]}function b(e){return l[e]=l[e]||t(v,e)}function w(t,e){var n=O();v.aborted||(0,a.D)(t,(function(t,r){e=e||"feature",u[r]=e,e in n||(n[e]=[])}))}function x(t){return!!O()[u[t]]}function O(){return v.backlog}}(void 0,"globalEE"),u.ee=r)},7361:function(t,e,n){"use strict";n.d(e,{E:function(){return r},p:function(){return o}});var r=n(1776).ee.get("handle");function o(t,e,n,o,i){i?(i.buffer([t],o),i.emit(t,e,n)):(r.buffer([t],o),r.emit(t,e,n))}},3350:function(t,e,n){"use strict";n.d(e,{X:function(){return i}});var r=n(7361);i.on=a;var o=i.handlers={};function i(t,e,n,i){a(i||r.E,o,t,e,n)}function a(t,e,n,o,i){i||(i="feature"),t||(t=r.E);var a=e[i]=e[i]||{};(a[n]=a[n]||[]).push([t,o])}},4408:function(t,e,n){"use strict";n.d(e,{m:function(){return i}});var r=!1;try{var o=Object.defineProperty({},"passive",{get:function(){r=!0}});window.addEventListener("testPassive",null,o),window.removeEventListener("testPassive",null,o)}catch(t){}function i(t){return r?{passive:!0,capture:!!t}:!!t}},4168:function(t,e,n){"use strict";function r(){var t=null,e=0,n=window.crypto||window.msCrypto;function r(){return t?15&t[e++]:16*Math.random()|0}n&&n.getRandomValues&&(t=n.getRandomValues(new Uint8Array(31)));for(var o,i="xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx",a="",c=0;c<i.length;c++)a+="x"===(o=i[c])?r().toString(16):"y"===o?(o=3&r()|8).toString(16):o;return a}function o(t){var e=null,n=0,r=window.crypto||window.msCrypto;r&&r.getRandomValues&&Uint8Array&&(e=r.getRandomValues(new Uint8Array(31)));for(var o=[],i=0;i<t;i++)o.push(a().toString(16));return o.join("");function a(){return e?15&e[n++]:16*Math.random()|0}}n.d(e,{Rl:function(){return r},ky:function(){return o}})},6959:function(t,e,n){"use strict";n.d(e,{nb:function(){return u},os:function(){return s},yf:function(){return c},zO:function(){return a}});var r=n(2364),o=(new Date).getTime(),i=o;function a(){return r.G&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-i}function c(){return o}function u(t){i=t}function s(){return i}},2364:function(t,e,n){"use strict";n.d(e,{G:function(){return r}});var r=void 0!==window.performance&&window.performance.timing&&void 0!==window.performance.timing.navigationStart},1793:function(t,e,n){"use strict";function r(t){var e,n=0;for(e=0;e<t.length;e++)n+=(e+1)*t.charCodeAt(e);return Math.abs(n)}n.d(e,{v:function(){return s},s:function(){return u}});var o=n(6972),i=n(5973),a=n(6959),c=n(2364),u=!0;function s(t){var e=function(){if(i.I&&i.I<9)return;if(c.G)return u=!1,window.performance.timing.navigationStart}()||function(){for(var t=document.cookie.split(" "),e=0;e<t.length;e++)if(0===t[e].indexOf("NREUM=")){for(var n,o,i,a,c=t[e].substring("NREUM=".length).split("&"),u=0;u<c.length;u++)0===c[u].indexOf("s=")?i=c[u].substring(2):0===c[u].indexOf("p=")?";"===(o=c[u].substring(2)).charAt(o.length-1)&&(o=o.substr(0,o.length-1)):0===c[u].indexOf("r=")&&";"===(n=c[u].substring(2)).charAt(n.length-1)&&(n=n.substr(0,n.length-1));if(n){var s=r(document.referrer);(a=s==n)||(a=r(document.location.href)==n&&s==o)}if(a&&i){if((new Date).getTime()-i>6e4)return;return i}}}();e&&((0,o.B)(t,"starttime",e),(0,a.nb)(e))}},6972:function(t,e,n){"use strict";n.d(e,{B:function(){return i},L:function(){return a}});var r=n(6959),o={};function i(t,e,n){void 0===n&&(n=(0,r.zO)()+(0,r.os)()),o[t]=o[t]||{},o[t][e]=n}function a(t,e,n,r){var i,a,c=t.sharedContext.agentIdentifier,u=null==(i=o[c])?void 0:i[n],s=null==(a=o[c])?void 0:a[r];void 0!==u&&void 0!==s&&t.store("measures",e,{value:s-u})}},7299:function(t,e,n){"use strict";n.d(e,{T:function(){return a}});var r=window,o=r;function i(){return o}var a={isFileProtocol:function(){var t=i(),e=!(!t.location||!t.location.protocol||"file:"!==t.location.protocol);e&&(a.supportabilityMetricSent=!0);return e},supportabilityMetricSent:!1}},847:function(t,e,n){"use strict";n.d(e,{K:function(){return a}});var r=n(1220),o=n(1476),i=["ajax","jserrors","metrics","page_action","page_view_event","page_view_timing","session_trace","spa"];function a(t){var e={};return i.forEach((function(n){e[n]=function(t,e){return!0!==(0,r.O)(e).disabled&&!1!==(0,o.Mt)(e,t+".enabled")}(n,t)})),e}},5023:function(t,e,n){"use strict";n.d(e,{W:function(){return o}});var r=n(1776),o=function(t,e,n){void 0===n&&(n=[]),this.agentIdentifier=t,this.aggregator=e,this.ee=r.ee.get(t),this.externalFeatures=n}},4217:function(t,e,n){"use strict";n.d(e,{X:function(){return o}});var r=Object.prototype.hasOwnProperty;function o(t,e,n){if(r.call(t,e))return t[e];var o=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:o,writable:!0,enumerable:!1}),o}catch(t){}return t[e]=o,o}},357:function(t,e,n){"use strict";n.d(e,{D:function(){return o}});var r=Object.prototype.hasOwnProperty;function o(t,e){var n=[],o="",i=0;for(o in t)r.call(t,o)&&(n[i]=e(o,t[o]),i+=1);return n}},603:function(t,e,n){"use strict";n.d(e,{$c:function(){return s},Ng:function(){return f},RR:function(){return u}});var r=n(1476),o=n(3707),i=n(7299);function a(t,e){return a=Object.setPrototypeOf?Object.setPrototypeOf.bind():function(t,e){return t.__proto__=e,t},a(t,e)}var c={regex:/^file:\/\/(.*)/,replacement:"file://OBFUSCATED"},u=function(t){var e,n;function r(e){return t.call(this,e)||this}n=t,(e=r).prototype=Object.create(n.prototype),e.prototype.constructor=e,a(e,n);var o=r.prototype;return o.shouldObfuscate=function(){return s(this.sharedContext.agentIdentifier).length>0},o.obfuscateString=function(t){if(!t||"string"!=typeof t)return t;for(var e=s(this.sharedContext.agentIdentifier),n=t,r=0;r<e.length;r++){var o=e[r].regex,i=e[r].replacement||"*";n=n.replace(o,i)}return n},r}(o.w);function s(t){var e=[],n=(0,r.Mt)(t,"obfuscate")||[];return e=e.concat(n),i.T.isFileProtocol()&&e.push(c),e}function f(t){for(var e=!1,n=!1,r=0;r<t.length;r++){"regex"in t[r]?"string"!=typeof t[r].regex&&t[r].regex.constructor!==RegExp&&(console&&console.warn&&console.warn('An obfuscation replacement rule contains a "regex" value with an invalid type (must be a string or RegExp)'),n=!0):(console&&console.warn&&console.warn('An obfuscation replacement rule was detected missing a "regex" value.'),n=!0);var o=t[r].replacement;o&&"string"!=typeof o&&(console&&console.warn&&console.warn('An obfuscation replacement rule contains a "replacement" value with an invalid type (must be a string)'),e=!0)}return!e&&!n}},1424:function(t,e,n){"use strict";n.d(e,{EZ:function(){return u},Qy:function(){return c},ce:function(){return o},fP:function(){return i},gG:function(){return s},mF:function(){return a}});var r=n(6959),o={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net"};function i(){return window.NREUM||(window.NREUM={}),void 0===window.newrelic&&(window.newrelic=window.NREUM),window.NREUM}function a(){var t=i();if(!t.o){var e=window,n=e.XMLHttpRequest;t.o={ST:setTimeout,SI:e.setImmediate,CT:clearTimeout,XHR:n,REQ:e.Request,EV:e.Event,PR:e.Promise,MO:e.MutationObserver,FETCH:e.fetch}}return t}function c(t,e,n){var o,a,c=i(),u=c.initializedAgents||{},s=u[t]||{};return Object.keys(s).length||(s.initializedAt={ms:(0,r.zO)(),date:new Date}),c.initializedAgents=Object.assign({},u,((a={})[t]=Object.assign({},s,((o={})[n]=e,o)),a)),c}function u(t,e){i()[t]=e}function s(){var t,e;return t=i(),e=t.info||{},t.info=Object.assign({beacon:o.beacon,errorBeacon:o.errorBeacon},e),function(){var t=i(),e=t.init||{};t.init=Object.assign({},e)}(),a(),function(){var t=i(),e=t.loader_config||{};t.loader_config=Object.assign({},e)}(),i()}},8539:function(t){t.exports=function(t,e,n){e||(e=0),void 0===n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(o<0?0:o);++r<o;)i[r]=t[e+r];return i}}},r={};function o(t){var e=r[t];if(void 0!==e)return e.exports;var i=r[t]={exports:{}};return n[t](i,i.exports,o),i.exports}o.m=n,o.n=function(t){var e=t&&t.__esModule?function(){return t.default}:function(){return t};return o.d(e,{a:e}),e},o.d=function(t,e){for(var n in e)o.o(e,n)&&!o.o(t,n)&&Object.defineProperty(t,n,{enumerable:!0,get:e[n]})},o.f={},o.e=function(t){return Promise.all(Object.keys(o.f).reduce((function(e,n){return o.f[n](t,e),e}),[]))},o.u=function(t){return t+"."+o.h().slice(0,8)+"-1220.js"},o.h=function(){return"2d6a2503b7f18a5b77dd"},o.o=function(t,e){return Object.prototype.hasOwnProperty.call(t,e)},t={},e="NRBA:",o.l=function(n,r,i,a){if(t[n])t[n].push(r);else{var c,u;if(void 0!==i)for(var s=document.getElementsByTagName("script"),f=0;f<s.length;f++){var d=s[f];if(d.getAttribute("src")==n||d.getAttribute("data-webpack")==e+i){c=d;break}}c||(u=!0,(c=document.createElement("script")).charset="utf-8",c.timeout=120,o.nc&&c.setAttribute("nonce",o.nc),c.setAttribute("data-webpack",e+i),c.src=n),t[n]=[r];var l=function(e,r){c.onerror=c.onload=null,clearTimeout(v);var o=t[n];if(delete t[n],c.parentNode&&c.parentNode.removeChild(c),o&&o.forEach((function(t){return t(r)})),e)return e(r)},v=setTimeout(l.bind(null,void 0,{type:"timeout",target:c}),12e4);c.onerror=l.bind(null,c.onerror),c.onload=l.bind(null,c.onload),u&&document.head.appendChild(c)}},o.r=function(t){"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(t,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(t,"__esModule",{value:!0})},o.p="https://js-agent.newrelic.com/",function(){var t={299:0,82:0};o.f.j=function(e,n){var r=o.o(t,e)?t[e]:void 0;if(0!==r)if(r)n.push(r[2]);else{var i=new Promise((function(n,o){r=t[e]=[n,o]}));n.push(r[2]=i);var a=o.p+o.u(e),c=new Error;o.l(a,(function(n){if(o.o(t,e)&&(0!==(r=t[e])&&(t[e]=void 0),r)){var i=n&&("load"===n.type?"missing":n.type),a=n&&n.target&&n.target.src;c.message="Loading chunk "+e+" failed.\n("+i+": "+a+")",c.name="ChunkLoadError",c.type=i,c.request=a,r[1](c)}}),"chunk-"+e,e)}};var e=function(e,n){var r,i,a=n[0],c=n[1],u=n[2],s=0;if(a.some((function(e){return 0!==t[e]}))){for(r in c)o.o(c,r)&&(o.m[r]=c[r]);if(u)u(o)}for(e&&e(n);s<a.length;s++)i=a[s],o.o(t,i)&&t[i]&&t[i][0](),t[i]=0},n=self.webpackChunkNRBA=self.webpackChunkNRBA||[];n.forEach(e.bind(null,0)),n.push=e.bind(null,n.push.bind(n))}();var i={};return function(){"use strict";o.r(i);var t=o(9034),e=o(4408),n=window,r=n.document;function a(t){"complete"===r.readyState&&t()}function c(t){a(t),r.addEventListener?n.addEventListener("load",t,(0,e.m)(!1)):n.attachEvent("onload",t)}function u(t){a(t),r.addEventListener?r.addEventListener("DOMContentLoaded",t,(0,e.m)(!1)):r.attachEvent("onreadystatechange",a)}var s=o(1776);function f(){f=function(){return t};var t={},e=Object.prototype,n=e.hasOwnProperty,r="function"==typeof Symbol?Symbol:{},o=r.iterator||"@@iterator",i=r.asyncIterator||"@@asyncIterator",a=r.toStringTag||"@@toStringTag";function c(t,e,n){return Object.defineProperty(t,e,{value:n,enumerable:!0,configurable:!0,writable:!0}),t[e]}try{c({},"")}catch(t){c=function(t,e,n){return t[e]=n}}function u(t,e,n,r){var o=e&&e.prototype instanceof l?e:l,i=Object.create(o.prototype),a=new j(r||[]);return i._invoke=function(t,e,n){var r="suspendedStart";return function(o,i){if("executing"===r)throw new Error("Generator is already running");if("completed"===r){if("throw"===o)throw i;return P()}for(n.method=o,n.arg=i;;){var a=n.delegate;if(a){var c=x(a,n);if(c){if(c===d)continue;return c}}if("next"===n.method)n.sent=n._sent=n.arg;else if("throw"===n.method){if("suspendedStart"===r)throw r="completed",n.arg;n.dispatchException(n.arg)}else"return"===n.method&&n.abrupt("return",n.arg);r="executing";var u=s(t,e,n);if("normal"===u.type){if(r=n.done?"completed":"suspendedYield",u.arg===d)continue;return{value:u.arg,done:n.done}}"throw"===u.type&&(r="completed",n.method="throw",n.arg=u.arg)}}}(t,n,a),i}function s(t,e,n){try{return{type:"normal",arg:t.call(e,n)}}catch(t){return{type:"throw",arg:t}}}t.wrap=u;var d={};function l(){}function v(){}function p(){}var h={};c(h,o,(function(){return this}));var g=Object.getPrototypeOf,y=g&&g(g(_([])));y&&y!==e&&n.call(y,o)&&(h=y);var m=p.prototype=l.prototype=Object.create(h);function b(t){["next","throw","return"].forEach((function(e){c(t,e,(function(t){return this._invoke(e,t)}))}))}function w(t,e){function r(o,i,a,c){var u=s(t[o],t,i);if("throw"!==u.type){var f=u.arg,d=f.value;return d&&"object"==typeof d&&n.call(d,"__await")?e.resolve(d.__await).then((function(t){r("next",t,a,c)}),(function(t){r("throw",t,a,c)})):e.resolve(d).then((function(t){f.value=t,a(f)}),(function(t){return r("throw",t,a,c)}))}c(u.arg)}var o;this._invoke=function(t,n){function i(){return new e((function(e,o){r(t,n,e,o)}))}return o=o?o.then(i,i):i()}}function x(t,e){var n=t.iterator[e.method];if(void 0===n){if(e.delegate=null,"throw"===e.method){if(t.iterator.return&&(e.method="return",e.arg=void 0,x(t,e),"throw"===e.method))return d;e.method="throw",e.arg=new TypeError("The iterator does not provide a 'throw' method")}return d}var r=s(n,t.iterator,e.arg);if("throw"===r.type)return e.method="throw",e.arg=r.arg,e.delegate=null,d;var o=r.arg;return o?o.done?(e[t.resultName]=o.value,e.next=t.nextLoc,"return"!==e.method&&(e.method="next",e.arg=void 0),e.delegate=null,d):o:(e.method="throw",e.arg=new TypeError("iterator result is not an object"),e.delegate=null,d)}function O(t){var e={tryLoc:t[0]};1 in t&&(e.catchLoc=t[1]),2 in t&&(e.finallyLoc=t[2],e.afterLoc=t[3]),this.tryEntries.push(e)}function E(t){var e=t.completion||{};e.type="normal",delete e.arg,t.completion=e}function j(t){this.tryEntries=[{tryLoc:"root"}],t.forEach(O,this),this.reset(!0)}function _(t){if(t){var e=t[o];if(e)return e.call(t);if("function"==typeof t.next)return t;if(!isNaN(t.length)){var r=-1,i=function e(){for(;++r<t.length;)if(n.call(t,r))return e.value=t[r],e.done=!1,e;return e.value=void 0,e.done=!0,e};return i.next=i}}return{next:P}}function P(){return{value:void 0,done:!0}}return v.prototype=p,c(m,"constructor",p),c(p,"constructor",v),v.displayName=c(p,a,"GeneratorFunction"),t.isGeneratorFunction=function(t){var e="function"==typeof t&&t.constructor;return!!e&&(e===v||"GeneratorFunction"===(e.displayName||e.name))},t.mark=function(t){return Object.setPrototypeOf?Object.setPrototypeOf(t,p):(t.__proto__=p,c(t,a,"GeneratorFunction")),t.prototype=Object.create(m),t},t.awrap=function(t){return{__await:t}},b(w.prototype),c(w.prototype,i,(function(){return this})),t.AsyncIterator=w,t.async=function(e,n,r,o,i){void 0===i&&(i=Promise);var a=new w(u(e,n,r,o),i);return t.isGeneratorFunction(n)?a:a.next().then((function(t){return t.done?t.value:a.next()}))},b(m),c(m,a,"Generator"),c(m,o,(function(){return this})),c(m,"toString",(function(){return"[object Generator]"})),t.keys=function(t){var e=[];for(var n in t)e.push(n);return e.reverse(),function n(){for(;e.length;){var r=e.pop();if(r in t)return n.value=r,n.done=!1,n}return n.done=!0,n}},t.values=_,j.prototype={constructor:j,reset:function(t){if(this.prev=0,this.next=0,this.sent=this._sent=void 0,this.done=!1,this.delegate=null,this.method="next",this.arg=void 0,this.tryEntries.forEach(E),!t)for(var e in this)"t"===e.charAt(0)&&n.call(this,e)&&!isNaN(+e.slice(1))&&(this[e]=void 0)},stop:function(){this.done=!0;var t=this.tryEntries[0].completion;if("throw"===t.type)throw t.arg;return this.rval},dispatchException:function(t){if(this.done)throw t;var e=this;function r(n,r){return a.type="throw",a.arg=t,e.next=n,r&&(e.method="next",e.arg=void 0),!!r}for(var o=this.tryEntries.length-1;o>=0;--o){var i=this.tryEntries[o],a=i.completion;if("root"===i.tryLoc)return r("end");if(i.tryLoc<=this.prev){var c=n.call(i,"catchLoc"),u=n.call(i,"finallyLoc");if(c&&u){if(this.prev<i.catchLoc)return r(i.catchLoc,!0);if(this.prev<i.finallyLoc)return r(i.finallyLoc)}else if(c){if(this.prev<i.catchLoc)return r(i.catchLoc,!0)}else{if(!u)throw new Error("try statement without catch or finally");if(this.prev<i.finallyLoc)return r(i.finallyLoc)}}}},abrupt:function(t,e){for(var r=this.tryEntries.length-1;r>=0;--r){var o=this.tryEntries[r];if(o.tryLoc<=this.prev&&n.call(o,"finallyLoc")&&this.prev<o.finallyLoc){var i=o;break}}i&&("break"===t||"continue"===t)&&i.tryLoc<=e&&e<=i.finallyLoc&&(i=null);var a=i?i.completion:{};return a.type=t,a.arg=e,i?(this.method="next",this.next=i.finallyLoc,d):this.complete(a)},complete:function(t,e){if("throw"===t.type)throw t.arg;return"break"===t.type||"continue"===t.type?this.next=t.arg:"return"===t.type?(this.rval=this.arg=t.arg,this.method="return",this.next="end"):"normal"===t.type&&e&&(this.next=e),d},finish:function(t){for(var e=this.tryEntries.length-1;e>=0;--e){var n=this.tryEntries[e];if(n.finallyLoc===t)return this.complete(n.completion,n.afterLoc),E(n),d}},catch:function(t){for(var e=this.tryEntries.length-1;e>=0;--e){var n=this.tryEntries[e];if(n.tryLoc===t){var r=n.completion;if("throw"===r.type){var o=r.arg;E(n)}return o}}throw new Error("illegal catch attempt")},delegateYield:function(t,e,n){return this.delegate={iterator:_(t),resultName:e,nextLoc:n},"next"===this.method&&(this.arg=void 0),d}},t}function d(t,e,n,r,o,i,a){try{var c=t[i](a),u=c.value}catch(t){return void n(t)}c.done?e(u):Promise.resolve(u).then(r,o)}var l=0;function v(t){var e;(e=f().mark((function e(){var n,r;return f().wrap((function(e){for(;;)switch(e.prev=e.next){case 0:if(!l++){e.next=2;break}return e.abrupt("return");case 2:return e.prev=2,e.next=5,o.e(552).then(o.bind(o,5552));case 5:return n=e.sent,r=n.aggregator,e.next=9,r(t);case 9:e.next=15;break;case 11:e.prev=11,e.t0=e.catch(2),console.error("Failed to successfully load all aggregators. Aborting...\n",e.t0),s.ee.abort();case 15:case"end":return e.stop()}}),e,null,[[2,11]])})),function(){var t=this,n=arguments;return new Promise((function(r,o){var i=e.apply(t,n);function a(t){d(i,r,o,a,c,"next",t)}function c(t){d(i,r,o,a,c,"throw",t)}a(void 0)}))})()}var p=o(8539),h=o.n(p),g=o(1424),y=o(1220),m=o(441),b=o(7361),w=o(357),x=o(6959);var O=o(1476),E=o(5955),j={accountID:void 0,trustKey:void 0,agentID:void 0,licenseKey:void 0,applicationID:void 0,xpid:void 0},_={};var P=!1;var A=o(6972),k=o(1793),L=o(5023);function S(t,e){return S=Object.setPrototypeOf?Object.setPrototypeOf.bind():function(t,e){return t.__proto__=e,t},S(t,e)}var T,C,I,R=function(t){var e,n;function r(e){var n;return n=t.call(this,e)||this,(0,k.v)(e),(0,A.B)(e,"firstbyte",(0,x.yf)()),c((function(){return n.measureWindowLoaded()})),u((function(){return n.measureDomContentLoaded()})),n}n=t,(e=r).prototype=Object.create(n.prototype),e.prototype.constructor=e,S(e,n);var o=r.prototype;return o.measureWindowLoaded=function(){var t=(0,x.zO)();(0,A.B)(this.agentIdentifier,"onload",t+(0,x.os)()),(0,b.p)("timing",["load",t],void 0,void 0,this.ee)},o.measureDomContentLoaded=function(){(0,A.B)(this.agentIdentifier,"domContent",(0,x.zO)()+(0,x.os)())},r}(L.W);void 0!==document.hidden?(T="hidden",C="visibilitychange",I="visibilityState"):void 0!==document.msHidden?(T="msHidden",C="msvisibilitychange"):void 0!==document.webkitHidden&&(T="webkitHidden",C="webkitvisibilitychange",I="webkitVisibilityState");var M=o(2085);function N(t,e){return N=Object.setPrototypeOf?Object.setPrototypeOf.bind():function(t,e){return t.__proto__=e,t},N(t,e)}var D=function(t){var n,r;function o(n){var r,o;if((r=t.call(this,n)||this).pageHiddenTime="hidden"===document.visibilityState?-1:1/0,r.performanceObserver,r.lcpPerformanceObserver,r.clsPerformanceObserver,r.fiRecorded=!1,!r.isEnabled())return function(t){if(void 0===t)throw new ReferenceError("this hasn't been initialised - super() hasn't been called");return t}(r);if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){r.performanceObserver=new PerformanceObserver((function(){var t;return(t=r).perfObserver.apply(t,arguments)}));try{r.performanceObserver.observe({entryTypes:["paint"]})}catch(t){}r.lcpPerformanceObserver=new PerformanceObserver((function(){var t;return(t=r).lcpObserver.apply(t,arguments)}));try{r.lcpPerformanceObserver.observe({entryTypes:["largest-contentful-paint"]})}catch(t){}r.clsPerformanceObserver=new PerformanceObserver((function(){var t;return(t=r).clsObserver.apply(t,arguments)}));try{r.clsPerformanceObserver.observe({type:"layout-shift",buffered:!0})}catch(t){}}if("addEventListener"in document){r.fiRecorded=!1;["click","keydown","mousedown","pointerdown","touchstart"].forEach((function(t){document.addEventListener(t,(function(){var t;return(t=r).captureInteraction.apply(t,arguments)}),(0,e.m)(!1))}))}return o=function(){var t;return(t=r).captureVisibilityChange.apply(t,arguments)},"addEventListener"in document&&C&&document.addEventListener(C,(function(){I&&document[I]?o(document[I]):document[T]?o("hidden"):o("visible")}),(0,e.m)(!1)),r}r=t,(n=o).prototype=Object.create(r.prototype),n.prototype.constructor=n,N(n,r);var i=o.prototype;return i.isEnabled=function(){return!1!==(0,O.Mt)(this.agentIdentifier,"page_view_timing.enabled")},i.perfObserver=function(t,e){var n=this;t.getEntries().forEach((function(t){"first-paint"===t.name?(0,b.p)("timing",["fp",Math.floor(t.startTime)],void 0,void 0,n.ee):"first-contentful-paint"===t.name&&(0,b.p)("timing",["fcp",Math.floor(t.startTime)],void 0,void 0,n.ee)}))},i.lcpObserver=function(t,e){var n=t.getEntries();if(n.length>0){var r=n[n.length-1];if(this.pageHiddenTime<r.startTime)return;var o=[r],i=this.addConnectionAttributes({});i&&o.push(i),(0,b.p)("lcp",o,void 0,void 0,this.ee)}},i.clsObserver=function(t){var e=this;t.getEntries().forEach((function(t){t.hadRecentInput||(0,b.p)("cls",[t],void 0,void 0,e.ee)}))},i.addConnectionAttributes=function(t){var e=navigator.connection||navigator.mozConnection||navigator.webkitConnection;if(e)return e.type&&(t["net-type"]=e.type),e.effectiveType&&(t["net-etype"]=e.effectiveType),e.rtt&&(t["net-rtt"]=e.rtt),e.downlink&&(t["net-dlink"]=e.downlink),t},i.captureInteraction=function(t){if(t instanceof M.Y.EV&&!this.fiRecorded){var e=Math.round(t.timeStamp),n={type:t.type};this.addConnectionAttributes(n),e<=(0,x.zO)()?n.fid=(0,x.zO)()-e:e>(0,x.os)()&&e<=Date.now()?(e-=(0,x.os)(),n.fid=(0,x.zO)()-e):e=(0,x.zO)(),this.fiRecorded=!0,(0,b.p)("timing",["fi",e,n],void 0,void 0,this.ee)}},i.captureVisibilityChange=function(t){"hidden"===t&&(this.pageHiddenTime=(0,x.zO)(),(0,b.p)("pageHide",[this.pageHiddenTime],void 0,void 0,this.ee))},o}(L.W),q=o(3350),B="React",z="Angular",G="AngularJS",H="Backbone",F="Ember",V="Vue",Z="Meteor",U="Zepto",X="Jquery";function Q(){var t=[];try{(function(){try{if(window.React||window.ReactDOM||window.ReactRedux)return!0;if(document.querySelector("[data-reactroot], [data-reactid]"))return!0;for(var t=document.querySelectorAll("body > div"),e=0;e<t.length;e++)if(Object.keys(t[e]).indexOf("_reactRootContainer")>=0)return!0;return!1}catch(t){return!1}})()&&t.push(B),function(){try{return!!window.angular||(!!document.querySelector(".ng-binding, [ng-app], [data-ng-app], [ng-controller], [data-ng-controller], [ng-repeat], [data-ng-repeat]")||!!document.querySelector('script[src*="angular.js"], script[src*="angular.min.js"]'))}catch(t){return!1}}()&&t.push(G),function(){try{return!!(window.hasOwnProperty("ng")&&window.ng.hasOwnProperty("coreTokens")&&window.ng.coreTokens.hasOwnProperty("NgZone"))||!!document.querySelectorAll("[ng-version]").length}catch(t){return!1}}()&&t.push(z),window.Backbone&&t.push(H),window.Ember&&t.push(F),window.Vue&&t.push(V),window.Meteor&&t.push(Z),window.Zepto&&t.push(U),window.jQuery&&t.push(X)}catch(t){}return t}var W=o(7299),K=o(603),Y=o(158);function J(t,e){return J=Object.setPrototypeOf?Object.setPrototypeOf.bind():function(t,e){return t.__proto__=e,t},J(t,e)}var $=function(t){var e,n;function r(e){var n;return(n=t.call(this,e)||this).singleChecks(),(0,q.X)("record-supportability",(function(){var t;return(t=n).recordSupportability.apply(t,arguments)}),void 0,n.ee),(0,q.X)("record-custom",(function(){var t;return(t=n).recordCustom.apply(t,arguments)}),void 0,n.ee),n}n=t,(e=r).prototype=Object.create(n.prototype),e.prototype.constructor=e,J(e,n);var o=r.prototype;return o.recordSupportability=function(t,e){var n=["sm",t,{name:t},e];return(0,b.p)("storeMetric",n,null,void 0,this.ee),n},o.recordCustom=function(t,e){var n=["cm",t,{name:t},e];return(0,b.p)("storeEventMetrics",n,null,void 0,this.ee),n},o.singleChecks=function(){var t=this;this.recordSupportability("Generic/Version/"+Y.q+"/Detected"),u((function(){Q().forEach((function(e){t.recordSupportability("Framework/"+e+"/Detected")}))})),W.T.isFileProtocol()&&(this.recordSupportability("Generic/FileProtocol/Detected"),W.T.supportabilityMetricSent=!0);var e=(0,K.$c)(this.agentIdentifier);e.length>0&&this.recordSupportability("Generic/Obfuscate/Detected"),e.length>0&&!(0,K.Ng)(e)&&this.recordSupportability("Generic/Obfuscate/Invalid")},r}(L.W),tt=o(847);new Promise((function(e,n){if(P)e(P);else{var r=(0,g.gG)();try{(0,m.L)(t.Z,r.info),(0,O.Dg)(t.Z,r.init),function(t,e){if(!t)throw new Error("All loader-config objects require an agent identifier!");_[t]=new E.I(e,j),(0,g.Qy)(t,_[t],"loader_config")}(t.Z,r.loader_config),(0,y.s)(t.Z,{}),function(t){var e=(0,g.fP)(),n=s.ee.get(t),r=n.get("tracer"),o="api-",i="api-ixn-";function a(){}(0,w.D)(["setErrorHandler","finished","addToTrace","inlineHit","addRelease"],(function(t,n){e[n]=u(o,n,!0,"api")})),e.addPageAction=u(o,"addPageAction",!0),e.setCurrentRouteName=u(o,"routeName",!0),e.setPageViewName=function(e,n){if("string"==typeof e)return"/"!==e.charAt(0)&&(e="/"+e),(0,y.O)(t).customTransaction=(n||"http://custom.transaction")+e,u(o,"setPageViewName",!0,"api")()},e.setCustomAttribute=function(e,n){var r,i=(0,m.C)(t);return(0,m.L)(t,Object.assign({},i,{jsAttributes:Object.assign({},i.jsAttributes,(r={},r[e]=n,r))})),u(o,"setCustomAttribute",!0,"api")()},e.interaction=function(){return(new a).get()};var c=a.prototype={createTracer:function(t,e){var o={},i=this,a="function"==typeof e;return(0,b.p)("api-ixn-tracer",[(0,x.zO)(),t,o],i,void 0,n),function(){if(r.emit((a?"":"no-")+"fn-start",[(0,x.zO)(),i,a],o),a)try{return e.apply(this,arguments)}catch(t){throw r.emit("fn-err",[arguments,this,"string"==typeof t?new Error(t):t],o),t}finally{r.emit("fn-end",[(0,x.zO)()],o)}}}};function u(t,e,r,o){return function(){return(0,b.p)("record-supportability",["API/"+e+"/called"],void 0,void 0,n),(0,b.p)(t+e,[(0,x.zO)()].concat(h()(arguments)),r?null:this,o,n),r?void 0:this}}(0,w.D)("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),(function(t,e){c[e]=u(i,e)})),e.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),(0,b.p)("record-supportability",["API/noticeError/called"],void 0,void 0,n),(0,b.p)("err",[t,(0,x.zO)(),!1,e],void 0,void 0,n)}}(t.Z),e(P=!0)}catch(t){n(t)}}})).then((function(){var e,n,r,o=(0,tt.K)(t.Z);o.page_view_event&&new R(t.Z),o.page_view_timing&&new D(t.Z),o.metrics&&new $(t.Z),e="lite",n?setTimeout((function(){return v(e)}),r||1e3):c((function(){return v(e)}))}))}(),i}()}));</script><meta content="yes" name="apple-mobile-web-app-capable" /><meta content="black" name="apple-mobile-web-app-status-bar-style" /><meta content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes" name="viewport" /><meta content="246sx3tXxgj7vArUn14JkI04T54IlRbcR52XYXnSJ8M" name="google-site-verification" /><meta content="B98DA1CC5D69C51D893C0B25FD01AE2D" name="msvalidate.01" /><link rel="apple-touch-icon" type="image/x-icon" href="https://marketing-assets.hubstaff.com/assets/favicon/hubstaff/apple-touch-icon-b274eaa546a627efc4bce66706c28dde991402c78a7678257170fc3b65f2d049.png" sizes="180x180" /><link rel="icon" type="image/png" href="https://marketing-assets.hubstaff.com/assets/favicon/hubstaff/favicon-32x32-b33474b31ff1ca79aec9d6c5034f2f809cc048a5259a7ba5113e1f34f86a0cf2.png" sizes="32x32" /><link rel="icon" type="image/png" href="https://marketing-assets.hubstaff.com/assets/favicon/hubstaff/favicon-16x16-8ffde39e9220571ec4ca78c82a28b34b9ed72c9b07d000ba0111a43c218c2cc2.png" sizes="16x16" /><link rel="manifest" type="image/x-icon" href="https://marketing-assets.hubstaff.com/assets/favicon/hubstaff/site-3d7452faa9160598065c1eedc12e724a53239fe9dd7a8e860f69fe3b330bd44a.webmanifest" /><meta content="Hubstaff" name="apple-mobile-web-app-title" /><meta content="Hubstaff" name="application-name" /><meta content="#da532c" name="msapplication-TileColor" /><meta content="#ffffff" name="theme-color" /><link rel="stylesheet" href="https://marketing-assets.hubstaff.com/assets/hsds/hsds-a08c52fa83725c69812d4a30246e0f1fec742b4b8b4af829681a85f0a55a309e.css" type="text/css" /><meta name="csrf-param" content="authenticity_token" />
+  <meta name="csrf-token" content="5rqBqnVPToqKyxYzJIHonXmxjtEVbDJnu/Wq0SLkoiIkPt/4y5hhbgfOH0ZVAIc8EjC7nkpRDIp4RkB6S8kbeQ==" /></head><body class=" "><header class="hsds-header"><div class="hsds-header__container"><nav class="hsds-nav"><div class="hsds-nav__cell hsds-nav__cell--menu-toggle"><button name="button" type="submit" class="hsds-button hsds-button--icon-only hsds-button--ghost hsds-button--muted hsds-button--small hsds-nav__link--menu-toggle" id="hsds-nav-menu-toggle" aria-controls="hsds-nav-menu" aria-haspopup="true" aria-expanded="false" aria-label="toggle navigation menu"><div class="hsds-icon--primary hsds-nav__hamburger-icon">Menu</div></button></div><div class="hsds-nav__cell hsds-nav__cell--logo"><span class="hsds-nav__logo-element"><svg aria-labelledby="hubstaff-logo-header" class="hsds-icon hsds-nav__logo" role="img"><title id="hubstaff-logo-header">Hubstaff time tracker app</title><use xlink:href="#logo-hubstaff"></use></svg></span></div><div class="hsds-nav__cell hsds-nav__cell--nav-menu" id="hsds-nav-menu"><ul class="hsds-nav__list hsds-nav__list--updated"><li class="hsds-nav__item hsds-nav__item--features"><div class="hsds-nav__dropdown hsds-nav__dropdown--wide"><button name="button" type="button" class="hsds-nav__link hsds-nav__link--menu-button" aria-controls="hsds-nav-dropdown-features" aria-haspopup="true" aria-expanded="false"><span class="hsds-nav__menu-button-label">Features</span><svg aria-hidden="true" class="hsds-icon hsds-nav__menu-icon"><use xlink:href="#caret-down-l"></use></svg></button><div aria-hidden="true" class="hsds-nav__dropdown-panel" id="hsds-nav-dropdown-features"><div class="hsds-nav__dropdown__wide-layout"><div class="hsds-nav__dropdown__wide-layout__col hsds-nav__dropdown__wide-layout__col--menu"><div class="hsds-nav__menu__label">Time tracking</div><ul class="hsds-nav__menu" role="menu"><li class="hsds-nav__menu-item"><a class="hsds-nav__menu-link" role="menuitem" href="/time_tracking_software"><svg aria-hidden="true" class="hsds-icon hsds-nav_menu-link__icon--main"><use xlink:href="#time-tracking"></use></svg><div class="hsds-nav__menu-link-label">Time tracking software</div></a><div class="hsds-nav__menu-link-descrition">Track employee work hours across devices for more accurate timesheets</div></li><li class="hsds-nav__menu-item"><a class="hsds-nav__menu-link" role="menuitem" href="/features/employee_timesheets"><svg aria-hidden="true" class="hsds-icon hsds-nav_menu-link__icon--main"><use xlink:href="#timesheets"></use></svg><div class="hsds-nav__menu-link-label">Online timesheets</div></a><div class="hsds-nav__menu-link-descrition">Get automatically generated timesheets from digital or manual time entries</div></li><li class="hsds-nav__menu-item"><a class="hsds-nav__menu-link" role="menuitem" href="/time-report"><svg aria-hidden="true" class="hsds-icon hsds-nav_menu-link__icon--main"><use xlink:href="#to-dos"></use></svg><div class="hsds-nav__menu-link-label">Time reporting</div></a><div class="hsds-nav__menu-link-descrition">Detailed time reports that help you improve business processes</div></li><li class="hsds-nav__menu-item"><a class="hsds-nav__menu-link" role="menuitem" href="/time-clock-app"><svg aria-hidden="true" class="hsds-icon hsds-nav_menu-link__icon--main"><use xlink:href="#time-approvals"></use></svg><div class="hsds-nav__menu-link-label">Time clock app</div></a><div class="hsds-nav__menu-link-descrition">Mobile apps track time to specific clients, projects, and work orders</div></li><li class="hsds-nav__menu-item"><a class="hsds-nav__menu-link" role="menuitem" href="/features/geofence_time_clock"><svg aria-hidden="true" class="hsds-icon hsds-nav_menu-link__icon--main"><use xlink:href="#gps"></use></svg><div class="hsds-nav__menu-link-label">Geofence time tracking</div></a><div class="hsds-nav__menu-link-descrition">Create location-based Job sites that automatically clock employees in and out</div></li></ul></div><div class="hsds-nav__dropdown__wide-layout__col hsds-nav__dropdown__wide-layout__col--menu"><div class="hsds-nav__menu__label">Employee monitoring</div><ul class="hsds-nav__menu" role="menu"><li class="hsds-nav__menu-item"><a class="hsds-nav__menu-link" role="menuitem" href="/features/employee_monitoring"><svg aria-hidden="true" class="hsds-icon hsds-nav_menu-link__icon--main"><use xlink:href="#quick-details"></use></svg><div class="hsds-nav__menu-link-label">Employee monitoring software</div></a><div class="hsds-nav__menu-link-descrition">Know the right work is getting done with activity levels, screenshots, apps, and URLs</div></li><li class="hsds-nav__menu-item"><a class="hsds-nav__menu-link" role="menuitem" href="/features/gps_time_tracking"><svg aria-hidden="true" class="hsds-icon hsds-nav_menu-link__icon--main"><use xlink:href="#geofences"></use></svg><div class="hsds-nav__menu-link-label">GPS location tracking</div></a><div class="hsds-nav__menu-link-descrition">Manage on-the-go work crews with mobile app geofencing and live map views.</div></li><li class="hsds-nav__menu-item"><a class="hsds-nav__menu-link" role="menuitem" href="/features/employee_productivity"><svg aria-hidden="true" class="hsds-icon hsds-nav_menu-link__icon--main"><use xlink:href="#team"></use></svg><div class="hsds-nav__menu-link-label">Employee productivity</div></a><div class="hsds-nav__menu-link-descrition">Built-in efficiency tools to help teams work smarter.</div></li><li class="hsds-nav__menu-item"><a class="hsds-nav__menu-link" role="menuitem" href="/how-tracking-works"><svg aria-hidden="true" class="hsds-icon hsds-nav_menu-link__icon--main"><use xlink:href="#screenshots"></use></svg><div class="hsds-nav__menu-link-label">How tracking features work</div></a><div class="hsds-nav__menu-link-descrition">Hubstaff was built to empower teams with transparency, access, and control of their data</div></li></ul></div><div class="hsds-nav__dropdown__wide-layout__col hsds-nav__dropdown__wide-layout__col--menu"><div class="hsds-nav__menu__label">Workforce management</div><ul class="hsds-nav__menu" role="menu"><li class="hsds-nav__menu-item"><a class="hsds-nav__menu-link" role="menuitem" href="/features/employee_scheduling_software"><svg aria-hidden="true" class="hsds-icon hsds-nav_menu-link__icon--main"><use xlink:href="#scheduling-l"></use></svg><div class="hsds-nav__menu-link-label">Employee scheduling</div></a><div class="hsds-nav__menu-link-descrition">Simplify scheduling with automated attendance tracking</div></li><li class="hsds-nav__menu-item"><a class="hsds-nav__menu-link" role="menuitem" href="/features/online_payroll"><svg aria-hidden="true" class="hsds-icon hsds-nav_menu-link__icon--main"><use xlink:href="#payroll-l"></use></svg><div class="hsds-nav__menu-link-label">Payroll tracking</div></a><div class="hsds-nav__menu-link-descrition">Pay teams faster and more easily based on hours worked</div></li><li class="hsds-nav__menu-item"><a class="hsds-nav__menu-link" role="menuitem" href="/features/online_invoicing"><svg aria-hidden="true" class="hsds-icon hsds-nav_menu-link__icon--main"><use xlink:href="#invoicing"></use></svg><div class="hsds-nav__menu-link-label">Invoice tracking</div></a><div class="hsds-nav__menu-link-descrition">Create custom invoices and send them right from your dashboard</div></li><li class="hsds-nav__menu-item"><a class="hsds-nav__menu-link" role="menuitem" href="/features/work-order-software"><svg aria-hidden="true" class="hsds-icon hsds-nav_menu-link__icon--main"><use xlink:href="#send"></use></svg><div class="hsds-nav__menu-link-label">Work orders / job management</div></a><div class="hsds-nav__menu-link-descrition">Create, assign, and track time to Work orders for various clients</div></li></ul></div><div class="hsds-nav__dropdown__wide-layout__col hsds-nav__dropdown__wide-layout__col--menu"><div class="hsds-nav__menu__label">Agile project management</div><ul class="hsds-nav__menu" role="menu"><li class="hsds-nav__menu-item"><a class="hsds-nav__menu-link" role="menuitem" href="/tasks"><svg aria-hidden="true" class="hsds-icon hsds-nav_menu-link__icon--main hsds-nav_menu-link__icon--tasks"><use xlink:href="#time-tracking"></use></svg><div class="hsds-nav__menu-link-label">Agile project management software</div></a><div class="hsds-nav__menu-link-descrition">Embrace Agile with user-friendly, collaborative task management</div></li><li class="hsds-nav__menu-item"><a class="hsds-nav__menu-link" role="menuitem" href="/tasks/agile-sprints"><svg aria-hidden="true" class="hsds-icon hsds-nav_menu-link__icon--main hsds-nav_menu-link__icon--tasks"><use xlink:href="#sprints"></use></svg><div class="hsds-nav__menu-link-label">Sprint management</div></a><div class="hsds-nav__menu-link-descrition">Manage your Sprints more easily and automate Sprint planning</div></li><li class="hsds-nav__menu-item"><a class="hsds-nav__menu-link" role="menuitem" href="/tasks/automated-standups"><svg aria-hidden="true" class="hsds-icon hsds-nav_menu-link__icon--main hsds-nav_menu-link__icon--tasks"><use xlink:href="#stand-ups"></use></svg><div class="hsds-nav__menu-link-label">Automated Stand-ups</div></a><div class="hsds-nav__menu-link-descrition">Work asynchronously and limit meetings with virtual Stand-ups</div></li><li class="hsds-nav__menu-item"><a class="hsds-nav__menu-link" role="menuitem" href="/tasks/project-time-tracker"><svg aria-hidden="true" class="hsds-icon hsds-nav_menu-link__icon--main hsds-nav_menu-link__icon--tasks"><use xlink:href="#workflows"></use></svg><div class="hsds-nav__menu-link-label">Project time tracker</div></a><div class="hsds-nav__menu-link-descrition">Clock hours on specific projects for better project planning and reporting</div></li></ul></div></div><div class="hsds-nav__menu-item hsds-nav__dropdown__wide-layout hsds-nav__menu-item--footer"><a class="hsds-nav__menu-link" href="/features"><div class="hsds-nav__menu-link-label">See all features</div></a></div></div></div></li><li class="hsds-nav__item"><div class="hsds-nav__dropdown hsds-nav__dropdown--wide"><button name="button" type="button" class="hsds-nav__link hsds-nav__link--menu-button" aria-controls="hsds-nav-dropdown-how-it-works" aria-haspopup="true" aria-expanded="false"><span class="hsds-nav__menu-button-label">How it works</span><svg aria-hidden="true" class="hsds-icon hsds-nav__menu-icon"><use xlink:href="#caret-down-l"></use></svg></button><div aria-hidden="true" class="hsds-nav__dropdown-panel" id="hsds-nav-dropdown-how-it-works"><div class="hsds-nav__dropdown__wide-layout"><div class="hsds-nav__dropdown__wide-layout__col hsds-nav__dropdown__wide-layout__col--menu"><div class="hsds-nav__menu__label">Solutions</div><ul class="hsds-nav__menu" role="menu"><li class="hsds-nav__menu-item"><a class="hsds-nav__menu-link" role="menuitem" href="/solutions/remote"><div class="hsds-nav__menu-link-label">Remote work software</div></a><div class="hsds-nav__menu-link-descrition">Manage remote and hybrid teams with greater visibility and productivity</div></li><li class="hsds-nav__menu-item"><a class="hsds-nav__menu-link" role="menuitem" href="/solutions/field-services"><div class="hsds-nav__menu-link-label">Field service management</div></a><div class="hsds-nav__menu-link-descrition">Create schedules, Work orders, and geofenced Job sites for your team</div></li><li class="hsds-nav__menu-item"><a class="hsds-nav__menu-link" role="menuitem" href="/solutions/agencies"><div class="hsds-nav__menu-link-label">Agency time tracking</div></a><div class="hsds-nav__menu-link-descrition">Track time, see project spend, and create automatic invoices for your agency clients</div></li><li class="hsds-nav__menu-item"><a class="hsds-nav__menu-link" role="menuitem" href="/solutions/freelancers"><div class="hsds-nav__menu-link-label">Freelance time tracking</div></a><div class="hsds-nav__menu-link-descrition">Easily bill clients for hours worked and track invoices</div></li><li class="hsds-nav__menu-item"><a class="hsds-nav__menu-link" role="menuitem" href="/solutions/consulting"><div class="hsds-nav__menu-link-label">Consultant time tracking</div></a><div class="hsds-nav__menu-link-descrition">Manage consulting projects, invoicing, and payroll from one software</div></li><li class="hsds-nav__menu-item hsds-nav__menu-item--footer"><a class="hsds-nav__menu-link" role="menuitem" href="/solutions"><div class="hsds-nav__menu-link-label">See all solutions</div></a></li></ul></div><div class="hsds-nav__dropdown__wide-layout__col hsds-nav__dropdown__wide-layout__col--menu"><div class="hsds-nav__menu__label">Industries</div><ul class="hsds-nav__menu" role="menu"><li class="hsds-nav__menu-item"><a class="hsds-nav__menu-link" role="menuitem" href="/solutions/software-development"><div class="hsds-nav__menu-link-label">Software development</div></a><div class="hsds-nav__menu-link-descrition">Automate billable hours tracking and invoice dev clients</div></li><li class="hsds-nav__menu-item"><a class="hsds-nav__menu-link" role="menuitem" href="/solutions/ecommerce"><div class="hsds-nav__menu-link-label">E-commerce</div></a><div class="hsds-nav__menu-link-descrition">Manage your e-commerce teams with timesheets and productivity features</div></li><li class="hsds-nav__menu-item"><a class="hsds-nav__menu-link" role="menuitem" href="/solutions/construction"><div class="hsds-nav__menu-link-label">Construction</div></a><div class="hsds-nav__menu-link-descrition">Set up Job sites with geofenced time tracking and scheduling for your crew</div></li><li class="hsds-nav__menu-item"><a class="hsds-nav__menu-link" role="menuitem" href="/solutions/janitorial"><div class="hsds-nav__menu-link-label">Cleaning</div></a><div class="hsds-nav__menu-link-descrition">Schedule cleaning teams and track hours with real-time GPS tracking</div></li></ul></div><div class="hsds-nav__dropdown__wide-layout__col hsds-nav__dropdown__wide-layout__col--menu"><div class="hsds-nav__menu__label">Integrations</div><ul class="hsds-nav__menu" role="menu"><li class="hsds-nav__menu-item"><a class="hsds-nav__menu-link" role="menuitem" href="/project-management-hours-tracking"><div class="hsds-nav__menu-link-label">Hubstaff + Tasks</div></a><div class="hsds-nav__menu-link-descrition">Sync time tracking and project management with two integrated tools</div></li><li class="hsds-nav__menu-item"><a class="hsds-nav__menu-link" role="menuitem" href="/jira_time_tracking"><div class="hsds-nav__menu-link-label">Jira</div></a><div class="hsds-nav__menu-link-descrition">Pair Hubstaff with Jira for better project management</div></li><li class="hsds-nav__menu-item"><a class="hsds-nav__menu-link" role="menuitem" href="/trello_time_tracking"><div class="hsds-nav__menu-link-label">Trello</div></a><div class="hsds-nav__menu-link-descrition">Track time to specific Trello boards and cards with Hubstaff</div></li><li class="hsds-nav__menu-item"><a class="hsds-nav__menu-link" role="menuitem" href="/quickbooks_time_tracking"><div class="hsds-nav__menu-link-label">Quickbooks</div></a><div class="hsds-nav__menu-link-descrition">Link Quickbooks and Hubstaff for more efficient payroll</div></li><li class="hsds-nav__menu-item hsds-nav__menu-item--footer"><a class="hsds-nav__menu-link" role="menuitem" href="/integrations"><div class="hsds-nav__menu-link-label">See all integrations</div></a></li></ul></div><div class="hsds-nav__dropdown__wide-layout__col hsds-nav__dropdown__wide-layout__col--menu hsds-nav__dropdown__layout__col--grey"><div class="hsds-nav__menu__label">Talk to us</div><div class="hsds-nav__content hsds-nav__content--sales"><img class="hsds-image-round" width="125" height="125" alt="Sales person image" src="https://marketing-assets.hubstaff.com/assets/refresh/stickers/sales-team-person2@2x-cc5829e1ccb6b3d107c184b73442ead86833faa64404a362681b309e37e16e4e.jpg" /><p>Learn more about Hubstaff from our in-house product specialist.</p><a class="hsds-contact__item-link" href="tel: +13174827165"><svg aria-hidden="true" class="hsds-contact__item-icon hsds-icon"><use xlink:href="https://hubstaff.com/assets/refresh/icons/icons-8bc1c8b23943c56d28b64b5fa10d8495cf8193894a2db6ca7dde1eeaf4323b26.svg#phone"></use></svg><div><div>Americas</div><div>+1 317 482 7165</div></div></a><a class="hsds-contact__item-link" href="tel: +442045251373"><svg aria-hidden="true" class="hsds-contact__item-icon hsds-icon"><use xlink:href="https://hubstaff.com/assets/refresh/icons/icons-8bc1c8b23943c56d28b64b5fa10d8495cf8193894a2db6ca7dde1eeaf4323b26.svg#phone"></use></svg><div><div>EMEA/APAC</div><div>+44 20 4525 1373</div></div></a><div class="hsds-contact__item--footer"><svg aria-hidden="true" class="hsds-contact__item-icon--info hsds-icon"><use xlink:href="https://hubstaff.com/assets/refresh/icons/icons-8bc1c8b23943c56d28b64b5fa10d8495cf8193894a2db6ca7dde1eeaf4323b26.svg#info"></use></svg><span>Phone numbers are only for sales queries</span></div></div></div></div></div></div></li><li class="hsds-nav__item hsds-nav__item--apps"><div class="hsds-nav__dropdown hsds-nav__dropdown--wide"><button name="button" type="button" class="hsds-nav__link hsds-nav__link--menu-button" aria-controls="hsds-nav-dropdown-features" aria-haspopup="true" aria-expanded="false"><span class="hsds-nav__menu-button-label">Apps</span><svg aria-hidden="true" class="hsds-icon hsds-nav__menu-icon"><use xlink:href="#caret-down-l"></use></svg></button><div aria-hidden="true" class="hsds-nav__dropdown-panel" id="hsds-nav-dropdown-apps"><div class="hsds-nav__dropdown__wide-layout"><div class="hsds-nav__dropdown__wide-layout__col hsds-nav__dropdown__wide-layout__col--menu"><div class="hsds-nav__menu__label">Desktop</div><ul class="hsds-nav__menu" role="menu"><li class="hsds-nav__menu-item"><a class="hsds-nav__menu-link" role="menuitem" href="/mac-time-tracker"><div class="hsds-nav__menu-link-label">Mac</div></a><div class="hsds-nav__menu-link-descrition">A time tracking and productivity suite for OS X Mavericks or newer</div></li><li class="hsds-nav__menu-item"><a class="hsds-nav__menu-link" role="menuitem" href="/windows"><div class="hsds-nav__menu-link-label">Windows</div></a><div class="hsds-nav__menu-link-descrition">A time tracking and productivity suite for Windows 8 or newer</div></li><li class="hsds-nav__menu-item"><a class="hsds-nav__menu-link" role="menuitem" href="/linux"><div class="hsds-nav__menu-link-label">Linux</div></a><div class="hsds-nav__menu-link-descrition">Lightweight time tracking that runs quietly in the background on Linux</div></li><li class="hsds-nav__menu-item hsds-nav__menu-item--footer"><a class="hsds-nav__menu-link" role="menuitem" href="https://app.hubstaff.com/download"><div class="hsds-nav__menu-link-label">Download the app</div></a></li></ul></div><div class="hsds-nav__dropdown__wide-layout__col hsds-nav__dropdown__wide-layout__col--menu"><div class="hsds-nav__menu__label">Mobile</div><ul class="hsds-nav__menu" role="menu"><li class="hsds-nav__menu-item"><a class="hsds-nav__menu-link" role="menuitem" href="/time_tracking_app_iphone"><div class="hsds-nav__menu-link-label">iOS</div></a><div class="hsds-nav__menu-link-descrition">Track time and GPS location from the iOS app</div></li><li class="hsds-nav__menu-item"><a class="hsds-nav__menu-link" role="menuitem" href="/android_time_tracking_app_with_gps"><div class="hsds-nav__menu-link-label">Android</div></a><div class="hsds-nav__menu-link-descrition">Track time and GPS location from the Android app</div></li></ul></div><div class="hsds-nav__dropdown__wide-layout__col hsds-nav__dropdown__wide-layout__col--menu"><div class="hsds-nav__menu__label">Web</div><ul class="hsds-nav__menu" role="menu"><li class="hsds-nav__menu-item"><a class="hsds-nav__menu-link" role="menuitem" href="/chrome"><div class="hsds-nav__menu-link-label">Google Chrome extension</div></a><div class="hsds-nav__menu-link-descrition">Track time to specific projects straight from your Chrome browser</div></li></ul></div><div class="hsds-nav__dropdown__wide-layout__col hsds-nav__dropdown__wide-layout__col--menu hsds-nav__dropdown__layout__col--grey"><div class="hsds-nav__menu__label">Start free trial</div><div class="hsds-nav__content"><img src="https://marketing-assets.hubstaff.com/assets/refresh/screenshots/freelance-time-tracking-dashboard-desktop@2x-a09b735ce8c97b27e0dd0b23829763da900ea3ae24462471e83d48ec93eb3e1e.png" /><a title="Start free trial" class="hsds-button hsds-button--medium hsds-button--ghost hsds-button--flush hsds-button--animate-icon-inline" href="/signup"><div class="hsds-nav__menu-link-label">Start free trial<svg aria-hidden="true" class="hsds-icon hsds-button__icon hsds-button__icon--inline"><use xlink:href="#arrow-right"></use></svg></div></a></div></div></div></div></div></li><li class="hsds-nav__item hsds-nav__item--pricing"><a class="hsds-nav__link" href="/pricing">Pricing</a></li><li class="hsds-nav__item"><a class="hsds-nav__link js-hsds-cta-track" data-name="Demo link navbar" href="/demo">Demo</a></li><li class="hsds-nav__item hsds-nav__item--cta-mobile"><a class="hsds-button hsds-button--large hsds-button--secondary hsds-button--block-level" href="https://app.hubstaff.com/login"><svg aria-hidden="true" class="hsds-icon hsds-button__icon hsds-button__icon--before"><use xlink:href="#sign-in"></use></svg><span class="hsds-button__label">Sign in</span></a><a class="hsds-button hsds-button--large hsds-button--primary hsds-button--block-level js-hsds-cta-track" data-name="Navbar signup on Mobile" href="/signup">Create account</a></li><li class="hsds-nav__item hsds-nav__item--cta-desktop"><a class="hsds-button hsds-button--medium hsds-button--primary js-hsds-cta-track" data-name="Navbar signup" href="/signup">Free 14-day trial</a></li><li class="hsds-nav__item hsds-nav__item--sign-in-desktop"><a class="hsds-button hsds-button--medium hsds-button--secondary" href="https://app.hubstaff.com/login"><svg aria-hidden="true" class="hsds-icon hsds-button__icon hsds-button__icon--before"><use xlink:href="#sign-in"></use></svg><span class="hsds-button__label">Sign in</span></a></li></ul></div><div class="hsds-nav__cell hsds-nav__cell--sign-in-mobile"><a class="hsds-button hsds-button--ghost hsds-button--on-dark hsds-button--muted hsds-button--icon-only hsds-button--small" aria-label="Sign in" href="https://app.hubstaff.com/login"><svg aria-hidden="true" class="hsds-icon"><use xlink:href="#sign-in"></use></svg></a></div></nav></div><div class="hsds-header__backdrop"></div></header><main class="hsds-layout__main"><section class="hsds-hero hsds-hero--with-fixed-height-mask"><div class="hsds-hero__background-graphic-wrapper hsds-graphic--desktop-only"><style type="text/css">.wistia_click_to_play {
+	position: static !important;
+  }</style><span class="wistia_embed popover=true popoverContent=html wistia_async_4hvb27uq5i playerColor=294DFF"></span><button name="button" type="button" class="js-hsds-wistia-popover-trigger hsds-round-button hsds-round-button--primary hsds-round-button--responsive hsds-hero__round-button" aria-label="launch Hubstaff video" data-video-id="4hvb27uq5i"><svg aria-hidden="true" class="hsds-icon hsds-round-button__icon-triangle"><use xlink:href="#triangle-right"></use></svg></button><svg class="hsds-hero__svg-mask"><defs><clipPath clipPathUnits="userSpaceOnUse" id="hero-mask" transform="scale(0.47)" transformOrigin="top left"><path d="M0,0l319.305,1135.219l-0.017-0.005c15.276,54.3,64.501,91.777,120.54,91.777h917.343c56.748,0,120.537-41.796,120.537-118.284V0H0z" fill="#FFFFFF"></path></clipPath></defs></svg><div class="hsds-hero__background-graphic-mask"><picture class="hsds-hero__background-graphic-mask__cover hsds-hero__background-graphic-mask__cover--overlay"><source media="(min-width: 992px)" srcset="https://marketing-assets.hubstaff.com/assets/refresh/heros/homepage-hero-keyframe-desktop-compressed@2x-2b02f809ffa5efbbc5e1c9651b4244e2b6af3d0b5f546710bd612290a11b2b71.webp" type="image/webp" /><source media="(min-width: 992px)" srcset="https://marketing-assets.hubstaff.com/assets/refresh/heros/homepage-hero-keyframe-desktop-compressed@2x-ead8dc207bd3585f8d25a261480d95571fd909fb8fb54d398bd076d42dda84e6.jpg" type="image/jpeg" /><img alt="Hubstaff video preview" height="624" width="1121" decoding="async" src="" /></picture><div class="hsds-hero__background-graphic hsds-hero__background-graphic--video" data-video-background-src-mp4="https://marketing-assets.hubstaff.com/assets/homepage-hero-video-background-desktop-c67c04d3493f3fed2296d4b72d90da3561680aad50fe2c9e4eb9f95e4d7c78ef.mp4" data-video-background-src-webm="https://marketing-assets.hubstaff.com/assets/homepage-hero-video-background-desktop-d4125b178c0b86034aab50520e43a352943a00f81aa3e7c459b379756d5d3087.webm"></div></div></div><div class="hsds-hero__container"><div class="hsds-hero__row"><div class="hsds-hero__col hsds-hero__col--content"><div class="hsds-hero__message"><h1 class="hsds-hero__heading">Spend less time tracking and more time <span class="hsds_hero__heading-brand">growing.</span></h1><p class="hsds-hero__deck">The all-in-one work time tracker for managing field or remote teams.</p><form class="hsds-form auth_form" id="auth_form" action="/api/signup" accept-charset="UTF-8" data-remote="true" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><div class="hsds-form__input-group hsds-form__input-group--small form-group"><div class="hsds-form__input-wrapper"><input placeholder="Name" class="hsds-form__input" required="required" autocomplete="off" aria-label="Name" type="text" name="user[name]" id="user_name" /></div></div><div class="hsds-form__input-group hsds-form__input-group--small form-group"><div class="hsds-form__input-wrapper"><input placeholder="Email" class="hsds-form__input" required="required" autocomplete="off" aria-label="Email" type="email" name="user[email]" id="user_email" /></div></div><div class="hsds-form__input-group hsds-form__input-group--small form-group"><div class="hsds-form__input-wrapper"><input placeholder="Password" class="hsds-form__input" autocomplete="off" required="required" aria-label="Password" title="At least six characters containing at least one number, one lower, and one uppercase letter" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" type="password" name="user[password]" id="user_password" /></div></div><div class="hsds-form__input-group form-group"><label class="hsds-form__checkbox hsds-form__checkbox--center-mobile" for="user_terms"><input name="user[terms]" type="hidden" value="0" /><input required="required" class="hsds-form__checkbox-input" type="checkbox" value="1" name="user[terms]" id="user_terms" /><div class="hsds-form__checkbox-icon"></div><div class="hsds-form__checkbox-label">I agree to the <a target="_blank" tabindex="-1" href="/terms">Terms</a>, <a target="_blank" tabindex="-1" href="/privacy">Privacy Policy</a>  and <a target="_blank" tabindex="-1" href="/dpa">DPA</a> </div></label></div><div class="hsds-form__input-group"><button name="button" type="submit" class="hsds-button hsds-button--medium hsds-button--primary hsds-button--block-level" data-disable-with="Processing...">Create account</button></div><div class="hsds-form__footnote hsds-form__footnote--centered">No credit card required</div></form></div></div><div class="hsds-hero__col hsds-hero__col--logos hsds-hero__col--align-end"><div class="hsds-hero__footnote">Trusted by <strong>40,000+</strong> businesses.</div><div class="hsds-hero__logo-row"><div class="hsds-hero__logo-col"><img class="hsds-hero__logo" alt="Groupon logo" loading="lazy" width="108" height="17" decoding="async" src="https://marketing-assets.hubstaff.com/assets/refresh/logos/customers/groupon-3390c0b918435d1ec9a58a1bdeb1e719b4913e1fe977349fb1b57101204c0d9d.svg" /></div><div class="hsds-hero__logo-col"><img class="hsds-hero__logo" alt="Keller Williams logo" loading="lazy" width="145" height="17" decoding="async" src="https://marketing-assets.hubstaff.com/assets/refresh/logos/customers/keller-williams-f06b48cdfe6149445df3739f89eca4aee21400bea877ed0386b9389fd3d5face.svg" /></div><div class="hsds-hero__logo-col"><img class="hsds-hero__logo" alt="Clippers logo" loading="lazy" width="59" height="44" decoding="async" src="https://marketing-assets.hubstaff.com/assets/refresh/logos/customers/clippers-dbc95012b41a4f71291072868a9b4b459d3f443ebddc90f6f93c3a23232019c4.svg" /></div><div class="hsds-hero__logo-col"><img class="hsds-hero__logo" alt="Instacart logo" loading="lazy" width="110" height="22" decoding="async" src="https://marketing-assets.hubstaff.com/assets/refresh/logos/customers/instacart-5b9f207c44cd0a516e4813ceda9728ba7eb31dd9ce0693d3f9a6f788d6ef8698.svg" /></div></div></div></div></div></section><section class="hsds-row hsds-row--background-oval"><div class="hsds-row__container"><div class="hsds-tabs"><div aria-label="Hubstaff features" class="hsds-tabs__tab-row"><ul class="hsds-tabs__tab-list"><li class="hsds-tabs__tab-visual"></li><li class="hsds-tabs__tab-item" role="tablist"><button name="button" type="submit" role="tab" class="hsds-tabs__tab hsds-tabs__tab--is-active" id="tab-time-tracking" aria-controls="tabpanel-time-tracking" aria-selected="true" tabindex="-1"><svg aria-hidden="true" class="hsds-icon hsds-tab__tab-icon"><use xlink:href="#time-tracking"></use></svg><span class="hsds-tab__tab-label">Time tracking</span></button></li><li class="hsds-tabs__tab-item" role="tablist"><button name="button" type="submit" role="tab" class="hsds-tabs__tab" id="tab-productivity-monitoring" aria-controls="tabpanel-productivity-monitoring"><svg aria-hidden="true" class="hsds-icon hsds-tab__tab-icon"><use xlink:href="#productivity-monitoring"></use></svg><span class="hsds-tab__tab-label">Productivity monitoring</span></button></li><li class="hsds-tabs__tab-item" role="tablist"><button name="button" type="submit" role="tab" class="hsds-tabs__tab" id="tab-reporting" aria-controls="tabpanel-reporting"><svg aria-hidden="true" class="hsds-icon hsds-tab__tab-icon"><use xlink:href="#development"></use></svg><span class="hsds-tab__tab-label">Reporting</span></button></li><li class="hsds-tabs__tab-item" role="tablist"><button name="button" type="submit" role="tab" class="hsds-tabs__tab" id="tab-gps-tracking" aria-controls="tabpanel-gps-tracking"><svg aria-hidden="true" class="hsds-icon hsds-tab__tab-icon"><use xlink:href="#gps"></use></svg><span class="hsds-tab__tab-label">GPS tracking</span></button></li><li class="hsds-tabs__tab-item" role="tablist"><button name="button" type="submit" role="tab" class="hsds-tabs__tab" id="tab-online-timesheets" aria-controls="tabpanel-online-timesheets"><svg aria-hidden="true" class="hsds-icon hsds-tab__tab-icon"><use xlink:href="#online-timesheets"></use></svg><span class="hsds-tab__tab-label">Online timesheets</span></button></li><li class="hsds-tabs__tab-item" role="tablist"><button name="button" type="submit" role="tab" class="hsds-tabs__tab" id="tab-automated-payroll" aria-controls="tabpanel-automated-payroll"><svg aria-hidden="true" class="hsds-icon hsds-tab__tab-icon"><use xlink:href="#automated-payroll"></use></svg><span class="hsds-tab__tab-label">Automated payroll</span></button></li></ul></div><ul class="hsds-tabs__panel-list"><li class="hsds-tabs__panel-item"><button name="button" type="button" class="hsds-tabs__tab-accordion hsds-tabs__tab-accordion--is-open" aria-controls="tabpanel-time-tracking" aria-expanded="true"><svg aria-hidden="true" class="hsds-icon hsds-tabs__tab-accordion-icon"><use xlink:href="#time-tracking"></use></svg><span class="hsds-tabs__tab-accordion-label">Time tracking</span><svg aria-hidden="true" class="hsds-icon hsds-tabs__tab-accordion-menu-icon"><use xlink:href="#caret-down-l"></use></svg></button><div aria-hidden="false" aria-labelledby="tab-time-tracking" class="hsds-tabs__panel hsds-tabs__panel--is-active hsds-tabs__panel--is-open" id="tabpanel-time-tracking" role="tabpanel"><h2 class="hsds-tabs__heading">Easy and accurate time tracking</h2><div class="hsds-tabs__deck">Clean, lightweight apps for desktop, web, mobile, and Chrome. <a href="/time_tracking_software">Learn more about time tracking.</a></div><div class="hsds-screenshot"><img class="hsds-screenshot__timer" alt="time tracking software" aria-hidden="true" loading="lazy" width="207" height="32" srcset="https://marketing-assets.hubstaff.com/assets/refresh/gifs/time-tracking-timer-mobile@2x-3acec9f51657a98d22ddc5033f6ccb4e30a5477175327214bd6610eaeddb4059.gif 142w, https://marketing-assets.hubstaff.com/assets/refresh/gifs/time-tracking-timer-desktop@2x-10c903bfd1d38bf799aeb34f4e7b06196d09bab4341ff89f00d51cd5445823c0.gif 433w" sizes="(max-width: 576px) 50px,
+  992px" decoding="async" src="https://marketing-assets.hubstaff.com/assets/refresh/gifs/time-tracking-timer-desktop@2x-10c903bfd1d38bf799aeb34f4e7b06196d09bab4341ff89f00d51cd5445823c0.gif" /><picture><source media="(max-width: 992px)" srcset="https://marketing-assets.hubstaff.com/assets/refresh/screenshots/time-tracking-no-timer-mobile@2x-d119ed183647c3cd4d0f34f0cec726d427d36fa6d86a8079086a157b44497f55.webp" type="image/webp" /><source srcset="https://marketing-assets.hubstaff.com/assets/refresh/screenshots/time-tracking-no-timer-desktop@2x-4a3cbf1950d6eeff229cfb610a5c753c15d57fc14516604f92a016468e227aa5.webp" type="image/webp" /><source media="(min-width: 992px)" srcset="https://marketing-assets.hubstaff.com/assets/refresh/screenshots/time-tracking-no-timer-desktop@2x-79d7dfe51917b72f9f10918a0aa95f47949c81d49cf19f5b445a7dd89d789bd8.png" type="image/jpeg" /><img class="hsds-tabs__image" alt="Clean, lightweight apps for desktop, web, mobile, and Chrome" loading="lazy" width="940" height="566" decoding="async" src="https://marketing-assets.hubstaff.com/assets/refresh/screenshots/time-tracking-no-timer-desktop@2x-79d7dfe51917b72f9f10918a0aa95f47949c81d49cf19f5b445a7dd89d789bd8.png" /></picture></div></div></li><li class="hsds-tabs__panel-item"><button name="button" type="button" class="hsds-tabs__tab-accordion" aria-controls="tabpanel-productivity-monitoring" aria-expanded="false"><svg aria-hidden="true" class="hsds-icon hsds-tabs__tab-accordion-icon"><use xlink:href="#productivity-monitoring"></use></svg><span class="hsds-tabs__tab-accordion-label">Productivity monitoring</span><svg aria-hidden="true" class="hsds-icon hsds-tabs__tab-accordion-menu-icon"><use xlink:href="#caret-down-l"></use></svg></button><div aria-labelledby="tab-productivity-monitoring" class="hsds-tabs__panel" id="tabpanel-productivity-monitoring" role="tabpanel"><h2 class="hsds-tabs__heading">Track and improve employee productivity</h2><div class="hsds-tabs__deck">Keep your team productive without constant check-ins. <a href="/features/employee_productivity">Learn more about productivity monitoring.</a></div><picture><source media="(max-width: 992px)" srcset="https://marketing-assets.hubstaff.com/assets/refresh/screenshots/productivity-monitoring-mobile@2x-67bdcbec6bed6db66cb0e70dc96a97e426e8d2ac04cfb29d6ad044b64c64b468.webp" type="image/webp" /><source srcset="https://marketing-assets.hubstaff.com/assets/refresh/screenshots/productivity-monitoring-desktop@2x-c340245effb54a1b720d77420ec6a823870571d66ccce0b1259e19f6697eab7b.webp" type="image/webp" /><source media="(min-width: 992px)" srcset="https://marketing-assets.hubstaff.com/assets/refresh/screenshots/productivity-monitoring-desktop@2x-a4c52386ead411067d1e45dd0c45fb49dafb1c75e6439c96ebb10f597d66c0ac.png" type="image/jpeg" /><img class="hsds-tabs__image" alt="Keep your team productive without constant check-ins" loading="lazy" width="940" height="520" decoding="async" src="https://marketing-assets.hubstaff.com/assets/refresh/screenshots/productivity-monitoring-mobile@2x-d344a0f09499c44b09d6e4ebac30a617519fed2e9448bc17e9d9889a8424edd1.png" /></picture></div></li><li class="hsds-tabs__panel-item"><button name="button" type="button" class="hsds-tabs__tab-accordion" aria-controls="tabpanel-reporting" aria-expanded="false"><svg aria-hidden="true" class="hsds-icon hsds-tabs__tab-accordion-icon"><use xlink:href="#development"></use></svg><span class="hsds-tabs__tab-accordion-label">Reporting</span><svg aria-hidden="true" class="hsds-icon hsds-tabs__tab-accordion-menu-icon"><use xlink:href="#caret-down-l"></use></svg></button><div aria-labelledby="tab-reporting" class="hsds-tabs__panel" id="tabpanel-reporting" role="tabpanel"><h2 class="hsds-tabs__heading">Detailed reporting for your business</h2><div class="hsds-tabs__deck">Uncover where time (and money) is being wasted. <a href="/time-report">Learn more about reporting.</a></div><picture><source media="(max-width: 992px)" srcset="https://marketing-assets.hubstaff.com/assets/refresh/screenshots/reporting-mobile@2x-f79a0f4b028e10281c4dd99dd80abc259f5d0ab1414cc16d1e53b59346097da8.webp" type="image/webp" /><source srcset="https://marketing-assets.hubstaff.com/assets/refresh/screenshots/reporting-desktop@2x-efcc6e85ce9b40c1487bed2a9f07ca6306ca8499d4e111621488cfc92b20d673.webp" type="image/webp" /><source media="(min-width: 992px)" srcset="https://marketing-assets.hubstaff.com/assets/refresh/screenshots/reporting-desktop@2x-f43dd52b399470a2db2e5de49453eea1ab547ca1b56ab5c28c72be4c889c95c0.png" type="image/jpeg" /><img class="hsds-tabs__image" alt="Uncover where time (and money) is being wasted" loading="lazy" width="940" height="508" decoding="async" src="https://marketing-assets.hubstaff.com/assets/refresh/screenshots/reporting-mobile@2x-46716334ed1d61a5d49da98a0eb4e2ae2ed9bc63f7df62e6b4e1f212f3f4a91e.png" /></picture></div></li><li class="hsds-tabs__panel-item"><button name="button" type="button" class="hsds-tabs__tab-accordion" aria-controls="tabpanel-gps-tracking" aria-expanded="false"><svg aria-hidden="true" class="hsds-icon hsds-tabs__tab-accordion-icon"><use xlink:href="#gps"></use></svg><span class="hsds-tabs__tab-accordion-label">GPS tracking</span><svg aria-hidden="true" class="hsds-icon hsds-tabs__tab-accordion-menu-icon"><use xlink:href="#caret-down-l"></use></svg></button><div aria-labelledby="tab-gps-tracking" class="hsds-tabs__panel" id="tabpanel-gps-tracking" role="tabpanel"><h2 class="hsds-tabs__heading">Smarter GPS tracking</h2><div class="hsds-tabs__deck">Manage your fleet with a simple GPS app. <a href="/features/gps_time_tracking">Learn more about GPS tracking.</a></div><picture><source media="(max-width: 992px)" srcset="https://marketing-assets.hubstaff.com/assets/refresh/screenshots/gps-tracking-mobile@2x-8d117cc44b9fdc86e64f4bc28fc40eac698ec6fef54ef785071e2d1c2d517909.webp" type="image/webp" /><source srcset="https://marketing-assets.hubstaff.com/assets/refresh/screenshots/gps-tracking-desktop@2x-be98bd226c7b02801869240ca60634343062fc0c547e34a2e1b359390a24edb3.webp" type="image/webp" /><source media="(min-width: 992px)" srcset="https://marketing-assets.hubstaff.com/assets/refresh/screenshots/gps-tracking-desktop@2x-d4b78bee199f6c455beea57e43d4042f18699e0c8e16aab6a1a706370b3810de.png" type="image/jpeg" /><img class="hsds-tabs__image" alt="Manage your fleet with a simple GPS app" loading="lazy" width="940" height="588" decoding="async" src="https://marketing-assets.hubstaff.com/assets/refresh/screenshots/gps-tracking-mobile@2x-2c4f1074e14fc1a2c2e8ea08c4900e6b409ce2950200ce5ea4aaf5b52fb8a879.png" /></picture></div></li><li class="hsds-tabs__panel-item"><button name="button" type="button" class="hsds-tabs__tab-accordion" aria-controls="tabpanel-online-timesheets" aria-expanded="false"><svg aria-hidden="true" class="hsds-icon hsds-tabs__tab-accordion-icon"><use xlink:href="#online-timesheets"></use></svg><span class="hsds-tabs__tab-accordion-label">Online timesheets</span><svg aria-hidden="true" class="hsds-icon hsds-tabs__tab-accordion-menu-icon"><use xlink:href="#caret-down-l"></use></svg></button><div aria-labelledby="tab-online-timesheets" class="hsds-tabs__panel" id="tabpanel-online-timesheets" role="tabpanel"><h2 class="hsds-tabs__heading">Never chase down timesheets again</h2><div class="hsds-tabs__deck">Simple timesheets that give you more control. <a href="/features/employee_timesheets">Learn more about online timesheets.</a></div><picture><source media="(max-width: 992px)" srcset="https://marketing-assets.hubstaff.com/assets/refresh/screenshots/online-timesheets-mobile@2x-ae5f1ac76cb77a5dca17f987020646a854129789b852ed365f9688d10bef2c95.webp" type="image/webp" /><source srcset="https://marketing-assets.hubstaff.com/assets/refresh/screenshots/online-timesheets-desktop@2x-dc72294ec03a4e811e5a073569332fa1d6091d73a22a60141f6198ce4cbac381.webp" type="image/webp" /><source media="(min-width: 992px)" srcset="https://marketing-assets.hubstaff.com/assets/refresh/screenshots/online-timesheets-desktop@2x-1fd9a6d8e2b2822ac0c6cfab23f8c746f4313e5d4a8d20a3b8b9aac4d7c24ea1.png" type="image/jpeg" /><img class="hsds-tabs__image" alt="Simple timesheets that give you more control" loading="lazy" width="940" height="541" decoding="async" src="https://marketing-assets.hubstaff.com/assets/refresh/screenshots/online-timesheets-mobile@2x-06e6bda0245c0272a87ac86c4164247505f77f27e244b6e9a2a668b4ee5d315a.png" /></picture></div></li><li class="hsds-tabs__panel-item"><button name="button" type="button" class="hsds-tabs__tab-accordion" aria-controls="tabpanel-automated-payroll" aria-expanded="false"><svg aria-hidden="true" class="hsds-icon hsds-tabs__tab-accordion-icon"><use xlink:href="#automated-payroll"></use></svg><span class="hsds-tabs__tab-accordion-label">Automated payroll</span><svg aria-hidden="true" class="hsds-icon hsds-tabs__tab-accordion-menu-icon"><use xlink:href="#caret-down-l"></use></svg></button><div aria-labelledby="tab-automated-payroll" class="hsds-tabs__panel" id="tabpanel-automated-payroll" role="tabpanel"><h2 class="hsds-tabs__heading">Automate payroll and invoicing</h2><div class="hsds-tabs__deck">Save yourself hours each week. <a href="/features/online_payroll">Learn more about automated payroll.</a></div><picture><source media="(max-width: 992px)" srcset="https://marketing-assets.hubstaff.com/assets/refresh/screenshots/automated-payroll-mobile@2x-6de22c9c8f2023584a810ac015667b6109a1f700254cae093df4a61f31b5d34c.webp" type="image/webp" /><source srcset="https://marketing-assets.hubstaff.com/assets/refresh/screenshots/automated-payroll-desktop@2x-20d4c649fe52ad32e4cef36ee11e9945d18cc010e8e4279d63cafe7e8e56be34.webp" type="image/webp" /><source media="(min-width: 992px)" srcset="https://marketing-assets.hubstaff.com/assets/refresh/screenshots/automated-payroll-desktop@2x-c484c450da1868035bb70ebd0b8228570ebd224a0c2989e694a9581079af95d5.png" type="image/jpeg" /><img class="hsds-tabs__image" alt="Save yourself hours each week" loading="lazy" width="940" height="470" decoding="async" src="https://marketing-assets.hubstaff.com/assets/refresh/screenshots/automated-payroll-mobile@2x-101b50f05fa74ac4dedcbf81d61a4b4edf7417d10f5d06898971bfe4eaa6c632.png" /></picture></div></li></ul></div></div></section><section class="hsds-row hsds-row--border-bottom hsds-row--collapse-padding-top"><div class="hsds-row__container"><div class="hsds-stats"><h3 class="hsds-stats__heading">Each month</h3><div class="hsds-stats__row"><dl class="hsds-stats__stat"><dt class="hsds-stats__label">Active users</dt><dd class="hsds-stats__value">588K+</dd></dl><dl class="hsds-stats__stat"><dt class="hsds-stats__label">Total hours tracked</dt><dd class="hsds-stats__value">21M+</dd></dl><dl class="hsds-stats__stat"><dt class="hsds-stats__label">Tasks completed</dt><dd class="hsds-stats__value">4M+</dd></dl><dl class="hsds-stats__stat"><dt class="hsds-stats__label">Payments</dt><dd class="hsds-stats__value">348K+</dd></dl></div></div></div></section><section class="hsds-row hsds-row hsds-row--background-brand-primary-dark hsds-row--oval-bottom"><div class="hsds-row__background-brand-circle hsds-row__background-brand-circle--blue"></div><div class="hsds-row__background-brand-circle hsds-row__background-brand-circle--green"></div><div class="hsds-row__background-brand-circle hsds-row__background-brand-circle--orange"></div><div class="hsds-row__container hsds-row__container--spaced"><div class="hsds-row__header hsds-row__header--width-medium"><h2 class="hsds-row__heading">The productivity platform</h2><div class="hsds-row__p hsds-row__p--large">The complete platform for time tracking, workforce and project management.</div></div><div class="hsds-card-menu hsds-card-menu--float-bottom"><div class="hsds-card-menu__row" role="menu"><a class="hsds-card-menu__item" role="menuitem" href="/product/time"><div class="hsds-card-menu__preview"><picture><source srcset="https://marketing-assets.hubstaff.com/assets/refresh/stock/menu-hubstaff-time-preview@2x-9ca60c5ec00a053c4d5e7802672a49d5e1ee743a09ebd19b1bbeb99556aa2548.webp" type="image/webp" /><img loading="lazy" width="335" height="313" decoding="async" alt="Hubstaff Time" src="https://marketing-assets.hubstaff.com/assets/refresh/stock/menu-hubstaff-time-preview@2x-0eca1bcbd2772058e59d4185a07261c62dfcce661ac97185485a37cf8e6f513e.jpg" /></picture></div><div class="hsds-card-menu__content"><svg aria-hidden="true" class="hsds-card-menu__svg-title"><use xlink:href="#logo-hubstaff-time"></use></svg><div class="hsds-card-menu__description">Simple time tracking and reporting</div></div></a><a class="hsds-card-menu__item" role="menuitem" href="/product/desk"><div class="hsds-card-menu__preview"><picture><source srcset="https://marketing-assets.hubstaff.com/assets/refresh/stock/menu-hubstaff-desk-preview@2x-66395c1d29d70e469199444aae7e27fa943cd45f51cac6d02a6e8925c71ebe54.webp" type="image/webp" /><img loading="lazy" width="335" height="313" decoding="async" alt="Hubstaff Desk" src="https://marketing-assets.hubstaff.com/assets/refresh/stock/menu-hubstaff-desk-preview@2x-1bab1fed2099f6e89c0af11c9f86d161b0b9a44a9934a818072f1ea410707655.jpg" /></picture></div><div class="hsds-card-menu__content"><svg aria-hidden="true" class="hsds-card-menu__svg-title"><use xlink:href="#logo-hubstaff-desk"></use></svg><div class="hsds-card-menu__description">Proof of work, time tracking, and team management</div></div></a><a class="hsds-card-menu__item" role="menuitem" href="/product/field"><div class="hsds-card-menu__preview"><picture><source srcset="https://marketing-assets.hubstaff.com/assets/refresh/stock/menu-hubstaff-field-preview@2x-9f92568bb227eb485d612fef8afd596365fb8d362987747640bee7d6db549693.webp" type="image/webp" /><img loading="lazy" width="335" height="313" decoding="async" alt="Hubstaff Field" src="https://marketing-assets.hubstaff.com/assets/refresh/stock/menu-hubstaff-field-preview@2x-c6242520bcb1584769a8a4fecf190085ec54f9316581819c15b75cf1ca583a70.jpg" /></picture></div><div class="hsds-card-menu__content"><svg aria-hidden="true" class="hsds-card-menu__svg-title"><use xlink:href="#logo-hubstaff-field"></use></svg><div class="hsds-card-menu__description">GPS location tracking and team management</div></div></a></div><div class="hsds-card-menu__row" role="menu"><a class="hsds-card-menu__item hsds-card-menu__item--horizontal-on-desktop" role="menuitem" href="/tasks"><div class="hsds-card-menu__preview"><picture><source srcset="https://marketing-assets.hubstaff.com/assets/refresh/stock/menu-hubstaff-tasks-preview@2x-3fb59de926dab88560b009602540409f7367a4a5b3def88a4763b6f35da2e7bc.webp" type="image/webp" /><img loading="lazy" width="161" height="196" decoding="async" alt="Hubstaff Tasks" src="https://marketing-assets.hubstaff.com/assets/refresh/stock/menu-hubstaff-tasks-preview@2x-57d7bb6203459bfc861f9c43501cda4286517a4b5a67e324562cc8ca9dc30d23.jpg" /></picture></div><div class="hsds-card-menu__content"><svg aria-hidden="true" class="hsds-card-menu__svg-title"><use xlink:href="#logo-hubstaff-tasks"></use></svg><div class="hsds-card-menu__description">Simple, Agile project management for productive teams of all sizes</div></div></a><a class="hsds-card-menu__item hsds-card-menu__item--horizontal-on-desktop" role="menuitem" rel="nofollow" href="https://talent.hubstaff.com"><div class="hsds-card-menu__preview"><picture><source srcset="https://marketing-assets.hubstaff.com/assets/refresh/stock/menu-hubstaff-talent-preview@2x-6eaf597033fa43832a3da12e1c204de1765414d6abc0d339d07bae947b925567.webp" type="image/webp" /><img loading="lazy" width="161" height="196" decoding="async" alt="Hubstaff Talent" src="https://marketing-assets.hubstaff.com/assets/refresh/stock/menu-hubstaff-talent-preview@2x-fa230a8c88e02bdc5f4af41f6c031296674bd75212840b7c35c7fbf6bcc7de92.jpg" /></picture></div><div class="hsds-card-menu__content"><svg aria-hidden="true" class="hsds-card-menu__svg-title"><use xlink:href="#logo-hubstaff-talent"></use></svg><div class="hsds-card-menu__description">The free and easy way to find remote talent across the world</div></div></a></div></div></div></section><section class="hsds-row hsds-row--collapse-padding-bottom"><div class="hsds-row__container"><div class="hsds-row__header hsds-row__header--width-small"><h2 class="hsds-row__eyebrow">3 ways hubstaff helps you</h2><h3 class="hsds-row__heading">Run a more profitable business</h3></div></div></section><section class="hsds-row hsds-row--col-flop-on-desktop"><div class="hsds-row__container"><div class="hsds-row__grid"><div class="hsds-row__col hsds-row__col--graphic hsds-row__col--pull-right"><div class="hsds-row__image-wrapper hsds-row__image-wrapper--margin-left-tablet"><svg aria-hidden="true" class="hsds-row__graph-paper-graphic"><use xlink:href="#graph-paper"></use></svg><div class="hsds-row__card-above hsds-row__card-above--bottom-left hsds-row__card-above--waiting-to-animate"><picture><source srcset="https://marketing-assets.hubstaff.com/assets/refresh/screenshots/hours-worked-today-frame-1@2x-4979fe01d1f6dba5b8da66352b57f70755385c8364d07d82f1e97d48ca8b7614.webp" type="image/webp" /><img class="hsds-row__image hsds-row__image--frame-1" aria-hidden="true" loading="lazy" width="468" height="148" decoding="async" alt="Worked today stat" src="https://marketing-assets.hubstaff.com/assets/refresh/screenshots/hours-worked-today-frame-1@2x-520c72d8340f382ddb883a8fac062d62889700a3fc1b3964982d1ce5c700e31a.jpg" /></picture><picture><source srcset="https://marketing-assets.hubstaff.com/assets/refresh/screenshots/hours-worked-today-frame-2@2x-1e43d6492aca7a15db8e55ced1665b8b36c36b6ccccef2e2cbfbaaa1e7daf880.jpg" type="image/webp" /><img class="hsds-row__image hsds-row__image--frame-2" aria-hidden="true" loading="lazy" width="468" height="148" decoding="async" alt="Happy productive employee" src="https://marketing-assets.hubstaff.com/assets/refresh/screenshots/hours-worked-today-frame-2@2x-1e43d6492aca7a15db8e55ced1665b8b36c36b6ccccef2e2cbfbaaa1e7daf880.jpg" /></picture></div><picture><source media="(max-width: 992px)" srcset="https://marketing-assets.hubstaff.com/assets/refresh/stock/happy-customer-on-couch-mobile@2x-9f6c1635dce39f0c560b817004d57f65c3d647550debdfd29ebd99ddd87673da.webp" type="image/webp" /><source srcset="https://marketing-assets.hubstaff.com/assets/refresh/stock/happy-customer-on-couch-desktop@2x-140bcad9178c62f4b9a80cede5b1b19e77c140d3f1fc60ad8637f4fba3efb30c.webp" type="image/webp" /><source media="(min-width: 992px)" srcset="https://marketing-assets.hubstaff.com/assets/refresh/stock/happy-customer-on-couch-desktop@2x-e12bf6beef8328a5217b33009631e7d1bb82c5449e15f60e1323242dc423d16d.jpg" type="image/jpeg" /><img class="hsds-row__image hsds-row__image--mask-radial hsds-row__image--mask-radial-inline-start" alt="improve productivity with Hubstaff" loading="lazy" width="585" height="713" decoding="async" src="https://marketing-assets.hubstaff.com/assets/refresh/stock/happy-customer-on-couch-mobile@2x-4fc04f2bcbb22e9e26ac97536150ba0035f34b92868375e017afe9ca75e59953.jpg" /></picture></div></div><div class="hsds-row__col hsds-row__col--content"><div class="hsds-medallion"><svg aria-hidden="true" class="hsds-icon hsds-medallion__icon"><use xlink:href="#employee-monitoring"></use></svg></div><h3 class="hsds-row__heading">Instantly improve productivity</h3><p class="hsds-row__p">It’s simple psychology. When your team tracks time with Hubstaff, everyone is more aware of how they're spending each minute of their day. This improves focus and keeps your team on task.</p><hr class="hsds-row__hr" /><h4 class="hsds-row__subhead">One-minute setup</h4><p class="hsds-row__p">There’s zero learning curve, so your team can start tracking right away.</p><h4 class="hsds-row__subhead">Over 40 integrations</h4><p class="hsds-row__p">Connect Hubstaff to your favorite business apps.</p><a class="hsds-button hsds-button--medium hsds-button--ghost hsds-button--flush hsds-button--animate-icon-inline" href="/productivity-stats"><span class="hsds-button__label">More about productivity <span class="hsds-button__label-icon-nowrap">benchmarks<svg aria-hidden="true" class="hsds-icon hsds-button__icon hsds-button__icon--inline"><use xlink:href="#arrow-right"></use></svg></span></span></a></div></div></div></section><section class="hsds-row"><div class="hsds-row__container"><div class="hsds-row__grid"><div class="hsds-row__col hsds-row__col--graphic"><div class="hsds-screenshot hsds-screenshot__collapse-bottom"><picture><source srcset="https://marketing-assets.hubstaff.com/assets/refresh/screenshots/hubstaff-app-notifications-message-1@2x-474f84a1c9cbdc3c0606c63800a66505f3d8d891f2dd01f6bdbb73fbadb50f62.webp" type="image/webp" /><img class="hsds-screenshot__notification hsds-screenshot__notification--1 hsds-screenshot__notification--waiting-to-animate" alt="Hubstaff: James is 30 minutes late for his shift" loading="lazy" width="360" height="116" decoding="async" src="https://marketing-assets.hubstaff.com/assets/refresh/screenshots/hubstaff-app-notifications-message-1@2x-3d05209f726f6fb5627fba07c460b3aefbf75638c046e4788f4514abfa083236.png" /></picture><picture><source srcset="https://marketing-assets.hubstaff.com/assets/refresh/screenshots/hubstaff-app-notifications-message-2@2x-c3210588581a035fe55855f9aac17ea62f0043cd5a775a60015ffc2b5d0c5bc6.webp" type="image/webp" /><img class="hsds-screenshot__notification hsds-screenshot__notification--2 hsds-screenshot__notification--waiting-to-animate" alt="Hubstaff: Mike has arrived at the &quot;Safeway&quot; job site" loading="lazy" width="360" height="116" decoding="async" src="https://marketing-assets.hubstaff.com/assets/refresh/screenshots/hubstaff-app-notifications-message-2@2x-fd06c24a719e693843be605eb0da3e55ea9312a9afa76699f921866f89ba53d0.png" /></picture><picture><source media="(max-width: 992px)" srcset="https://marketing-assets.hubstaff.com/assets/refresh/screenshots/hubstaff-app-notifications-mobile@2x-05cd3f6220fe9bf5fcba4880236f80c61d40b0c61460bd7dd1123d1c2c73034a.webp" type="image/webp" /><source srcset="https://marketing-assets.hubstaff.com/assets/refresh/screenshots/hubstaff-app-notifications-desktop@2x-64776ebfe105a7307d385d4a6a4663b88c85dae6399f99d09f950d0b28948fa3.webp" type="image/webp" /><source media="(min-width: 992px)" srcset="https://marketing-assets.hubstaff.com/assets/refresh/screenshots/hubstaff-app-notifications-desktop@2x-f027b138c9b5984a9a4bc3243628a2f5fac2160bc8b2a8accdcef3c6322703bf.png" type="image/jpeg" /><img class="hsds-screenshot__app-notifications" alt="automate team management" loading="lazy" width="562" height="855" decoding="async" src="https://marketing-assets.hubstaff.com/assets/refresh/screenshots/hubstaff-app-notifications-mobile@2x-af6d070e724a5cc3ad0822f322c649d2cdeeeda953fc4768ada8ffa2d7b00cf7.png" /></picture></div></div><div class="hsds-row__col hsds-row__col--content"><div class="hsds-medallion hsds-medallion--brand-accent"><svg aria-hidden="true" class="hsds-icon hsds-medallion__icon"><use xlink:href="#automate-management"></use></svg></div><h3 class="hsds-row__heading">Automate team management</h3><p class="hsds-row__p">Hubstaff tackles time-draining admin work for you. Like chasing down project updates. Or messing with timesheets. Or ensuring deadlines are met and work stays within budget.</p><hr class="hsds-row__hr" /><h4 class="hsds-row__subhead">Goodbye check-ins (hello alerts)</h4><p class="hsds-row__p">See what sites and apps they’ve used and get productivity stats.</p><h4 class="hsds-row__subhead">Spot workers who need help</h4><p class="hsds-row__p">Activity reports tell you who is struggling. Optional screenshots show how they’re struggling.</p><a class="hsds-button hsds-button--medium hsds-button--ghost hsds-button--flush hsds-button--animate-icon-inline" href="/features/employee_monitoring"><span class="hsds-button__label">More about employee <span class="hsds-button__label-icon-nowrap">monitoring<svg aria-hidden="true" class="hsds-icon hsds-button__icon hsds-button__icon--inline"><use xlink:href="#arrow-right"></use></svg></span></span></a></div></div></div></section><section class="hsds-row hsds-row--col-flop-on-desktop"><div class="hsds-row__container"><div class="hsds-row__grid"><div class="hsds-row__col hsds-row__col--graphic hsds-row__col--pull-right"><div class="hsds-row__image-wrapper hsds-row__image--pull-right-desktop-override hsds-row__image-wrapper--margin-left-tablet"><div class="hsds-row__card-above hsds-row__card-above--left-center hsds-row__card-above--bottom-right-desktop hsds-row__card-above--padded"><picture><source srcset="https://marketing-assets.hubstaff.com/assets/refresh/screenshots/report-time-limits@2x-cd6e6de0b030b445094b41b40b824481dd3ca33f4677694442fda41ecee059d9.webp" type="image/webp" /><img class="hsds-row__image" aria-hidden="true" loading="lazy" width="249" height="217" decoding="async" alt="Time tracking with weekly limits" src="https://marketing-assets.hubstaff.com/assets/refresh/screenshots/report-time-limits@2x-f36ffeb01774c7ae74338d471c4dba607b708fa2c1f237c97dcb2a7550dcd575.jpg" /></picture><div class="hsds-progress-wrapper hsds-progress-wrapper--desktop-only"><div class="hsds-progress"><div class="hsds-progress__heading">Weekly Limit</div><div class="hsds-progress__row"><div class="hsds-progress__label">20 hrs</div><div class="hsds-progress__bar-cell"><div class="hsds-progress__track"><div class="hsds-progress__bar hsds-progress__bar--waiting-to-animate" style="width: 50%"></div></div></div><div class="hsds-progress__value">50%</div></div></div></div></div><div class="hsds-row__card-above hsds-row__card-above--bottom-right hsds-row__card-above--left-center-desktop hsds-row__card-above--padded"><div class="hsds-progress-wrapper hsds-progress-wrapper--mobile-only"><div class="hsds-progress hsds-progress--table"><div class="hsds-progress__row"><div class="hsds-progress__label">5:00 hrs</div><div class="hsds-progress__bar-cell"><div class="hsds-progress__track"><div class="hsds-progress__bar hsds-progress__bar--waiting-to-animate hsds-progress__bar--is-error" style="width: 100%"></div></div></div><div class="hsds-progress__value">3396%</div></div><div class="hsds-progress__row"><div class="hsds-progress__label">30:00 hrs</div><div class="hsds-progress__bar-cell"><div class="hsds-progress__track"><div class="hsds-progress__bar hsds-progress__bar--waiting-to-animate" style="width: 90%"></div></div></div><div class="hsds-progress__value">90%</div></div><div class="hsds-progress__row"><div class="hsds-progress__label">3:00 hrs</div><div class="hsds-progress__bar-cell"><div class="hsds-progress__track"><div class="hsds-progress__bar hsds-progress__bar--waiting-to-animate" style="width: 12%"></div></div></div><div class="hsds-progress__value">12%</div></div><div class="hsds-progress__row"><div class="hsds-progress__label">8:00 hrs</div><div class="hsds-progress__bar-cell"><div class="hsds-progress__track"><div class="hsds-progress__bar"></div></div></div><div class="hsds-progress__value">0%</div></div></div></div><div class="hsds-progress-wrapper hsds-progress-wrapper--desktop-only"><div class="hsds-progress"><div class="hsds-progress__heading">Development</div><div class="hsds-progress__row"><div class="hsds-progress__label">18 hrs</div><div class="hsds-progress__bar-cell"><div class="hsds-progress__track"><div class="hsds-progress__bar hsds-progress__bar--waiting-to-animate" style="width: 40%"></div></div></div><div class="hsds-progress__value">40%</div></div></div><div class="hsds-progress"><div class="hsds-progress__heading">Webinars</div><div class="hsds-progress__row"><div class="hsds-progress__label">$1,200</div><div class="hsds-progress__bar-cell"><div class="hsds-progress__track"><div class="hsds-progress__bar hsds-progress__bar--waiting-to-animate" style="width: 50%"></div></div></div><div class="hsds-progress__value">50%</div></div></div><div class="hsds-progress"><div class="hsds-progress__heading">Admin</div><div class="hsds-progress__row"><div class="hsds-progress__label">18 hrs</div><div class="hsds-progress__bar-cell"><div class="hsds-progress__track"><div class="hsds-progress__bar hsds-progress__bar--is-error hsds-progress__bar--waiting-to-animate" style="width: 100%"></div></div></div><div class="hsds-progress__value">133%</div></div></div></div></div><picture><source media="(max-width: 992px)" srcset="https://marketing-assets.hubstaff.com/assets/refresh/stock/happy-customer-on-step-mobile@2x-710dccbd535afc0e55485ad9d4bf4387af2da1f0123dc8040e2d5b02d5cffc63.webp" type="image/webp" /><source srcset="https://marketing-assets.hubstaff.com/assets/refresh/stock/happy-customer-on-step-desktop@2x-51f1edda7e4ef1b77d257d0be7e7b582af1821bf728fa48283e154cea0f9892b.webp" type="image/webp" /><source media="(min-width: 992px)" srcset="https://marketing-assets.hubstaff.com/assets/refresh/stock/happy-customer-on-step-desktop@2x-61c7e3bb146fc55d75ec5805f5be4290df037222cf1eebc1eb9c139d75264818.jpg" type="image/jpeg" /><img class="hsds-row__image hsds-row__image--mask-radial hsds-row__image--mask-radial-inline-start" alt="Hubstaff project cost management" loading="lazy" width="540" height="740" decoding="async" src="https://marketing-assets.hubstaff.com/assets/refresh/stock/happy-customer-on-step-mobile@2x-c3bbc849ed68322d4ea298b8896aed5ce5768cfe8b2aff3ec2354357ec21181e.jpg" /></picture></div></div><div class="hsds-row__col hsds-row__col--content"><div class="hsds-medallion"><svg aria-hidden="true" class="hsds-icon hsds-medallion__icon"><use xlink:href="#wrench"></use></svg></div><h3 class="hsds-row__heading">Find and fix money leaks</h3><p class="hsds-row__p">Is a project or client draining your profit margin? Hubstaff will let you know. It gives you reports on where your company's billable hours are going and how that impacts revenue.</p><hr class="hsds-row__hr" /><h4 class="hsds-row__subhead">Know what to prioritize</h4><p class="hsds-row__p">Reports show you which projects are most profitable and which ones drain your team’s time.</p><h4 class="hsds-row__subhead">Control expenses</h4><p class="hsds-row__p">Track expenses and set weekly budgets or time limits for teams. Get alerts when projects go over.</p><a class="hsds-button hsds-button--medium hsds-button--ghost hsds-button--flush hsds-button--animate-icon-inline" href="/features/project_cost_management"><span class="hsds-button__label">More about cost <span class="hsds-button__label-icon-nowrap">management<svg aria-hidden="true" class="hsds-icon hsds-button__icon hsds-button__icon--inline"><use xlink:href="#arrow-right"></use></svg></span></span></a></div></div></div></section><section class="hsds-row"><div class="hsds-row__container"><div class="hsds-row__grid"><div class="hsds-row__col hsds-row__col--graphic hsds-row__col--pull-left"><picture><source media="(max-width: 992px)" srcset="https://marketing-assets.hubstaff.com/assets/refresh/stock/industries-gang-mobile@2x-40f4b11c0946fb817832438fb3f600e5c11099e1dfcc54d72520c586df0ffb9f.webp" type="image/webp" /><source srcset="https://marketing-assets.hubstaff.com/assets/refresh/stock/industries-gang-desktop@2x-de54c12f92bc87f5238523899b3b3a2a9055cda7dd9925a2750b50419f477df8.webp" type="image/webp" /><source media="(min-width: 992px)" srcset="https://marketing-assets.hubstaff.com/assets/refresh/stock/industries-gang-desktop@2x-4bdb92ed5d9c9059a33d543a0b5d243386aee705dacd784dff676ca36609d055.jpg" type="image/jpeg" /><img class="hsds-row__image" alt="Hubstaff is a good solution for any team" loading="lazy" width="725" height="932" decoding="async" src="https://marketing-assets.hubstaff.com/assets/refresh/stock/industries-gang-mobile@2x-5efb015edf6ca277463d2add32ccbd12cf7ce34623fae440a7ed12047dbd6ace.jpg" /></picture></div><div class="hsds-row__col hsds-row__col--content"><h2 class="hsds-row__eyebrow">Industries</h2><h3 class="hsds-row__heading">Desk work or field work, we’ve got you covered</h3><p class="hsds-row__p">Businesses in more than 100 different industries track time with Hubstaff.</p><ul class="hsds-link-list"><li class="hsds-link-list__item"><a class="hsds-link-list__link" href="/solutions/software-development"><svg aria-hidden="true" class="hsds-icon hsds-link-list__icon"><use xlink:href="#development"></use></svg><span class="hsds-link-list__label">Software development</span><svg aria-hidden="true" class="hsds-icon hsds-link-list__caret-icon"><use xlink:href="#caret-down-l"></use></svg></a></li><li class="hsds-link-list__item"><a class="hsds-link-list__link" href="/solutions/agencies"><svg aria-hidden="true" class="hsds-icon hsds-link-list__icon"><use xlink:href="#agency"></use></svg><span class="hsds-link-list__label">Agency</span><svg aria-hidden="true" class="hsds-icon hsds-link-list__caret-icon"><use xlink:href="#caret-down-l"></use></svg></a></li><li class="hsds-link-list__item"><a class="hsds-link-list__link" href="/solutions/accounting"><svg aria-hidden="true" class="hsds-icon hsds-link-list__icon"><use xlink:href="#accountants"></use></svg><span class="hsds-link-list__label">Accountants</span><svg aria-hidden="true" class="hsds-icon hsds-link-list__caret-icon"><use xlink:href="#caret-down-l"></use></svg></a></li><li class="hsds-link-list__item"><a class="hsds-link-list__link" href="/solutions/construction"><svg aria-hidden="true" class="hsds-icon hsds-link-list__icon"><use xlink:href="#construction"></use></svg><span class="hsds-link-list__label">Construction</span><svg aria-hidden="true" class="hsds-icon hsds-link-list__caret-icon"><use xlink:href="#caret-down-l"></use></svg></a></li><li class="hsds-link-list__item"><a class="hsds-link-list__link" href="/solutions/home-health-care"><svg aria-hidden="true" class="hsds-icon hsds-link-list__icon"><use xlink:href="#health-care"></use></svg><span class="hsds-link-list__label">Health care</span><svg aria-hidden="true" class="hsds-icon hsds-link-list__caret-icon"><use xlink:href="#caret-down-l"></use></svg></a></li><li class="hsds-link-list__item"><a class="hsds-link-list__link" href="/solutions/ecommerce"><svg aria-hidden="true" class="hsds-icon hsds-link-list__icon"><use xlink:href="#e-commerce"></use></svg><span class="hsds-link-list__label">E-commerce</span><svg aria-hidden="true" class="hsds-icon hsds-link-list__caret-icon"><use xlink:href="#caret-down-l"></use></svg></a></li><li class="hsds-link-list__item hsds-link-list__item--no-border hsds-link-list__item--more"><button name="button" type="button" class="js-hsds-modal-trigger hsds-button hsds-button--medium hsds-button--ghost hsds-button--flush hsds-button--animate-icon-inline" aria-controls="select-your-industry-modal"><span class="hsds-button__label">Select your industry<svg aria-hidden="true" class="hsds-icon hsds-button__icon hsds-button__icon--inline"><use xlink:href="#arrow-right"></use></svg></span></button></li></ul></div></div></div></section><section class="hsds-row hsds-row--background-brand-primary-dark hsds-row--oval-bottom hsds-row--oval-bottom-light-blue"><div class="hsds-row__container hsds-row__container--full-width"><div class="hsds-row__grid hsds-row__grid--3-col"><div class="hsds-row__col"><div class="hsds-sticker-container hsds-sticker-container--left"><div class="hsds-sticker hsds-sticker--responsive hsds-sticker--waiting-to-animate"><img alt="jira integration" class="hsds-sticker__icon" loading="lazy" width="36" height="36" decoding="async" src="https://marketing-assets.hubstaff.com/assets/refresh/logos/integrations/jira-mark-dcc8982baa2812b784f0172a6740f4c5e95dce9f49c7f70835aeb6214899fb85.svg" /></div><div class="hsds-sticker hsds-sticker--responsive hsds-sticker--small hsds-sticker--waiting-to-animate"><img alt="gitlab integration" class="hsds-sticker__icon" loading="lazy" width="22" height="21" decoding="async" src="https://marketing-assets.hubstaff.com/assets/refresh/logos/integrations/gitlab-mark-53d2b8f539040ea7eb5462b172551d1ed1080b99821c2be2305eac95632815fd.svg" /></div><div class="hsds-sticker hsds-sticker--responsive hsds-sticker--responsive hsds-sticker--large hsds-sticker--waiting-to-animate" style="background: #C8DE72"><img alt="zendesk integration" class="hsds-sticker__icon" loading="lazy" width="48" height="35" decoding="async" src="https://marketing-assets.hubstaff.com/assets/refresh/logos/integrations/zendesk-mark-e743b09960594c57d98012efc195cb70c0aa50da139b789162dd25b1c8bca4c6.svg" /></div><div class="hsds-sticker hsds-sticker--responsive hsds-sticker--waiting-to-animate" style="background: #28A037"><img alt="quickbooks integration" class="hsds-sticker__icon" loading="lazy" width="36" height="32" decoding="async" src="https://marketing-assets.hubstaff.com/assets/refresh/logos/integrations/quickbooks-mark-white-0fd7af1d7fcd9c491c83f59bccbce52880f8042fe3d45de4a9dab24fb09aae05.svg" /></div><div class="hsds-sticker hsds-sticker--responsive hsds-sticker--small hsds-sticker--waiting-to-animate"><img alt="paypal integration" class="hsds-sticker__icon" loading="lazy" width="22" height="26" decoding="async" src="https://marketing-assets.hubstaff.com/assets/refresh/logos/integrations/paypal-mark-1c234c1c47001e9c518961c3561466a270421d4b480b6730ed12afb69328f9cc.svg" /></div><div class="hsds-sticker hsds-sticker--responsive hsds-sticker--waiting-to-animate"><img alt="breeze integration" class="hsds-sticker__icon" loading="lazy" width="36" height="34" decoding="async" src="https://marketing-assets.hubstaff.com/assets/refresh/logos/integrations/breeze-mark-1580f970d82c62c518fc7af9c968d17e50d5295d6e35cb270a24a2e9b37fee04.svg" /></div><div class="hsds-sticker hsds-sticker--responsive hsds-sticker--xlarge hsds-sticker--waiting-to-animate" style="background: linear-gradient(135deg, #ff4566 0%,#ff5478 35%,#ff7150 100%)"><img alt="asana integration" class="hsds-sticker__icon" loading="lazy" width="64" height="59" decoding="async" src="https://marketing-assets.hubstaff.com/assets/refresh/logos/integrations/asana-mark-white-b69dd558eb716f020205275b842ee2a8174297d3e530e1dcf76f7bade543f039.svg" /></div><div class="hsds-sticker hsds-sticker--responsive hsds-sticker--waiting-to-animate"><img alt="slack integration" class="hsds-sticker__icon" loading="lazy" width="36" height="36" decoding="async" src="https://marketing-assets.hubstaff.com/assets/refresh/logos/integrations/slack-mark-12adc41eeb84bc0a6ca1ad3bf1450ebb7ac2a455345931568bf0f4b0502e46b2.svg" /></div></div></div><div class="hsds-row__col hsds-row__col--fixed-width"><div class="hsds-row__header"><h3 class="hsds-row__heading">Over 30 integrations</h3><p class="hsds-row__p">Hubstaff syncs with the apps you’re already using.</p><a class="hsds-button hsds-button--large hsds-button--primary hsds-button--on-dark" href="/integrations">View all integrations</a></div></div><div class="hsds-row__col"><div class="hsds-sticker-container hsds-sticker-container--right"><div class="hsds-sticker hsds-sticker--responsive hsds-sticker--waiting-to-animate" style="background: linear-gradient(135deg, #0091e6 0%,#0079bf 100%)"><img alt="trello integration" class="hsds-sticker__icon" loading="lazy" width="36" height="36" decoding="async" src="https://marketing-assets.hubstaff.com/assets/refresh/logos/integrations/trello-mark-white-9d5d6528c74f4747688bd2cfa4e3f76f4d94fd093eecc45b5d75e532033d1da7.svg" /></div><div class="hsds-sticker hsds-sticker--responsive hsds-sticker--small hsds-sticker--waiting-to-animate" style="background: #F45D48"><img alt="gusto integration" class="hsds-sticker__icon" loading="lazy" width="22" height="31" decoding="async" src="https://marketing-assets.hubstaff.com/assets/refresh/logos/integrations/gusto-mark-white-fe0435c57e8443908b846f040e3737a7a4f1478a501ac2be04f626bdc3f382cc.svg" /></div><div class="hsds-sticker hsds-sticker--responsive hsds-sticker--large hsds-sticker--waiting-to-animate" style="background: #00B6ED"><img alt="gusto integration" class="hsds-sticker__icon" loading="lazy" width="48" height="52" decoding="async" src="https://marketing-assets.hubstaff.com/assets/refresh/logos/integrations/transferwise-mark-white-07e04a243bc50194190aaebd9a495b5b5c7974df1647542e32275cf324acb19f.svg" /></div><div class="hsds-sticker hsds-sticker--responsive hsds-sticker--xlarge hsds-sticker--waiting-to-animate"><img alt="asana integration" class="hsds-sticker__icon" loading="lazy" width="64" height="77" decoding="async" src="https://marketing-assets.hubstaff.com/assets/refresh/logos/integrations/clickup-mark-2896d10820ada77481e810a2ea5785f966e7689766c4d03931f4ac688f1ae7c4.svg" /></div><div class="hsds-sticker hsds-sticker--responsive hsds-sticker--waiting-to-animate"><img alt="freshdesk integration" class="hsds-sticker__icon" loading="lazy" width="36" height="36" decoding="async" src="https://marketing-assets.hubstaff.com/assets/refresh/logos/integrations/freshdesk-mark-556745935677b8841a1823cc9e711d026530044a4702d03696cc68b926d3d171.svg" /></div><div class="hsds-sticker hsds-sticker--responsive hsds-sticker--waiting-to-animate" style="background: #000000"><img alt="github integration" class="hsds-sticker__icon" loading="lazy" width="36" height="36" decoding="async" src="https://marketing-assets.hubstaff.com/assets/refresh/logos/integrations/github-mark-white-c8c44a7dd384d2650be6464c48ede93e18224e19dca4a76758d8f76b58c937fe.svg" /></div><div class="hsds-sticker hsds-sticker--responsive hsds-sticker--small hsds-sticker--waiting-to-animate" style="background: #FF5621"><img alt="insightly integration" class="hsds-sticker__icon" style="width: 70%" loading="lazy" width="45" height="17" decoding="async" src="https://marketing-assets.hubstaff.com/assets/refresh/logos/integrations/insightly-logo-white-2785668a47f1f03b43504ed6968f36ff95c24f9d8135f037ddc496884a64c49a.svg" /></div><div class="hsds-sticker hsds-sticker--responsive hsds-sticker--small hsds-sticker--waiting-to-animate"><img style="width: 100%;" alt="zapier integration" class="hsds-sticker__icon" loading="lazy" width="36" height="36" decoding="async" src="https://marketing-assets.hubstaff.com/assets/refresh/logos/integrations/zapier-mark-62847adf935dc131808c238e1551a8926547d28cb5e7d5cd88765ab1bf1cc694.svg" /></div></div></div></div></div></section><section class="hsds-row hsds-row--background-light-blue hsds-row--collapse-padding-top"><div class="hsds-row__container"><div class="hsds-row__header hsds-row__header--width-medium"><h2 class="hsds-row__eyebrow">Customer stories</h2><h3 class="hsds-row__heading">Over 40,000 businesses have increased productivity and profit with Hubstaff</h3></div></div></section><section class="hsds-row hsds-row--background-rectangle-left"><div class="hsds-row__container"><div class="hsds-blockquote-carousel"><style type="text/css">.wistia_click_to_play {
+	position: static !important;
+  }</style><span class="wistia_embed popover=true popoverContent=html wistia_async_4kt4cx471d playerColor=294DFF"></span><style type="text/css">.wistia_click_to_play {
+	position: static !important;
+  }</style><span class="wistia_embed popover=true popoverContent=html wistia_async_pwv53tg7u8 playerColor=294DFF"></span><div class="hsds-blockquote-carousel__track" data-glide-el="track"><ul class="hsds-blockquote-carousel__list"><li class="hsds-blockquote-carousel__item"><div class="hsds-blockquote-object"><div class="hsds-blockquote-object__col hsds-blockquote-object__col--image"><button name="button" type="button" class="js-hsds-wistia-popover-trigger hsds-round-button hsds-round-button--primary hsds-round-button--large hsds-blockquote-object__round-button" aria-label="launch Hubstaff video" data-video-id="4kt4cx471d"><svg aria-hidden="true" class="hsds-icon hsds-round-button__icon-triangle"><use xlink:href="#triangle-right"></use></svg></button><picture><source srcset="https://marketing-assets.hubstaff.com/assets/refresh/customers/tallyfy-thumbnail@2x-3b0b66885f9fa52f1e133c1fd410c7b35972391b56e1333700068ded24cdec72.webp" type="image/webp" /><img alt="Amit Kothari co-founder of Tallyfy" class="hsds-blockquote-object__thumbnail" loading="lazy" width="464" height="464" decoding="async" src="https://marketing-assets.hubstaff.com/assets/refresh/customers/tallyfy-thumbnail@2x-dd21aeffd56876e7f0a911dab9ac0d99e38a07a56221a71476329abc266706e1.jpg" /></picture></div><div class="hsds-blockquote-object__col hsds-blockquote-object__col--content"><blockquote class="hsds-blockquote-object__blockquote"><p class="hsds-blockquote-object__quote">We believe — just like Hubstaff — that <strong>talent is everywhere and people should be able to work any time, anywhere, even in their pajamas</strong>. As a company, we believe in the same future of work as Hubstaff, which is great because our values align.</p><footer class="hsds-blockquote-object__footer"><div class="hsds-blockquote-object__footer-col hsds-blockquote-object__footer-col--cite"><img alt="Tallyfy logo" class="hsds-blockquote-object__logo" loading="lazy" width="115" height="36" decoding="async" src="https://marketing-assets.hubstaff.com/assets/refresh/logos/customers/tallyfy-ea62568630aebdbf2d528772de9fa9613bd7a1f41b89e1a3b089e9a8b73420bd.svg" /><cite class="hsds-blockquote-object__cite"><span class="hsds-blockquote-object__name">Amit Kothari</span><span class="hsds-blockquote-object__title"> / Co-founder of Tallyfy</span></cite></div></footer></blockquote></div></div></li><li class="hsds-blockquote-carousel__item"><div class="hsds-blockquote-object"><div class="hsds-blockquote-object__col hsds-blockquote-object__col--image"><picture><source srcset="https://marketing-assets.hubstaff.com/assets/refresh/customers/encdd-thumbnail@2x-a32cb4f954b64c5da28fd0597eebd093bd43ca7bdcd3a0aa6176efe845bd4335.webp" type="image/webp" /><img alt="Javier Enciso Jr. Founder and President of ENC Construction" class="hsds-blockquote-object__thumbnail" loading="lazy" width="464" height="464" decoding="async" src="https://marketing-assets.hubstaff.com/assets/refresh/customers/encdd-thumbnail@2x-0cd1aa7d2df7b89c7e228024c77af3ea88ede24d4b494d1b4b3848f5bc877e59.jpg" /></picture></div><div class="hsds-blockquote-object__col hsds-blockquote-object__col--content"><blockquote class="hsds-blockquote-object__blockquote"><p class="hsds-blockquote-object__quote">Knowing how long workers are taking to <strong>move from one job to another or exactly where your workers</strong> are at all times is vital in construction.</p><footer class="hsds-blockquote-object__footer"><div class="hsds-blockquote-object__footer-col hsds-blockquote-object__footer-col--cite"><img alt="ENC Construction logo" class="hsds-blockquote-object__logo" loading="lazy" width="132" height="36" decoding="async" src="https://marketing-assets.hubstaff.com/assets/refresh/logos/customers/enccd_logo_horizontal@2x-08e816cab54feb30d0ec423ed1b2ff7ed57e599d91bbc36d4e33e9627d134528.png" /><cite class="hsds-blockquote-object__cite"><span class="hsds-blockquote-object__name">Javier Enciso Jr.</span><span class="hsds-blockquote-object__title"> / Founder and President of ENC Construction</span></cite></div></footer></blockquote></div></div></li><li class="hsds-blockquote-carousel__item"><div class="hsds-blockquote-object"><div class="hsds-blockquote-object__col hsds-blockquote-object__col--image"><picture><source srcset="https://marketing-assets.hubstaff.com/assets/refresh/customers/linkup-thumbnail@2x-eed25fce24ec4f9799c04d5ad94b09224c13190a3fddef19b9763f74c821ce12.webp" type="image/webp" /><img alt="Andriy Sambir CEO of LinkUp Studio" class="hsds-blockquote-object__thumbnail" loading="lazy" width="464" height="464" decoding="async" src="https://marketing-assets.hubstaff.com/assets/refresh/customers/linkup-thumbnail@2x-d8873ee9eab15053101e41d418217e0d2045e81ea61bce8891ca142b02a49794.jpg" /></picture></div><div class="hsds-blockquote-object__col hsds-blockquote-object__col--content"><blockquote class="hsds-blockquote-object__blockquote"><p class="hsds-blockquote-object__quote">Hubstaff solved our pain point the moment we started using it. Compared to other tools we’d tested, <strong>Hubstaff is simple, easy, and synchronizes with the other applications we use</strong>.</p><footer class="hsds-blockquote-object__footer"><div class="hsds-blockquote-object__footer-col hsds-blockquote-object__footer-col--cite"><img alt="LinkUp Studio logo" class="hsds-blockquote-object__logo" loading="lazy" width="40" height="36" decoding="async" src="https://marketing-assets.hubstaff.com/assets/refresh/logos/customers/linkup-0e66523d3e0f0b777c445fdc0a5e6bd4f87c873fa29fb7a25099230ad1fab963.svg" /><cite class="hsds-blockquote-object__cite"><span class="hsds-blockquote-object__name">Andriy Sambir</span><span class="hsds-blockquote-object__title"> / CEO of LinkUp Studio</span></cite></div></footer></blockquote></div></div></li><li class="hsds-blockquote-carousel__item"><div class="hsds-blockquote-object"><div class="hsds-blockquote-object__col hsds-blockquote-object__col--image"><button name="button" type="button" class="js-hsds-wistia-popover-trigger hsds-round-button hsds-round-button--primary hsds-round-button--large hsds-blockquote-object__round-button" aria-label="launch Hubstaff video" data-video-id="pwv53tg7u8"><svg aria-hidden="true" class="hsds-icon hsds-round-button__icon-triangle"><use xlink:href="#triangle-right"></use></svg></button><picture><source srcset="https://marketing-assets.hubstaff.com/assets/refresh/customers/front-runner-thumbnail@2x-fa008ffa6d218506011c481a75a4ae6929d98a7a75c2378b923d430ab2926077.webp" type="image/webp" /><img alt="Tyler Nimmons CEO of Front Runner Films" class="hsds-blockquote-object__thumbnail" loading="lazy" width="464" height="464" decoding="async" src="https://marketing-assets.hubstaff.com/assets/refresh/customers/front-runner-thumbnail@2x-d91e1e04029097a5a6454c9679b79e3f24e8b588382ae8334ec78f8bdc00ea6f.jpg" /></picture></div><div class="hsds-blockquote-object__col hsds-blockquote-object__col--content"><blockquote class="hsds-blockquote-object__blockquote"><p class="hsds-blockquote-object__quote">Once we implemented Hubstaff I was amazed to see that <strong>some of the projects I thought were going to be profitable, we were blowing through hours</strong> that I wasn't aware of.</p><footer class="hsds-blockquote-object__footer"><div class="hsds-blockquote-object__footer-col hsds-blockquote-object__footer-col--cite"><img alt="Front Runner Films logo" class="hsds-blockquote-object__logo" loading="lazy" width="46" height="36" decoding="async" src="https://marketing-assets.hubstaff.com/assets/refresh/logos/customers/front-runner-films-logo@2x-4517afbd33d15712d0f557bd235d43cfb346e52b4ee8864c3fa30fbb303f0445.png" /><cite class="hsds-blockquote-object__cite"><span class="hsds-blockquote-object__name">Tyler Nimmons</span><span class="hsds-blockquote-object__title"> / CEO of Front Runner Films</span></cite></div></footer></blockquote></div></div></li></ul></div><div class="hsds-blockquote-carousel__footer"><div class="hsds-blockquote-carousel__footer-row"><div class="hsds-blockquote-carousel__footer-col hsds-blockquote-carousel__footer-col--controls"><div class="hsds-blockquote-carousel__controls"><div class="hsds-blockquote-carousel__controls-controls" data-glide-el="controls"><button name="button" type="submit" class="hsds-blockquote-carousel__nav-scroll-button hsds-blockquote-carousel__nav-scroll-button--prev" aria-label="select previous blockquote" data-glide-dir="&lt;"><svg class="hsds-icon hsds-blockquote-carousel__nav-icon hsds-blockquote-carousel__nav-icon--prev"><use xlink:href="#arrow-right"></use></svg></button></div><div class="hsds-blockquote-carousel__controls-nav" data-glide-el="controls[nav]"><button name="button" type="submit" class="hsds-blockquote-carousel__nav-button hsds-blockquote-carousel__nav-button--is-active" aria-label="select blockquote 1" data-glide-dir="=0"></button><button name="button" type="submit" class="hsds-blockquote-carousel__nav-button" aria-label="select blockquote 2" data-glide-dir="=1"></button><button name="button" type="submit" class="hsds-blockquote-carousel__nav-button" aria-label="select blockquote 3" data-glide-dir="=2"></button><button name="button" type="submit" class="hsds-blockquote-carousel__nav-button" aria-label="select blockquote 4" data-glide-dir="=3"></button></div><div class="hsds-blockquote-carousel__controls-controls" data-glide-el="controls"><button name="button" type="submit" class="hsds-blockquote-carousel__nav-scroll-button hsds-blockquote-carousel__nav-scroll-button--next" aria-label="select next blockquote" data-glide-dir="&gt;"><svg class="hsds-icon hsds-blockquote-carousel__nav-icon hsds-blockquote-carousel__nav-icon--next"><use xlink:href="#arrow-right"></use></svg></button></div></div></div><div class="hsds-blockquote-carousel__footer-col hsds-blockquote-carousel__footer-col--cta"><a class="hsds-button hsds-button--medium hsds-button--ghost hsds-button--flush hsds-button--animate-icon-inline" href="/customers"><span class="hsds-button__label">View all case studies<svg aria-hidden="true" class="hsds-icon hsds-button__icon hsds-button__icon--inline"><use xlink:href="#arrow-right"></use></svg></span></a></div></div></div></div></div></section><section class="hsds-row hsds-row--background-light-blue hsds-row--collapse-padding-bottom hsds-row--collapse-padding-left hsds-row--collapse-padding-right"><div class="hsds-row__container"><div class="hsds-row__header"><h3 class="hsds-row__heading">What our customers say</h3></div><div class="hsds-carousel-wrapper"><div class="hsds-carousel"><div class="hsds-carousel__track" data-glide-el="track"><ul class="hsds-carousel__list"><li class="hsds-carousel__item"><blockquote class="hsds-testimonial"><p class="hsds-testimonial__heading">I always ended up coming back to Hubstaff!</p><p class="hsds-testimonial__quote">When I started working as a freelancer I tested most of the most famous time tracking software services out there. I always ended up coming back to Hubstaff!</p><footer class="hsds-testimonial__footer"><cite class="hsds-testimonial__cite">Arman S.</cite></footer></blockquote></li><li class="hsds-carousel__item"><blockquote class="hsds-testimonial"><p class="hsds-testimonial__heading">Def helps you stay motivated.</p><p class="hsds-testimonial__quote">The app is super stable and on the user end of things, always works as expected. My favorite feature is the productivity score especially as it notifies you via email when your productivity is consistently high. Def helps you stay motivated.</p><footer class="hsds-testimonial__footer"><cite class="hsds-testimonial__cite">Moseph M.</cite></footer></blockquote></li><li class="hsds-carousel__item"><blockquote class="hsds-testimonial"><p class="hsds-testimonial__heading">I love the screenshot taking feature.</p><p class="hsds-testimonial__quote">This is by far the most robust time tracking software I've ever tested. I love the screenshot taking feature and how easy is to create new tasks.</p><footer class="hsds-testimonial__footer"><cite class="hsds-testimonial__cite">Luis R.</cite></footer></blockquote></li><li class="hsds-carousel__item"><blockquote class="hsds-testimonial"><p class="hsds-testimonial__heading">It's the best time tracking software I've come across.</p><p class="hsds-testimonial__quote">We've been using Hubstaff for a few years now, and it's the best time tracking software I've come across. They also award badges if someone has consistently high activity levels, which is also motivating for employees.</p><footer class="hsds-testimonial__footer"><cite class="hsds-testimonial__cite">Esther L.</cite></footer></blockquote></li><li class="hsds-carousel__item"><blockquote class="hsds-testimonial"><p class="hsds-testimonial__heading">It does help many companies keep track of their employees.</p><p class="hsds-testimonial__quote">As a time tracking, payment management, and employee monitoring software, Hubstaff does a great job. It does help many companies keep track of their employees and is pretty comprehensive and even fun to use (when you look at it from the browser).</p><footer class="hsds-testimonial__footer"><cite class="hsds-testimonial__cite">Benjamín T.</cite></footer></blockquote></li></ul></div><div class="hsds-carousel__nav" data-glide-el="controls[nav]"><button name="button" type="button" class="hsds-carousel__nav-button" aria-label="select slide 1" data-glide-dir="=0"></button><button name="button" type="button" class="hsds-carousel__nav-button" aria-label="select slide 2" data-glide-dir="=1"></button><button name="button" type="button" class="hsds-carousel__nav-button" aria-label="select slide 3" data-glide-dir="=2"></button><button name="button" type="button" class="hsds-carousel__nav-button" aria-label="select slide 4" data-glide-dir="=3"></button><button name="button" type="button" class="hsds-carousel__nav-button" aria-label="select slide 5" data-glide-dir="=4"></button></div></div></div><div class="hsds-review-wrapper"><ul class="hsds-review__list"><li class="hsds-review__item"><dl class="hsds-review__review"><dt class="hsds-review__cite"><img class="hsds-review__logo" alt="GetApp logo" loading="lazy" width="130" height="24" decoding="async" src="https://marketing-assets.hubstaff.com/assets/refresh/logos/customers/getapp-59e0292084e820f5ff42ffee8d11b54fbafcd6db3a189d82b58c8184707c02c6.svg" /></dt><dd class="hsds-review__meta"><div class="hsds-review__description">4.58 out of 5 stars from 1,045 reviews</div><div class="hsds-review__stars"><svg aria-hidden="true" class="hsds-icon hsds-review__star"><use xlink:href="#star"></use></svg><svg aria-hidden="true" class="hsds-icon hsds-review__star"><use xlink:href="#star"></use></svg><svg aria-hidden="true" class="hsds-icon hsds-review__star"><use xlink:href="#star"></use></svg><svg aria-hidden="true" class="hsds-icon hsds-review__star"><use xlink:href="#star"></use></svg><svg aria-hidden="true" class="hsds-icon hsds-review__star"><use xlink:href="#half-star"></use></svg></div></dd></dl></li><li class="hsds-review__item"><dl class="hsds-review__review"><dt class="hsds-review__cite"><img class="hsds-review__logo" alt="Capterra logo" loading="lazy" width="108" height="24" decoding="async" src="https://marketing-assets.hubstaff.com/assets/refresh/logos/customers/capterra-02c9bbde3f14e4e46c00179c07cb5c004b0af6e8ede8f78d3b623888db576a7a.svg" /></dt><dd class="hsds-review__meta"><div class="hsds-review__description">4.6 out of 5 stars from 1,045 reviews</div><div class="hsds-review__stars"><svg aria-hidden="true" class="hsds-icon hsds-review__star"><use xlink:href="#star"></use></svg><svg aria-hidden="true" class="hsds-icon hsds-review__star"><use xlink:href="#star"></use></svg><svg aria-hidden="true" class="hsds-icon hsds-review__star"><use xlink:href="#star"></use></svg><svg aria-hidden="true" class="hsds-icon hsds-review__star"><use xlink:href="#star"></use></svg><svg aria-hidden="true" class="hsds-icon hsds-review__star"><use xlink:href="#half-star"></use></svg></div></dd></dl></li><li class="hsds-review__item"><dl class="hsds-review__review"><dt class="hsds-review__cite"><img class="hsds-review__logo" alt="G2 Cloud logo" loading="lazy" width="85" height="24" decoding="async" src="https://marketing-assets.hubstaff.com/assets/refresh/logos/customers/g2-f8595946722c3096c56e6b16f32e84442c6a78a0244c9d2d1d666de8a6ceb857.svg" /></dt><dd class="hsds-review__meta"><div class="hsds-review__description">4.4 out of 5 stars from 319 reviews</div><div class="hsds-review__stars"><svg aria-hidden="true" class="hsds-icon hsds-review__star"><use xlink:href="#star"></use></svg><svg aria-hidden="true" class="hsds-icon hsds-review__star"><use xlink:href="#star"></use></svg><svg aria-hidden="true" class="hsds-icon hsds-review__star"><use xlink:href="#star"></use></svg><svg aria-hidden="true" class="hsds-icon hsds-review__star"><use xlink:href="#star"></use></svg><svg aria-hidden="true" class="hsds-icon hsds-review__star"><use xlink:href="#half-star"></use></svg></div></dd></dl></li></ul></div></div></section><section class="hsds-row hsds-row--background-brand-primary hsds-row--background-hubstaff-spoke hsds-row--oval-top hsds-row--oval-top-light-blue"><div class="hsds-row__container"><div class="hsds-row__header"><h3 class="hsds-row__heading hsds-row__heading--level-1">Try Hubstaff free for 14 days</h3><a class="hsds-button hsds-button--large hsds-button--tertiary js-hsds-cta-track" data-name="Bottom section signup" href="/signup">Start my free trial</a></div></div></section><div aria-hidden="true" aria-labelledby="select-your-industry-modal-heading" aria-modal="true" class="hsds-modal hsds-modal--xlarge" id="select-your-industry-modal" role="dialog"><div class="hsds-modal__dialog"><button name="button" type="submit" class="hsds-button hsds-button--ghost hsds-button--muted hsds-button--icon-only hsds-button--secondary hsds-button--xsmall hsds-modal__close-button" aria-label="close select your industry modal"><svg aria-hidden="true" class="hsds-icon hsds-button__icon"><use xlink:href="#close-x"></use></svg></button><div class="hsds-modal__content"><div class="hsds-modal__header"><div class="hsds-modal__heading" id="select-your-industry-modal-heading">Select your industry</div></div><div class="hsds-modal__body"><ul class="hsds-link-list hsds-link-list--3-col"><li class="hsds-link-list__item"><a class="hsds-link-list__link" href="/solutions/janitorial"><span class="hsds-link-list__label">Cleaning</span><svg aria-hidden="true" class="hsds-icon hsds-link-list__caret-icon"><use xlink:href="#caret-down-l"></use></svg></a></li><li class="hsds-link-list__item"><a class="hsds-link-list__link" href="/solutions/construction"><span class="hsds-link-list__label">Construction</span><svg aria-hidden="true" class="hsds-icon hsds-link-list__caret-icon"><use xlink:href="#caret-down-l"></use></svg></a></li><li class="hsds-link-list__item"><a class="hsds-link-list__link" href="/solutions/landscaping"><span class="hsds-link-list__label">Landscaping</span><svg aria-hidden="true" class="hsds-icon hsds-link-list__caret-icon"><use xlink:href="#caret-down-l"></use></svg></a></li><li class="hsds-link-list__item"><a class="hsds-link-list__link" href="/solutions/home-health-care"><span class="hsds-link-list__label">Health care</span><svg aria-hidden="true" class="hsds-icon hsds-link-list__caret-icon"><use xlink:href="#caret-down-l"></use></svg></a></li><li class="hsds-link-list__item"><a class="hsds-link-list__link" href="/solutions/consulting"><span class="hsds-link-list__label">Consultants</span><svg aria-hidden="true" class="hsds-icon hsds-link-list__caret-icon"><use xlink:href="#caret-down-l"></use></svg></a></li><li class="hsds-link-list__item"><a class="hsds-link-list__link" href="/solutions/agencies"><span class="hsds-link-list__label">Agencies</span><svg aria-hidden="true" class="hsds-icon hsds-link-list__caret-icon"><use xlink:href="#caret-down-l"></use></svg></a></li><li class="hsds-link-list__item"><a class="hsds-link-list__link" href="/solutions/manufacturing"><span class="hsds-link-list__label">Manufacturing</span><svg aria-hidden="true" class="hsds-icon hsds-link-list__caret-icon"><use xlink:href="#caret-down-l"></use></svg></a></li><li class="hsds-link-list__item"><a class="hsds-link-list__link" href="/solutions/architects-engineers"><span class="hsds-link-list__label">Architects and engineers</span><svg aria-hidden="true" class="hsds-icon hsds-link-list__caret-icon"><use xlink:href="#caret-down-l"></use></svg></a></li><li class="hsds-link-list__item"><a class="hsds-link-list__link" href="/solutions/accounting"><span class="hsds-link-list__label">Accountants</span><svg aria-hidden="true" class="hsds-icon hsds-link-list__caret-icon"><use xlink:href="#caret-down-l"></use></svg></a></li><li class="hsds-link-list__item"><a class="hsds-link-list__link" href="/solutions/law-firms"><span class="hsds-link-list__label">Attorneys</span><svg aria-hidden="true" class="hsds-icon hsds-link-list__caret-icon"><use xlink:href="#caret-down-l"></use></svg></a></li><li class="hsds-link-list__item"><a class="hsds-link-list__link" href="/solutions/software-development"><span class="hsds-link-list__label">Software developers</span><svg aria-hidden="true" class="hsds-icon hsds-link-list__caret-icon"><use xlink:href="#caret-down-l"></use></svg></a></li><li class="hsds-link-list__item"><a class="hsds-link-list__link" href="/solutions/ecommerce"><span class="hsds-link-list__label">E-commerce</span><svg aria-hidden="true" class="hsds-icon hsds-link-list__caret-icon"><use xlink:href="#caret-down-l"></use></svg></a></li><li class="hsds-link-list__item"><a class="hsds-link-list__link" href="/solutions/real-estate"><span class="hsds-link-list__label">Real estate</span><svg aria-hidden="true" class="hsds-icon hsds-link-list__caret-icon"><use xlink:href="#caret-down-l"></use></svg></a></li><li class="hsds-link-list__item"><a class="hsds-link-list__link" href="/solutions/nonprofits"><span class="hsds-link-list__label">Nonprofit</span><svg aria-hidden="true" class="hsds-icon hsds-link-list__caret-icon"><use xlink:href="#caret-down-l"></use></svg></a></li><li class="hsds-link-list__item"><a class="hsds-link-list__link" href="/solutions/designers"><span class="hsds-link-list__label">Design</span><svg aria-hidden="true" class="hsds-icon hsds-link-list__caret-icon"><use xlink:href="#caret-down-l"></use></svg></a></li></ul></div></div></div></div><script>window.addEventListener('DOMContentLoaded', function (evt) {
+	  HubstaffAuth.signupForm('.auth_form', {
+		product: 'hubstaff',
+		extra: {"pricing":"desk_n_field_7_10_12_15_20,default"},
+		onsubmitsuccess: function($form, json, callback) {
+		  analytics.track('Signup form submitted', {
+			source: window.location.href
+		  }, {}, function() {
+			callback();
+		  });
+		}
+	  });
+  })</script><script type="application/ld+json">{
+	"@context": "http://schema.org",
+	"@type": "Organization",
+	"name": "Hubstaff",
+	"description": "Hubstaff is a time tracking software that helps remote teams and mobile crews become more efficient and productive. Thanks to its powerful capabilities, this desktop and mobile app helps owners focus on growing their businesses instead of running them.",
+	"image": "https://marketing-assets.hubstaff.com/images/static/press/hubstaff_logo_1000.png",
+	"logo": "https://marketing-assets.hubstaff.com/images/static/press/hubstaff_logo_1000.png",
+	"url": "https://hubstaff.com/",
+	"sameAs": [
+	  "https://twitter.com/Hubstaff",
+	  "https://www.linkedin.com/company/hubstaff/",
+	  "https://plus.google.com/+Hubstaff",
+	  "https://www.facebook.com/hubstaffapps",
+	  "https://www.youtube.com/channel/UCV0-Tt5WiHnxDb3Z7wV_Qlg",
+	  "https://en.wikipedia.org/wiki/Hubstaff",
+	  "https://www.capterra.com/p/132376/Hubstaff/"
+	],
+	"aggregateRating": {
+	  "@type": "AggregateRating",
+	  "ratingValue": "4.5",
+	  "bestRating": "5",
+	  "ratingCount": "404"
+	}
+  }</script><script type="application/ld+json">{
+	"@context": "http://schema.org",
+	"@type": "WebSite",
+	"url": "https://hubstaff.com/",
+	"name": "Hubstaff",
+	"about": "Time tracking with screenshots and activity levels.",
+	"keywords": "time tracking,screenshot software, virtual team management,time management software,productivity",
+	"award": "Category Leader Q4 2018 - GetApp",
+	"image": "https://marketing-assets.hubstaff.com/assets/marketing/startup/mac_time_tracker-2b0c31554ed7c11ed6e7a250b6f112b8f106bbd6046e4ed562793a5e1e6888b6.png",
+	"description": "Simple yet powerful employee work tracker with screenshots, timesheets, billing, in-depth reports, and more. Understand productivity issues and act on them.",
+	"sameAs" : [
+	  "https://www.facebook.com/hubstaffapps",
+	  "https://plus.google.com/+Hubstaff",
+	  "https://twitter.com/hubstaff",
+	  "https://www.youtube.com/channel/UCV0-Tt5WiHnxDb3Z7wV_Qlg"
+	]
+  }</script></main><footer class="hsds-footer"><div class="hsds-footer__container"><div class="hsds-footer__row"><div class="hsds-footer__col hsds-footer__col--nav"><nav class="hsds-footer__nav"><ul class="hsds-footer__list"><li class="hsds-footer__item hsds-footer__item--heading">Software</li><li class="hsds-footer__item"><a class="hsds-footer__link js-hsds-analytics-footer-link" rel="" href="/features">Features overview</a></li><li class="hsds-footer__item"><a class="hsds-footer__link js-hsds-analytics-footer-link" rel="" href="/solutions">Solutions</a></li><li class="hsds-footer__item"><a class="hsds-footer__link js-hsds-analytics-footer-link" rel="" href="/features/free-time-tracking-software">Free time tracking app</a></li><li class="hsds-footer__item"><a class="hsds-footer__link js-hsds-analytics-footer-link" rel="" href="/integrations">Integrations</a></li><li class="hsds-footer__item"><a class="hsds-footer__link js-hsds-analytics-footer-link" rel="" href="https://app.hubstaff.com/download">Download app</a></li><li class="hsds-footer__item"><a class="hsds-footer__link js-hsds-analytics-footer-link" rel="" href="/demo">Demo</a></li><li class="hsds-footer__item"><a class="hsds-footer__link js-hsds-analytics-footer-link" rel="" href="/time_tracking_api">Time tracking API</a></li><li class="hsds-footer__item"><a class="hsds-footer__link js-hsds-analytics-footer-link" rel="nofollow" href="https://roadmap.hubstaff.com/">Request a feature</a></li></ul><ul class="hsds-footer__list"><li class="hsds-footer__item hsds-footer__item--heading">Learning center</li><li class="hsds-footer__item"><a class="hsds-footer__link js-hsds-analytics-footer-link" rel="" href="/time-tracking">Time tracking resources</a></li><li class="hsds-footer__item"><a class="hsds-footer__link js-hsds-analytics-footer-link" rel="" href="/workforce-management">Workforce management resources</a></li><li class="hsds-footer__item"><a class="hsds-footer__link js-hsds-analytics-footer-link" rel="" href="/resources">Business resources</a></li><li class="hsds-footer__item"><a class="hsds-footer__link js-hsds-analytics-footer-link" rel="" href="https://blog.hubstaff.com/">Blog</a></li></ul><ul class="hsds-footer__list"><li class="hsds-footer__item hsds-footer__item--heading">More</li><li class="hsds-footer__item"><a class="hsds-footer__link js-hsds-analytics-footer-link" rel="" href="/affiliate">Affiliates</a></li><li class="hsds-footer__item"><a class="hsds-footer__link js-hsds-analytics-footer-link" rel="nofollow" href="https://support.hubstaff.com">Help Center</a></li><li class="hsds-footer__item"><a class="hsds-footer__link js-hsds-analytics-footer-link" rel="" href="/faq">FAQ</a></li><li class="hsds-footer__item"><a class="hsds-footer__link js-hsds-analytics-footer-link" rel="nofollow" href="https://status.hubstaff.com/">Status</a></li></ul><ul class="hsds-footer__list"><li class="hsds-footer__item hsds-footer__item--heading">Company</li><li class="hsds-footer__item"><a class="hsds-footer__link js-hsds-analytics-footer-link" rel="" href="/about">About us</a></li><li class="hsds-footer__item"><a class="hsds-footer__link js-hsds-analytics-footer-link" rel="" href="/contact">Contact Us</a></li><li class="hsds-footer__item"><a class="hsds-footer__link js-hsds-analytics-footer-link" rel="" href="/reviews">Reviews</a></li><li class="hsds-footer__item"><a class="hsds-footer__link js-hsds-analytics-footer-link" rel="" href="/customers">Customer stories</a></li><li class="hsds-footer__item"><a class="hsds-footer__link js-hsds-analytics-footer-link" rel="" href="/jobs">Careers</a></li><li class="hsds-footer__item"><a class="hsds-footer__link js-hsds-analytics-footer-link" rel="" href="/press">Press</a></li></ul></nav></div><div class="hsds-footer__col hsds-footer__col--cta"><div class="hsds-footer__cta"><div class="hsds-footer__heading">Ready to get started?</div><a class="hsds-button hsds-button--medium hsds-button--primary hsds-button--on-dark js-hsds-cta-track" data-name="Footer signup" href="/signup">Sign me up</a></div><div class="hsds-footer__sub-heading">Follow us</div><ul class="hsds-footer__social-list"><li class="hsds-footer__social-item"><a class="hsds-footer__social-link" aria-label="follow Hubstaff on Facebook" rel="nofollow" href="https://www.facebook.com/hubstaffapps"><svg aria-hidden="true" class="hsds-icon hsds-icon--reverse"><use xlink:href="#logo-facebook-mark"></use></svg></a></li><li class="hsds-footer__social-item"><a class="hsds-footer__social-link" aria-label="follow Hubstaff on LinkedIn" rel="nofollow" href="https://www.linkedin.com/company/hubstaff"><svg aria-hidden="true" class="hsds-icon hsds-icon--reverse"><use xlink:href="#logo-linkedin-mark"></use></svg></a></li><li class="hsds-footer__social-item"><a class="hsds-footer__social-link" aria-label="follow Hubstaff on Twitter" rel="nofollow" href="https://twitter.com/Hubstaff"><svg aria-hidden="true" class="hsds-icon hsds-icon--reverse"><use xlink:href="#logo-twitter-mark"></use></svg></a></li><li class="hsds-footer__social-item"><a class="hsds-footer__social-link" aria-label="follow Hubstaff on YouTube" rel="nofollow" href="https://www.youtube.com/channel/UCV0-Tt5WiHnxDb3Z7wV_Qlg/feed"><svg aria-hidden="true" class="hsds-icon hsds-icon--reverse"><use xlink:href="#logo-youtube-mark"></use></svg></a></li></ul></div></div></div><div class="hsds-footer__legal"><div class="hsds-footer__legal-container"><div class="hsds-footer__copyright"><span class="hsds-footer__copyright-logo-link"><svg aria-labelledby="hubstaff-logo-footer" class="hsds-icon hsds-footer__copyright-logo" role="img"><title id="hubstaff-logo-footer">Hubstaff time tracker software</title><use xlink:href="#logo-hubstaff"></use></svg></span><span class="hsds-footer__copyright-label"><div>Copyright © 2022 Netsoft Holdings, LLC</div><div>11650 Olio Road, Suite #1000 - 193 Fishers, IN 46037</div></span></div><ul class="hsds-footer__tos-list"><li class="hsds-footer__tos-item"><a class="hsds-footer__tos-link" href="/terms">Terms</a></li><li class="hsds-footer__tos-item"><a class="hsds-footer__tos-link" href="/privacy">Privacy</a></li><li class="hsds-footer__tos-item"><a class="hsds-footer__tos-link" href="/gdpr">GDPR compliance</a></li></ul></div></div></footer><script>var loadScriptsEvent = new CustomEvent("loadScripts");
+  var autoLoadDuration = 5; //In Seconds
+  var eventList = ["keydown", "mousemove", "wheel", "touchmove", "touchstart", "touchend"];
+  var autoLoadTimeout = setTimeout(triggerScripts, autoLoadDuration * 1000);
+  
+  eventList.forEach(function (event) {
+	window.addEventListener(event, triggerScripts, {passive: true})
+  });
+  
+  function triggerScripts() {
+	runScripts();
+	document.dispatchEvent(loadScriptsEvent);
+	clearTimeout(autoLoadTimeout);
+	eventList.forEach(function (event) {
+	  window.removeEventListener(event, triggerScripts, {passive: true});
+	});
+  }
+  
+  function runScripts() {
+	document.querySelectorAll("script[delay]").forEach(function (scriptTag) {
+	  var scriptSrc = scriptTag.getAttribute("delay");
+	  var newScript = document.createElement("script");
+	  newScript.setAttribute("src", scriptSrc);
+	  document.body.appendChild(newScript);
+	  scriptTag.remove();
+	});
+  }</script><script src="https://marketing-assets.hubstaff.com/assets/application-refresh-b2da50dd1c03381b75b7a5a63f200c0ccc05f62ad2af5d308a2523779dc5fa4d.js" defer="defer"></script><script>document.addEventListener("loadScripts", function(e) {
+	// Segment starts here
+	!function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","debug","page","once","off","on","addSourceMiddleware","addIntegrationMiddleware","setAnonymousId","addDestinationMiddleware"];analytics.factory=function(e){return function(){var t=Array.prototype.slice.call(arguments);t.unshift(e);analytics.push(t);return analytics}};for(var e=0;e<analytics.methods.length;e++){var key=analytics.methods[e];analytics[key]=analytics.factory(key)}analytics.load=function(key,e){var t=document.createElement("script");t.type="text/javascript";t.async=!0;t.src="https://cdn.segment.com/analytics.js/v1/" + key + "/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(t,n);analytics._loadOptions=e};analytics._writeKey="xV8azCvcoEfDe2gU6TH9KnAUAea8P3ln";analytics.SNIPPET_VERSION="4.13.2";
+	  analytics.load("xV8azCvcoEfDe2gU6TH9KnAUAea8P3ln");
+	  analytics.page();
+	}}();
+	analytics.ready(function() {
+	  analytics.track('AB pricing model', {"variant":"dfnp","product":"desk_n_field_7_10_12_15_20","page":"default"});
+	});
+	// Segment ends here
+  
+  
+  });</script><script src="" delay="https://marketing-assets.hubstaff.com/assets/hsds/hsds-4cbfd4db62684bb96fe5da40792c72672a7b39789cab6f7f5e1b027111076330.js"></script><script src="" delay="https://www.clickcease.com/monitor/stat.js"></script><script>window.addEventListener('DOMContentLoaded', function (evt) {
+	var ajax = new XMLHttpRequest();
+	ajax.open("GET", "https://hubstaff.com/assets/refresh/icons/icons-8bc1c8b23943c56d28b64b5fa10d8495cf8193894a2db6ca7dde1eeaf4323b26.svg", true);
+	ajax.send();
+	ajax.onload = function (e) {
+	  var div = document.createElement("div");
+	  div.innerHTML = ajax.responseText;
+	  document.body.insertBefore(div, document.body.childNodes[0]);
+	}
+  })</script><script>(function() {
+	var script = document.createElement('script');
+	script.src = 'https://unpkg.com/web-vitals/dist/web-vitals.iife.js';
+	script.onload = function() {
+	  function sendToAnalytics(metric) {
+		metric.url = this.location.pathname;
+  
+		analytics.track('CWV metric', metric)
+	  }
+  
+	  webVitals.getFID(sendToAnalytics);
+	  webVitals.getLCP(sendToAnalytics);
+	  webVitals.getCLS(sendToAnalytics);
+	}
+	document.head.appendChild(script);
+  }())</script><script src="https://secure.visionary-business-52.com/js/266098.js" type="text/javascript"></script><noscript><img alt="" src="https://secure.visionary-business-52.com/266098.png" style="display:none;" /></noscript><script defer src="https://static.cloudflareinsights.com/beacon.min.js/vaafb692b2aea4879b33c060e79fe94621666317369993" integrity="sha512-0ahDYl866UMhKuYcW078ScMalXqtFJggm7TmlUtp0UlD4eQk0Ixfnm5ykXKvGJNFjLMoortdseTfsRT8oCfgGA==" data-cf-beacon='{"rayId":"780203423b3685b1","token":"c0b21bd3a3eb487aaada88c950c0434b","version":"2022.11.3","si":100}' crossorigin="anonymous"></script>
+  </body></html>

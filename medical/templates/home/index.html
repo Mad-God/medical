@@ -164,8 +164,8 @@
 				<div class="features-slider slider">
 					{% for clinic in hospitals %}
 					<div class="feature-item text-center">
-						<img src="{{clinic.picture.url}}" class="img-fluid" alt="Feature">
-						<p>{{clinic.name}}</p>
+						<a href="{% url 'home:hospital' slug=clinic.slug %}"><img src="{{clinic.picture.url}}" class="img-fluid" alt="Feature"></a>
+						<a href="{% url 'home:hospital' slug=clinic.slug %}"><p>{{clinic.name}}</p></a>
 					</div>
 					{% endfor %}
 

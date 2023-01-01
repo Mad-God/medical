@@ -18,7 +18,11 @@ class Doctor(models.Model):
     qualification = models.CharField(max_length=40, null=True, blank=True)
     overview = models.CharField(max_length=700, blank=True, null=True)
     hospital = models.ForeignKey(
-        "Hospital", on_delete=models.SET_NULL, null=True, blank=True, related_name="doctor"
+        "Hospital",
+        on_delete=models.SET_NULL,
+        null=True,
+        blank=True,
+        related_name="doctor",
     )
     speciality = models.ForeignKey(
         "Speciality",
@@ -27,17 +31,18 @@ class Doctor(models.Model):
         null=True,
         blank=True,
     )
-    slug = AutoSlugField(populate_from='name', unique = True, null =True, default=None)
+    slug = AutoSlugField(populate_from="name", unique=True, null=True, default=None)
     message_link = models.CharField(max_length=30)
     phone = models.CharField(max_length=13)
     video_link = models.CharField(max_length=30)
-    monday=models.CharField(max_length=30, default="closed")
-    tuesday=models.CharField(max_length=30, default="closed")
-    wednesday=models.CharField(max_length=30, default="closed")
-    thursday=models.CharField(max_length=30, default="closed")
-    friday=models.CharField(max_length=30, default="closed")
-    saturday=models.CharField(max_length=30, default="closed")
-    sunday=models.CharField(max_length=30, default="closed")
+    monday = models.CharField(max_length=30, default="closed")
+    tuesday = models.CharField(max_length=30, default="closed")
+    wednesday = models.CharField(max_length=30, default="closed")
+    thursday = models.CharField(max_length=30, default="closed")
+    friday = models.CharField(max_length=30, default="closed")
+    saturday = models.CharField(max_length=30, default="closed")
+    sunday = models.CharField(max_length=30, default="closed")
+
     def __str__(self) -> str:
         return self.name
 
@@ -62,7 +67,8 @@ class Speciality(models.Model):
         upload_to="branch/", default="speciality/specialities-01.png"
     )
     name = models.CharField(max_length=30)
-    slug = AutoSlugField(populate_from='name', unique = True, null =True, default=None)
+    slug = AutoSlugField(populate_from="name", unique=True, null=True, default=None)
+
     def __str__(self):
         return self.name
 
@@ -99,23 +105,36 @@ class Hospital(models.Model):
         null=True,
         blank=True,
     )
-    picture = models.ImageField(upload_to='hospital', null=True, blank=True)
-    slug = AutoSlugField(populate_from='name', unique = True, null =True, default=None)
+    picture = models.ImageField(upload_to="hospital", null=True, blank=True)
+    slug = AutoSlugField(populate_from="name", unique=True, null=True, default=None)
 
 
 class Booking(models.Model):
-    name=models.CharField(max_length=40)
-    date=models.DateField()
+    name = models.CharField(max_length=40)
+    date = models.DateField()
     time = models.TimeField()
-    doctor = models.ForeignKey("Doctor", on_delete=models.CASCADE, related_name="booking")
+    doctor = models.ForeignKey(
+        "Doctor", on_delete=models.CASCADE, related_name="booking"
+    )
     phone = models.CharField(max_length=13)
     email = models.CharField(max_length=30)
 
 
 class DoctorImage(models.Model):
-    image = models.ImageField(upload_to = 'doctor/images')
+    image = models.ImageField(upload_to="doctor/images")
     doctor = models.ForeignKey("Doctor", on_delete=models.CASCADE, related_name="image")
+
 
 class DoctorServices(models.Model):
     name = models.CharField(max_length=20)
-    doctor = models.ForeignKey("Doctor", on_delete=models.CASCADE, related_name="service")
+    doctor = models.ForeignKey(
+        "Doctor", on_delete=models.CASCADE, related_name="service"
+    )
+
+
+class ContactRequest(models.Model):
+    name = models.CharField(max_length=30)
+    email = models.CharField(max_length=50)
+    phone = models.CharField(max_length=30)
+    company = models.CharField(max_length=50)
+    message = models.CharField(max_length=130)

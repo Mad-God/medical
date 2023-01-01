@@ -23,11 +23,11 @@
 							<div class="card-body">
 								<div class="pro-widget-content">
 									<div class="profile-info-widget">
-										<a href="" class="booking-doc-img">
+										<a href="{% url 'home:hospital' slug=hospital.slug %}" class="booking-doc-img">
 											<img src="{{hospital.picture.url}}" alt="Hospital Image">
 										</a>
 										<div class="profile-det-info">
-											<h3><a href=""> {{hospital.name}}</a></h3>
+											<h3><a href="{% url 'home:hospital' slug=hospital.slug %}"> {{hospital.name}}</a></h3>
 											
 											<div class="patient-details">
 												<h5><b>{{hospital.speciality}}</b></h5>
@@ -42,11 +42,15 @@
 									</ul>
 								</div>
 								
-								<div class="pro-widget-content" style="align:left;">
-									<strong>Doctors in this Hospital: </strong><br>
+								<div class="pro-widget-content">
+									<strong> <span><br>
 										{% for doctor in hospital.doctor.all %}
-										<a href="{% url 'home:doctor-profile' slug=doctor.slug %}">{{doctor.name|truncatechars:35}}</a><br>
+											{% for service in doctor.service.all %}
+												| {{service.name}} 
+											{% endfor %}
 										{% endfor %}
+									</span>
+									</strong>
 								</div>
 							</div>
 						</div>
